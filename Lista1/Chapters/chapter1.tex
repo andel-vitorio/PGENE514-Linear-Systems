@@ -1,0 +1,347 @@
+\chapter{Resolução da Primeira Lista}
+
+\begin{question}
+  Se $A \in \mathbb{R}^{n \times n} $ e $\alpha $ é um escalar, qual é $\det(\alpha A) $? Qual é $\det(-A) $?
+\end{question}
+
+\begin{resolution}
+  Para resolver esta questão, é necessário usar duas propriedades fundamentais das matrizes: o produto de uma matriz $M \in \mathbb{R}^{n \times m}$ com um escalar $\alpha \in \mathbb{R}$,
+  \begin{equation}
+    (\alpha M)_{ij} = \alpha m_{ij}, \quad \text{para todos} \; 1 \leq i \leq m, \; 1 \leq j \leq n,
+  \end{equation}
+  e o determinante de uma matriz $N \in \mathbb{R}^{p \times p}$,
+  \begin{equation}
+    \det(N) = \sum_{j=1}^p (-1)^{i+j} n_{ij} \det(N_{ij}),
+  \end{equation}
+  onde $N_{ij}$ é a matriz menor obtida removendo a $i$-ésima linha e a $j$-ésima coluna de $N$, com $i$ sendo um valor fixo.
+
+  Dado isso, podemos escrever:
+  \begin{equation}
+    \det(\alpha A) = \sum_{j=1}^n (-1)^{i+j} \alpha a_{ij} \det(\alpha A_{ij}).
+  \end{equation}
+  Esse processo pode ser aplicado recursivamente até chegarmos a uma matriz quadrada de ordem 2, onde:
+  \begin{equation}
+    \det\left(\alpha \begin{bmatrix} {A_{ij}}_{11} & {A_{ij}}_{12} \\ {A_{ij}}_{21} & {A_{ij}}_{22} \end{bmatrix}\right) =
+    \alpha^2 \left({A_{ij}}_{11} {A_{ij}}_{22} - {A_{ij}}_{12} {A_{ij}}_{21}\right) = \alpha^2 \det(A_{ij}).
+  \end{equation}
+  Esse é o critério de parada. No processo de retorno, observando a equação anterior, nota-se o fator $\alpha$ multiplicando os determinantes das matrizes menores. Isso resulta em uma cadeia de multiplicações por $\alpha$ que ocorre em cada passo da recursão. Como são $n-2$ passos até a matriz de ordem 2, temos $n-2$ produtos de $\alpha$, que ao serem combinados com $\alpha^2$, resultam em $\alpha^n$. Assim, temos:
+  \begin{equation}
+    \det(\alpha A) = \alpha^n \sum_{j=1}^n (-1)^{i+j} a_{ij} \det(A_{ij}) = \alpha^n \det(A).
+  \end{equation}
+  No caso especial em que $\alpha = -1$, obtemos:
+  \begin{equation}
+    \det(-A) = (-1)^n \det(A).
+  \end{equation}
+  Ou seja, se a ordem da matriz $A$ for par, o determinante da matriz oposta $-A$ será igual ao de $A$; se for ímpar, o determinante de $-A$ será o oposto do determinante de $A$.
+\end{resolution}
+
+
+\begin{question}
+  Se $A$ é orthogonal, qual é $\det A$? Se A é unitária, qual é $\det A$?
+\end{question}
+\begin{resolution}
+  Uma matriz $ A \in \mathbb{R}^{n \times n} $ é chamada de ortogonal se:
+  \begin{equation}
+    A^T A = I,
+  \end{equation}
+  onde $ A^T $ é a transposta de $ A $ e $ I $ é a matriz identidade de ordem $ n $. Para Qualquer matriz $ A $, temos:
+  \begin{equation}
+    \det(A^T) = \det(A).
+  \end{equation}
+  Para duas matrizes $ A $ e $ B $, a seguinte relação é válida:
+  \begin{equation}
+    \det(AB) = \det(A) \det(B).
+  \end{equation}
+  Além disso, sabemos que:
+  \begin{equation}
+    \det(I) = 1.
+  \end{equation}
+  Usando a definição de matriz ortogonal, temos:
+  \begin{equation}
+    A^T A = I.
+  \end{equation}
+  Aplicando o determinante em ambos os lados da equação, obtemos:
+  \begin{equation}
+    \det(A^T A) = \det(I).
+  \end{equation}
+  Aplicando a propriedade do determinante do produto de matrizes, temos:
+  \begin{equation}
+    \det(A^T) \det(A) = \det(I).
+  \end{equation}
+  Como o determinante da transposta é igual ao determinante da matriz original, $ \det(A^T) = \det(A) $. Portanto, a equação se simplifica para:
+  \begin{equation}
+    \det(A) \det(A) = 1,
+  \end{equation}
+  ou seja:
+  \begin{equation}
+    \det(A)^2 = 1.
+  \end{equation}
+  A solução para essa equação é:
+  \begin{equation}
+    \det(A) = \pm 1.
+  \end{equation}
+  Assim, o determinante de uma matriz ortogonal $ A $ é sempre $ \pm 1 $.
+
+  Uma matriz $A$ é dita unitária se $A^\dagger A = I$, onde $A^\dagger$ é a matriz adjunta (ou conjugada transposta) de $A$, e $I$ é a matriz identidade. Considerando que $A^\dagger A = I$, aplique o determinante em ambos os lados da igualdade:
+  \begin{equation}
+    \det(A^\dagger A) = \det(I)
+  \end{equation}
+  Usando a propriedade de que o determinante do produto de duas matrizes é o produto dos determinantes:
+  \begin{equation}
+    \det(A^\dagger A) = \det(A^\dagger) \det(A)
+  \end{equation}
+  E como $\det(I) = 1$, temos:
+  \begin{equation}
+    \det(A^\dagger) \det(A) = 1
+  \end{equation}
+  Note que $\det(A^\dagger) = \overline{\det(A)}$, onde $\overline{\det(A)}$ é o conjugado complexo de $\det(A)$. Assim:
+  \begin{equation}
+    \overline{\det(A)} \det(A) = 1
+  \end{equation}
+  O produto $\overline{\det(A)} \det(A)$ é, na verdade, o quadrado do módulo de $\det(A)$:
+  \begin{equation}
+    |\det(A)|^2 = 1
+  \end{equation}
+  Portanto, tomando a raiz quadrada em ambos os lados da equação, obtemos:
+  \begin{equation}
+    |\det(A)| = 1
+  \end{equation}
+  Assim, o módulo do determinante de uma matriz unitária é igual a 1.
+\end{resolution}
+
+\begin{question}
+  Seja $x$, $y \in \mathbb{R}^n$. Mostre que $\det (I-xy^{\top}) = 1 - y^{\top}x$.
+\end{question}
+\begin{resolution}
+  Seja \(A = I - xy^\top\). A matriz \(A\) pode ser escrita como \(I\) menos o produto externo \(xy^\top\). Usamos a fórmula de determinante para matrizes de rank 1:
+  \begin{equation}
+    \det(I - xy^\top) = (1 - v^\top u).
+  \end{equation}
+  Se \(u\) e \(v\) são vetores em \(\mathbb{R}^n\), a matriz \(xy^\top\) é uma matriz de rank 1. O determinante de \(I - xy^\top\) pode ser encontrado através da fórmula de determinante para matrizes de rank 1. Em particular, se \(M\) é uma matriz \(n \times n\) e \(w\) é um vetor coluna, a fórmula de determinante para matrizes \(M + xy^\top\) é dada por:
+  \begin{equation}
+    \det(M + xy^\top) = \det(M) \left(1 + v^\top M^{-1} u\right).
+  \end{equation}
+  Para \(M = I\), temos:
+  \begin{equation}
+    \det(I + xy^\top) = 1 + y^\top x.
+  \end{equation}
+  Assim, obtemos:
+  \begin{equation}
+    \det(I - xy^\top) = 1 - y^\top x.
+  \end{equation}
+\end{resolution}
+
+
+\begin{question}
+  Seja $U_1$, $U_2$, \dots, $U_k \in \mathbb{R}^{n\times n}$ matrizes ortogonais. Mostre que o produto $U=U_1U_2\dots U_k$ é uma matriz ortogonal.
+\end{question}
+\begin{resolution}
+  Para demonstrar que o produto $U = U_1 U_2 \cdots U_k$ de matrizes ortogonais $U_1, U_2, \ldots, U_k$ é também uma matriz ortogonal, é necessário provar que $U$ satisfaz a condição de ortogonalidade. Especificamente, uma matriz $U \in \mathbb{R}^{n \times n}$ é considerada ortogonal se, e somente se, $U^T U = I$, onde $U^T$ denota a transposta de $U$ e $I$ representa a matriz identidade.
+
+  Dado que cada matriz $U_i$ para $i = 1, 2, \ldots, k$ é ortogonal, elas satisfazem a condição $U_i^T U_i = I$ e $U_i U_i^T = I$. O objetivo é demonstrar que o produto $U = U_1 U_2 \cdots U_k$ também atende a essa condição. Para verificar isso, calculamos o produto $U^T U$. A transposta de $U$ é dada por:
+  \begin{equation}
+    U^T = (U_1 U_2 \cdots U_k)^T = U_k^T \cdots U_2^T U_1^T
+  \end{equation}
+  Consequentemente, o produto $U^T U$ é:
+  \begin{equation}
+    U^T U = (U_k^T \cdots U_2^T U_1^T) (U_1 U_2 \cdots U_k)
+  \end{equation}
+  Agrupando os termos, obtemos:
+  \begin{equation}
+    U^T U = U_k^T (U_k^T U_k) (U_{k-1}^T U_{k-1}) \cdots (U_2^T U_2) (U_1^T U_1)
+  \end{equation}
+  Como $U_i^T U_i = I$ para cada $i$, o produto acima simplifica para:
+  \begin{equation}
+    U^T U = U_k^T I U_{k-1}^T I \cdots U_2^T I U_1^T I = I
+  \end{equation}
+  Portanto, $U^T U = I$, o que confirma que a matriz $U$ é ortogonal. Dessa forma, o produto de matrizes ortogonais é, de fato, ortogonal.
+\end{resolution}
+
+\begin{question}
+  Seja $A \in \mathbb{R}^{n \times n}$. O traço de $A$, denotado por $\operatorname{trace}(A)$, é definido como a soma de seus elementos diagonais, ou seja, $\operatorname{trace}(A) = \ds \sum_{i=1}^n a_{ii}$.
+  \begin{enumerate}[label=(\alph*)]
+    \item Mostre que o traço é uma função linear; isto é, se $A$, $B \in \mathbb{R}^{n \times n}$ e $\alpha$, $\beta \in \mathbb{R}$, então $\operatorname{trace}(\alpha A + \beta B) = \alpha \operatorname{trace}(A) + \beta \operatorname{trace}(B)$.
+    \item Mostre que $\operatorname{trace}(AB) = \operatorname{trace}(BA)$, mesmo que em geral $AB \neq BA$.
+    \item Seja $S \in \mathbb{R}^{n \times n}$ antissimétrico, ou seja, $S^{\top} = -S$. Mostre que $\operatorname{trace}(S) = 0$. Então prove a afirmação contrária ou forneça um contraexemplo.
+  \end{enumerate}
+\end{question}
+
+\begin{resolution}
+  {\bf (a)}  Prova de que o traço é uma função linear
+
+  Para mostrar que o traço é uma função linear, devemos verificar que, para quaisquer matrizes \( A, B \in \mathbb{R}^{n \times n} \) e escalares \( \alpha, \beta \in \mathbb{R} \), a seguinte igualdade é verdadeira:
+  \begin{equation}
+    \operatorname{trace}(\alpha A + \beta B) = \alpha \operatorname{trace}(A) + \beta \operatorname{trace}(B)
+  \end{equation}
+  O traço de uma matriz \( C \in \mathbb{R}^{n \times n} \) é definido como a soma dos elementos da diagonal principal de \( C \):
+  \begin{equation}
+    \operatorname{trace}(C) = \sum_{i=1}^n c_{ii}
+  \end{equation}
+  Para a matriz \( \alpha A + \beta B \), onde \( (\alpha A + \beta B)_{ij} = \alpha a_{ij} + \beta b_{ij} \), temos:
+  \begin{equation}
+    \operatorname{trace}(\alpha A + \beta B) = \sum_{i=1}^n (\alpha a_{ii} + \beta b_{ii})
+  \end{equation}
+  Distribuindo a soma:
+  \begin{equation}
+    \operatorname{trace}(\alpha A + \beta B) = \sum_{i=1}^n \alpha a_{ii} + \sum_{i=1}^n \beta b_{ii}
+  \end{equation}
+  \begin{equation}
+    \operatorname{trace}(\alpha A + \beta B) = \alpha \sum_{i=1}^n a_{ii} + \beta \sum_{i=1}^n b_{ii}
+  \end{equation}
+  \begin{equation}
+    \operatorname{trace}(\alpha A + \beta B) = \alpha \operatorname{trace}(A) + \beta \operatorname{trace}(B)
+  \end{equation}
+  Portanto, o traço é uma função linear.
+
+    {\bf (b)} Prova de que \( \operatorname{trace}(AB) = \operatorname{trace}(BA) \)
+
+  Para provar que \( \operatorname{trace}(AB) = \operatorname{trace}(BA) \) para matrizes \( A, B \in \mathbb{R}^{n \times n} \), seguimos os seguintes passos:
+  O traço de \( AB \) é:
+  \begin{equation}
+    \operatorname{trace}(AB) = \sum_{i=1}^n (AB)_{ii}
+  \end{equation}
+  O elemento \( (AB)_{ii} \) é dado por:
+  \begin{equation}
+    (AB)_{ii} = \sum_{k=1}^n a_{ik} b_{ki}
+  \end{equation}
+  Portanto:
+  \begin{equation}
+    \operatorname{trace}(AB) = \sum_{i=1}^n \sum_{k=1}^n a_{ik} b_{ki}
+  \end{equation}
+  Reorganizando a soma:
+  \begin{equation}
+    \operatorname{trace}(AB) = \sum_{k=1}^n \sum_{i=1}^n b_{ki} a_{ik}
+  \end{equation}
+  O traço de \( BA \) é:
+  \begin{equation}
+    \operatorname{trace}(BA) = \sum_{i=1}^n (BA)_{ii}
+  \end{equation}
+  \begin{equation}
+    (BA)_{ii} = \sum_{k=1}^n b_{ik} a_{ki}
+  \end{equation}
+  Portanto:
+  \begin{equation}
+    \operatorname{trace}(BA) = \sum_{i=1}^n \sum_{k=1}^n b_{ik} a_{ki}
+  \end{equation}
+  Comparando as somas:
+  \begin{gather}
+    \operatorname{trace}(BA) = \sum_{k=1}^n \sum_{i=1}^n a_{ik} b_{ki}, \\
+    \operatorname{trace}(AB) = \sum_{k=1}^n \sum_{i=1}^n a_{ik} b_{ki}.
+  \end{gather}
+  Logo, \( \operatorname{trace}(AB) = \operatorname{trace}(BA) \).
+
+    {\bf (c)} Uma matriz \( S \in \mathbb{R}^{n \times n} \) é anti-simétrica se \( S^T = -S \). Vamos mostrar que \( \operatorname{trace}(S) = 0 \).
+  O traço de \( S \) é:
+  \begin{equation}
+    \operatorname{trace}(S) = \sum_{i=1}^n s_{ii}.
+  \end{equation}
+  Como \( S^T = -S \), os elementos da diagonal de \( S \) satisfazem:
+  \begin{equation}
+    s_{ii} = -s_{ii}.
+  \end{equation}
+  Portanto:
+  \begin{gather}
+    2s_{ii} = 0 \implies s_{ii} = 0.
+  \end{gather}
+  Assim, o traço de \( S \) é:
+  \begin{equation}
+    \operatorname{trace}(S) = \sum_{i=1}^n s_{ii} = \sum_{i=1}^n 0 = 0.
+  \end{equation}
+  Portanto, o traço de uma matriz anti-simétrica é zero.
+
+    {\it Nota sobre o Converse}
+
+  Se uma matriz \( S \) tem traço zero, isso não implica necessariamente que \( S \) seja anti-simétrica. Por exemplo, a matriz nula \( S = 0 \) é anti-simétrica e tem traço zero, mas uma matriz com traço zero não precisa ser anti-simétrica.
+
+  {\it Contraexemplo}
+
+  Considere a matriz:
+  \begin{equation}
+    S = \begin{pmatrix}
+      1 & 2 \\
+      3 & 4
+    \end{pmatrix}.
+  \end{equation}
+  O traço de \( S \) é \( 1 + 4 = 5 \), que não é zero. Portanto, uma matriz com traço zero não precisa ser anti-simétrica, e anti-simetria não é uma condição necessária para que o traço seja zero.
+\end{resolution}
+
+\begin{question}
+  Uma matriz $A \in \mathbb{R}^{n \times n}$ é dita ser idempotente se $A^2 = A$.
+  \begin{enumerate}[label=(\alph*)]
+    \item Mostre que $A = \ds \frac{1}{2} \begin{bmatrix}2\cos^2\theta & \sin 2\theta \\ \sin 2\theta & 2 \sin^2\theta\end{bmatrix}$ é idempotente para todo $\theta$.
+    \item Suponha que $A \in \mathbb{R}^{n \times n}$ é idempotente e $A \neq I$. Mostre que $A$ deve ser singular.
+  \end{enumerate}
+\end{question}
+
+\begin{resolution}
+  {\bf (a)} Primeiro, calculamos \( A^2 \). Se denotarmos \( A \) como \( \frac{1}{2} B \), onde
+
+  \begin{equation}
+    B = \begin{bmatrix}
+      2\cos^2\theta & \sin 2\theta  \\
+      \sin 2\theta  & 2\sin^2\theta
+    \end{bmatrix},
+  \end{equation}
+  então
+  \begin{equation}
+    A = \frac{1}{2} B,
+  \end{equation}
+  e precisamos calcular
+  \begin{equation}
+    A^2 = \left(\frac{1}{2} B\right)^2 = \frac{1}{4} B^2.
+  \end{equation}
+  Assim, precisamos encontrar \( B^2 \):
+  \begin{equation}
+    B^2 = \begin{bmatrix}
+      2\cos^2\theta & \sin 2\theta  \\
+      \sin 2\theta  & 2\sin^2\theta
+    \end{bmatrix}
+    \begin{bmatrix}
+      2\cos^2\theta & \sin 2\theta  \\
+      \sin 2\theta  & 2\sin^2\theta
+    \end{bmatrix}.
+  \end{equation}
+  Calculando o produto, obtemos:
+  \begin{equation}
+    B^2 = \begin{bmatrix}
+      (2\cos^2\theta)^2 + (\sin 2\theta)^2                                & 2\cos^2\theta \cdot \sin 2\theta + \sin 2\theta \cdot 2\sin^2\theta \\
+      \sin 2\theta \cdot 2\cos^2\theta + 2\sin^2\theta \cdot \sin 2\theta & (\sin 2\theta)^2 + (2\sin^2\theta)^2
+    \end{bmatrix}.
+  \end{equation}
+  Utilizando as identidades trigonométricas \( \sin^2\theta + \cos^2\theta = 1 \) e \( \sin 2\theta = 2 \sin \theta \cos \theta \):
+  \begin{gather}
+    (2\cos^2\theta)^2 + (\sin 2\theta)^2 = 4 \cos^4\theta + 4 \cos^2\theta \sin^2\theta = 4 \cos^2\theta, \\
+    \sin 2\theta \cdot 2\cos^2\theta + 2\sin^2\theta \cdot \sin 2\theta = 2 \sin 2\theta (\cos^2\theta + \sin^2\theta) = 2 \sin 2\theta, \\
+    (\sin 2\theta)^2 + (2\sin^2\theta)^2 = 4 \sin^2\theta.
+  \end{gather}
+  Logo,
+  \begin{equation}
+    B^2 = \begin{bmatrix}
+      2\cos^2\theta & \sin 2\theta  \\
+      \sin 2\theta  & 2\sin^2\theta
+    \end{bmatrix} = 2 \cdot \begin{bmatrix}
+      \cos^2\theta & \sin^2\theta \\
+      \sin^2\theta & \sin^2\theta
+    \end{bmatrix}.
+  \end{equation}
+  Então,
+  \begin{equation}
+    A^2 = \frac{1}{4} B^2 = \frac{1}{4} \cdot 2 \cdot B = \frac{1}{2} B = A.
+  \end{equation}
+  Portanto, \( A^2 = A \), confirmando que \( A \) é idempotente para todo \( \theta \).
+
+    {\bf (b)} Se \( A \) é idempotente, então:
+  \begin{equation}
+    A^2 = A.
+  \end{equation}
+  Suponha que \( \lambda \) é um autovalor de \( A \). Então, para um vetor próprio \( v \) associado a \( \lambda \), temos:
+  \begin{equation}
+    A v = \lambda v.
+  \end{equation}
+  Aplicando a condição idempotente:
+  \begin{gather}
+    A^2 v = A v \implies \lambda^2 v = \lambda v \\
+    \lambda^2 = \lambda \implies \lambda(\lambda - 1) = 0
+  \end{gather}
+  Assim, os autovalores de \( A \) devem ser \( 0 \) ou \( 1 \). Se \( A \neq I \), então \( A \) não pode ser uma matriz onde todos os autovalores são \( 1 \). Assim, deve existir pelo menos um autovalor igual a \( 0 \). Logo, a matriz \( A \) tem pelo menos um autovalor igual a \( 0 \), o que implica que a matriz é singular (ou seja, seu determinante é zero). Portanto, qualquer matriz idempotente que não seja a matriz identidade deve ser singular.
+\end{resolution}

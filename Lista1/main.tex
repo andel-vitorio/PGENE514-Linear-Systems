@@ -1,0 +1,73 @@
+\documentclass[
+  a4paper,
+	oneside, 
+	12pt
+]{report} 
+
+\usepackage{workconfig}
+
+\newcommand{\instituicao}{UNIVERSIDADE FEDERAL DO AMAZONAS \\ PROGRAMA DE PÓS GRADUAÇÃO EM ENGENHARIA ELÉTRICA}
+\newcommand{\titulo}{CONTROLE FUZZY ADAPTATIVO DE SISTEMAS NÃO LINEARES}
+\newcommand{\apresentacao}{Este trabalho foi preparado como parte dos requisitos da disciplina \emph{Sistemas Inteligentes} oferecida pelo Programa de Pós-graduação em Engenharia Elétrica da Universidade Federal do Amazonas.}
+\newcommand{\autor}{Andevaldo da Encarnação Vitório}
+\newcommand{\local}{MANAUS-AM \\ 2024}
+\newcommand{\orientador}{Prof. Dr. João Edgar Chaves Filho}
+
+
+\begin{document}
+
+% Capa
+\include{Pre-textual/capa}
+\ifthenelse{\boolean{@twoside}}{\cleardoublepage}{}
+
+% Folha de Rosto
+\input{Pre-textual/folha-de-rosto}
+\ifthenelse{\boolean{@twoside}}{\cleardoublepage}{}
+
+% % Dedicatória
+% \input{pre-textual/dedicatoria}
+% \ifthenelse{\boolean{@twoside}}{\cleardoublepage}{}
+
+% % Agradecimentos
+% \input{pre-textual/agradecimentos}
+% \ifthenelse{\boolean{@twoside}}{\cleardoublepage}{}
+
+% % Epígrafe
+% \input{pre-textual/epigrafe}
+% \ifthenelse{\boolean{@twoside}}{\cleardoublepage}{}
+
+% % Resumo
+% \input{pre-textual/resumo}
+% \ifthenelse{\boolean{@twoside}}{\cleardoublepage}{}
+
+% % Abstract
+% \input{pre-textual/abstract}
+% \ifthenelse{\boolean{@twoside}}{\cleardoublepage}{}
+
+% Listas de Figuras, Tabelas, Abreviaturas, etc.
+% \listoffigures
+% \checkoddpageandclear
+
+% \listoftables
+% \checkoddpageandclear
+
+% Sumário
+% \tableofcontents
+% \checkoddpageandclear
+
+% Capítulos
+\input{Chapters/chapter1.tex}
+\ifthenelse{\boolean{@twoside}}{\cleardoublepage}{}
+
+% Referências
+\bibliographystyle{IEEEtranN}
+\bibliography{references.bib}
+\ifthenelse{\boolean{@twoside}}{\cleardoublepage}{}
+
+% Apêndices
+% \appendix
+% \include{appendixes/A}
+% \ifthenelse{\boolean{@twoside}}{\cleardoublepage}{}
+
+
+\end{document}
