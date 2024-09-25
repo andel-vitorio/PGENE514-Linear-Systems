@@ -1,0 +1,136 @@
+\chapter{Algoritmo do Row Echelon Form}
+
+Este capítulo apresenta a descrição do código que realiza uma das operações essenciais de álgebra linear: a redução de matrizes à forma escalonada e à forma escalonada reduzida por linhas. Para isso, foi utilizada a linguagem {\it Python} e a sua biblioteca {\it NumPy}. A função principal é a \textit{row\_echelon\_form}, que permite ao usuário escolher entre a forma escalonada e a forma escalonada reduzida. Além disso, uma função auxiliar chamada {\it show\_matrix} é implementada para exibir as matrizes resultantes de forma formatada e de fácil visualização.
+
+\section{Descrição do Algoritmo}
+
+A redução de matrizes é um procedimento fundamental em álgebra linear, frequentemente utilizado para resolver sistemas de equações lineares, calcular o posto de uma matriz e determinar a invertibilidade de matrizes. O algoritmo recebe como entrada uma matriz \( A \) e realiza operações elementares sobre as linhas da matriz para transformá-la em uma forma escalonada de linha. Opcionalmente, pode-se obter a forma escalonada reduzida de linha se o parâmetro \textit{reduced} for verdadeiro. A seguir, detalharemos o funcionamento e a base matemática do algoritmo.
+
+\subsection{Definições}
+Uma matriz \( A \) está na forma escalonada de linha (REF, do inglês {\it Row Echelon Form}) se satisfizer as seguintes condições:
+\begin{itemize}
+    \item A primeira entrada não nula de cada linha (chamada de \textit{pivô}) é 1;
+    \item Os pivôs de cada linha aparecem à direita dos pivôs da linha anterior;
+    \item Todas as linhas que contêm apenas zeros estão na parte inferior da matriz;
+\end{itemize}
+
+Além disso, uma matriz \( A \) está na forma escalonada reduzida de linha (RREF, do inglês {\it Reduced} REF) se, além das condições para REF, satisfizer a seguinte condição: cada pivô é o único elemento não nulo em sua coluna.
+
+\section{Implementação em Python}
+
+Baseado nas definições do algoritmo, foi realizada a sua implementação em {\it Python}. O código implementado é apresentado a seguir.
+
+\vspace{8pt}
+\begin{lstlisting}[language=Python, caption={Implementação do algoritmo para obtenção da REF e RREF de uma matriz.}]
+import numpy as np
+
+def row_echelon_form(A, reduced=False):
+"""
+Reduces the matrix A to row echelon form or reduced row echelon form.
+
+Parameters:
+A: input matrix.
+reduced: boolean, if True, returns the reduced row echelon form (RREF).
+          If False, returns only the row echelon form (REF).
+
+Returns:
+A: matrix reduced to the desired form.
+"""
+A = np.array(
+    A, dtype=float)  # Convert the matrix to float to ensure precision
+rows, cols = A.shape
+
+# Reduce the matrix to row echelon form (REF)
+for col in range(min(rows, cols)):
+  # Choose the pivot
+  max_row = np.argmax(np.abs(A[col:rows, col])) + col
+  if A[max_row, col] == 0:
+    continue  # Skip the column if the pivot is zero
+
+  # Swap the current row with the row containing the pivot
+  A[[col, max_row]] = A[[max_row, col]]
+
+  # Normalize the pivot row so that the pivot is 1
+  A[col] = A[col] / A[col, col]
+
+  # Eliminate the values below the pivot
+  for i in range(col + 1, rows):
+    A[i] -= A[i, col] * A[col]
+
+# If reduced is True, reduce to the reduced row echelon form (RREF)
+if reduced:
+  for col in range(min(rows, cols) - 1, -1, -1):
+    pivot_row = None
+    for row in range(rows):
+      if A[row, col] == 1:
+        pivot_row = row
+        break
+
+    if pivot_row is not None:
+      for row in range(pivot_row):
+        A[row] -= A[row, col] * A[pivot_row]
+
+return A
+\end{lstlisting}
+
+Inicialmente, a matriz de entrada $A$ é convertida para o tipo \textit{float} para garantir precisão nas operações. Isso é necessário para evitar erros de arredondamento que podem ocorrer com operações inteiras. Em seguida, para cada coluna da matriz, o algoritmo seleciona o pivô como o maior valor absoluto na parte não processada da coluna. Esse processo é feito para melhorar a estabilidade numérica do algoritmo, garantindo que divisões por valores pequenos sejam minimizadas. Formalmente, o pivô \( a_{ij} \) é escolhido de tal forma que:
+\begin{equation}
+    |a_{ij}| = \max \{|a_{kj}|, k \geq i\}
+\end{equation}
+Se o valor do pivô for zero, a coluna é ignorada, pois não pode ser usada para escalonamento.
+
+Após selecionar o pivô, a linha que o contém é trocada com a linha atual. Essa troca é realizada para garantir que o pivô seja utilizado corretamente na eliminação das entradas abaixo dele. A linha contendo o pivô é normalizada, dividindo todos os seus elementos pelo valor do pivô, de forma que o pivô se torne 1:
+\begin{equation}
+    A[i,:] = \frac{A[i,:]}{A[i,i]}
+\end{equation}
+Esse passo é necessário para garantir que o elemento pivô seja igual a 1, como exigido na definição de REF. Para cada linha abaixo da linha do pivô, subtrai-se uma fração da linha do pivô de modo a zerar os elementos abaixo do pivô:
+\begin{equation}
+    A[j,:] = A[j,:] - A[j,i] \cdot A[i,:] \quad \text{para} \quad j > i
+\end{equation}
+Desta forma, é garantido que todos os elementos abaixo do pivô na mesma coluna sejam nulos.
+
+Se o parâmetro \textit{reduced} for verdadeiro, o algoritmo realiza um passo adicional: para cada pivô, ele elimina os valores acima do pivô de forma que o pivô seja o único elemento não nulo em sua coluna. Isso é feito subtraindo múltiplos da linha do pivô das linhas acima dela:
+\begin{equation}
+    A[k,:] = A[k,:] - A[k,i] \cdot A[i,:] \quad \text{para} \quad k < i
+\end{equation}
+Esse processo transforma a matriz na forma escalonada reduzida de linha.
+
+\subsection{Complexidade Computacional}
+A complexidade computacional deste algoritmo é aproximadamente \( O(n^3) \), onde \( n \) é o número de linhas ou colunas da matriz, o que torna o método adequado para matrizes de tamanho moderado. O fator cúbico provém da necessidade de realizar operações sobre todos os elementos abaixo (ou acima, no caso da forma reduzida) dos pivôs.
+
+\subsection{Exemplo de Uso}
+
+Consideremos a seguinte matriz \( A \):
+\begin{equation}
+  A = \begin{bmatrix}
+  1 & 3 & 3 & 8 & 5 \\
+  0 & 1 & 3 & 10 & 8 \\
+  0 & 0 & 0 & -1 & -4 \\
+  0 & 0 & 0 & 2 & 8
+  \end{bmatrix}
+\end{equation}
+
+Aplicando o algoritmo \textit{row\_echelon\_form} a esta matriz, pode-se obter tanto a forma escalonada de linha quanto a forma escalonada reduzida de linha. Para isso, temos:
+
+\vspace{8pt}
+\begin{lstlisting}[language=Python, caption={Exemplo de uso do algoritmo.}]
+A = [[1, 3, 3, 8, 5],
+    [0, 1, 3, 10, 8],
+    [0, 0, 0, -1, -4],
+    [0, 0, 0, 2, 8]]
+
+# Para obter a forma escalonada de linha (REF)
+echelon_form = row_echelon_form(A, reduced=False)
+print("Forma Escalonada de Linha:")
+print(echelon_form)
+
+# Para obter a forma escalonada reduzida de linha (RREF)
+reduced_echelon_form = row_echelon_form(A, reduced=True)
+print("\nForma Escalonada Reduzida de Linha:")
+print(reduced_echelon_form)
+\end{verbatim}
+\end{lstlisting}
+
+A execução desse código resultará na transformação da matriz \( A \) em suas respectivas formas escalonadas. Quando o parâmetro \texttt{reduced=False}, o algoritmo retorna a matriz na forma escalonada de linha. Quando \texttt{reduced=True}, a matriz resultante será a forma escalonada reduzida de linha. Este exemplo ilustra a flexibilidade do algoritmo em lidar com diferentes formas de redução de matrizes.
+% \section*{Conclusão}
+% O algoritmo apresentado é uma implementação simples, porém robusta, para a redução de matrizes à forma escalonada de linha (REF) e à forma escalonada reduzida de linha (RREF). Ele é amplamente utilizado em problemas de álgebra linear, como a solução de sistemas lineares, cálculo de determinantes e avaliação do posto de uma matriz. A precisão numérica é garantida pelo uso de operações em ponto flutuante e pela escolha inteligente dos pivôs. A versão opcional da redução à forma escalonada reduzida torna o algoritmo ainda mais versátil para aplicações que exigem uma forma mais simplificada da matriz.
