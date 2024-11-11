@@ -1,0 +1,822 @@
+\chapter{Resolução da Lista de Exercícios}
+
+% =========================== Questão 01 ===========================
+
+\begin{question}
+  Encontre a matriz padrão das seguintes transformações lineares:
+  \begin{enumerate}[label=\alph*)]
+    \item $T(v_1, v_2) = (v_1 + 2v_2, 3v_1 - v_2)$
+    \item $T(v_1, v_2) = (v_1 + v_2, 2v_1-v_2, -v_1+3v_2)$
+    \item $T(v_1, v_2, v_3) = (v_1 + v_2, v_1 + v_2 - v_3)$
+    \item $T(v_1, v_2, v_3) = (v_2, 2v_1 + v_3, v_2 - v_3)$
+  \end{enumerate}
+\end{question}
+
+% ========================= Resolução 01 =========================
+\begin{resolution}
+  \vspace{-24pt}
+  \begin{enumerate}[label=\alph*)]
+    \item  A transformação pode ser definida por uma expressão matemática, como \( T(v) = Av \), onde \( A \) é uma matriz que representa a transformação. Assim, calculando as imagens dos vetores da base do domínio $\{(1,0), (0,1)\}$, obtemos:
+          \begin{align}
+            T(1,0) & = (1, 3) & \text{e} &  & T(0, 1) & = (2, -1)
+          \end{align}
+          A matriz padrão é definida como $A = [T(1,0), T(0,1)]$, ou seja:
+          \begin{equation}
+            A = \begin{bmatrix}
+              1 & 2  \\
+              3 & -1
+            \end{bmatrix}
+          \end{equation}
+    \item Seguindo os mesmo procedimentos do item (a), obtemos:
+          \begin{align}
+            T(1,0) & = (1, 2, -1) & \text{e} &  &
+            T(0,1) & = (1, -1, 3)
+          \end{align}
+          Logo,
+          \begin{equation}
+            A = \begin{bmatrix}
+              1 & 1 \\ 2 & -1 \\ -1 & 3
+            \end{bmatrix}
+          \end{equation}
+    \item Seguindo os mesmo procedimentos do item (a), obtemos:
+          \begin{align}
+            T(1,0,0) & = (1, 1), &
+            T(0,1,0) & = (1, 1)  & \text{e} &  &
+            T(0,0,1) & = (0, -1)
+          \end{align}
+          Logo,
+          \begin{equation}
+            A = \begin{bmatrix}
+              1 & 1 & 0 \\ 1 & 1 & -1
+            \end{bmatrix}
+          \end{equation}
+    \item Seguindo os mesmo procedimentos do item (a), obtemos:
+          \begin{align}
+            T(1,0,0) & = (0, 2, 0), &
+            T(0,1,0) & = (1, 0, 1)  & \text{e} &  &
+            T(0,0,1) & = (0, 1, -1)
+          \end{align}
+          Logo,
+          \begin{equation}
+            A = \begin{bmatrix}
+              0 & 1 & 0  \\
+              2 & 0 & 1  \\
+              0 & 1 & -1
+            \end{bmatrix}
+          \end{equation}
+  \end{enumerate}
+\end{resolution}
+
+% =========================== Questão 02 ===========================
+\begin{question}
+  Encontre as matrizes padrões das transformações lineares $T$ que agem da seguinte forma:
+  \begin{enumerate}[label=\alph*)]
+    \item $T(1, 0) = (3, -1)$ and $T(0, 1) = (1, 2)$.
+    \item $T(1, 0) = (1, 3)$ and $T(1, 1) = (3, 7)$.
+    \item $T(1, 0) = (-1, 0, 1)$ and $T(0, 1) = (2, 3, 0)$.
+    \item $T(1,0,0) = (2, 1)$ and $T(0, 1, 0) = (-1, 1)$ and $T(0,0,1) = (0,3)$.
+    \item $T(1,0,0) = (1, 2, 3)$, $T(1, 1, 0) = (0, 1, 2)$ and $T(1,1,1) = (0,0,1)$
+  \end{enumerate}
+\end{question}
+
+% ========================= Resolução 02 =========================
+\begin{resolution}
+  \vspace{-24pt}
+  \begin{enumerate}[label=\alph*)]
+    \item As operações foram realizadas com os vetores que formam uma base. Portanto, a matriz padrão é definida como $A = [T(1,0), T(0,1)]$, ou seja:
+          \begin{equation}
+            A = \begin{bmatrix}
+              3 & 1 \\
+              1 & 2
+            \end{bmatrix}
+          \end{equation}
+    \item Temos que para encontrar o segundo vetor que forma base com o vetor $(1,0)$, podemos usar a propriedade de vetores linearmente dependentes para fragmentar o vetor $(1,1)$:
+          \begin{gather}
+            (1, 1) = (1, 0) + (0, 1) \\
+            T(1,1) = T(1,0) + T(0,1) \\
+            T(0,1) = T(1,1) - T(1,0) \\
+            T(0,1) = (3, 7) - (1, 3) \\
+            T(0,1) = (2, 4)
+          \end{gather}
+          Logo, a matriz padrão é:
+          \begin{equation}
+            A = \begin{bmatrix}
+              1 & 2 \\
+              3 & 4
+            \end{bmatrix}
+          \end{equation}
+    \item As operações foram realizadas com os vetores que formam uma base. Portanto, a matriz padrão é definida como $A = [T(1,0), T(0,1)]$, ou seja:
+          \begin{equation}
+            A = \begin{bmatrix}
+              -1 & 2 \\
+              0  & 3 \\
+              1  & 0
+            \end{bmatrix}
+          \end{equation}
+    \item As operações foram realizadas com os vetores que formam uma base. Portanto, a matriz padrão é definida como $A = [T(1,0, 0), T(0,1, 0), T(0, 0, 1)]$, ou seja:
+          \begin{equation}
+            A = \begin{bmatrix}
+              2 & -1 & 0 \\
+              1 & 1  & 3
+            \end{bmatrix}
+          \end{equation}
+    \item A matriz padrão pode ser obtida seguindo os mesmos procedimentos apresentados no item (b). Para o vetor $(1, 1, 0)$:
+          \begin{gather}
+            (1,1,0) = (1,0,0) + (0,1,0) \\
+            T(1,1,0) = T(1,0,0) + T(0,1,0) \\
+            T(0,1,0) = T(1,1,0) - T(1,0,0) \\
+            T(0,1,0) = (0,1,2) - (1,2,3) \\
+            T(0,1,0) = (-1, -1, -1)
+          \end{gather}
+          Para o vetor $(1, 1, 1)$:
+          \begin{gather}
+            (1, 1, 1) = (1, 0, 0) + (0, 1, 0) + (0, 0, 1) \\
+            T(1, 1, 1) = T(1, 0, 0) + T(0, 1, 0) + T(0, 0, 1) \\
+            T(0, 0, 1) = T(1, 1, 1) - T(1, 0, 0) - T(0, 1, 0)  \\
+            T(0,0,1) = (0,0,1) - (1, 2, 3) - (-1, -1, -1) \\
+            T(0,0,1) = (0, -1, -1)
+          \end{gather}
+          Logo, a matriz padrão é:
+          \begin{equation}
+            A = \begin{bmatrix}
+              1 & -1 & 0  \\
+              2 & -1 & -1 \\
+              3 & -1 & -1
+            \end{bmatrix}
+          \end{equation}
+  \end{enumerate}
+\end{resolution}
+
+% =========================== Questão 03 ===========================
+\begin{question}
+  Encontre a matriz padrão da composição de transformações lineares $S \circ T$, quando $S$ e $T$ são definidas como segue:
+  \begin{enumerate}[label=\alph*)]
+    \item $S(v_1, v_2) = (2v_2, v_1 + v_2)$ and $T(v_1, v_2) = (v_1 + 2v_2, 3v_1 - v_2)$.
+    \item $S(v_1, v_2) = (v_1 - 2 v_2, 3v_1 + v_2)$ and $T(v_1, v_2, v_3) = (v_1 + v_2, v_1 + v_2 - v_3)$.
+    \item $S(v_1, v_2, v_3) = (v_1, v_1 + v_2, v_1 + v_2 + v_3)$ and $T(v_1, v_2) = (v_1 + v_2, 2v_1 - v_2, -v_1 + 3v_2)$.
+  \end{enumerate}
+\end{question}
+
+% ========================= Resolução 03 =========================
+\begin{resolution}
+  \vspace{-24pt}
+  \begin{enumerate}[label=\alph*)]
+    \item A matriz padrão da composição é obtida pela multiplicação entre cada matriz padrão das transformação lineares da composição. A matriz padrão da transformação linear $S$ é:
+          \begin{equation}
+            A_S =\begin{bmatrix}
+              0 & 2 \\
+              1 & 1
+            \end{bmatrix},
+          \end{equation}
+          e da transformação linear $T$,
+          \begin{equation}
+            A_T = \begin{bmatrix}
+              1 & 2  \\
+              3 & -1
+            \end{bmatrix}.
+          \end{equation}
+          Desta forma, a matriz padrão da composição é:
+          \begin{equation}
+            A_{S \circ T} = A_S \cdot A_T \Rightarrow A_{S \circ T} = \begin{bmatrix}
+              6 & -2 \\ 4 & 1
+            \end{bmatrix}
+          \end{equation}
+
+    \item Seguindo os mesmos passos do item (a), temos que a matriz padrão da transformação $S$ é:
+          \begin{equation}
+            A_S = \begin{bmatrix}
+              1 & -2 \\
+              3 & 1
+            \end{bmatrix},
+          \end{equation}
+          e da transformação $T$:
+          \begin{equation}
+            A_T = \begin{bmatrix}
+              1 & 1 & 0 \\ 1 & 1 & -1
+            \end{bmatrix}
+          \end{equation}
+          Desta forma, a matriz padrão da composição é:
+          \begin{equation}
+            A_{S \circ T} = A_S \cdot A_T \Rightarrow A_{S \circ T} = \begin{bmatrix}
+              -1 & -1 & 2 \\ 4 & 4 & -1
+            \end{bmatrix}
+          \end{equation}
+
+    \item Seguindo os mesmos passos do item (a), temos que a matriz padrão da transformação $S$ é:
+          \begin{equation}
+            A_S = \begin{bmatrix}
+              1 & 0 & 0 \\
+              1 & 1 & 0 \\
+              1 & 1 & 1
+            \end{bmatrix},
+          \end{equation}
+          e da transformação $T$:
+          \begin{equation}
+            A_T = \begin{bmatrix}
+              1  & 1  & 0 \\
+              2  & -1 & 0 \\
+              -1 & 3  & 0
+            \end{bmatrix}
+          \end{equation}
+          Desta forma, a matriz padrão da composição é:
+          \begin{equation}
+            A_{S \circ T} = A_S \cdot A_T \Rightarrow A_{S \circ T} = \begin{bmatrix}
+              1 & 1 & 0 \\ 3 & 0 & 0 \\ 2 & 3 & 0
+            \end{bmatrix}
+          \end{equation}
+  \end{enumerate}
+\end{resolution}
+
+% =========================== Questão 04 ===========================
+\begin{question}
+  Determine quais das seguintes funções $T: \mathbb{R}^2 \rightarrow \mathbb{R}^2$ são e não são transformações lineares. Se $T$ é uma transformação linear, encontre a matriz padrão. Se não for uma transformação linear, justifique sua resposta (i.e., mostre uma propriedade da transformação linear que falhe).
+  \begin{enumerate}[label=\alph*)]
+    \item $T(v_1, v_2) = (v_1^2, v_2)$.
+    \item $T(v_1, v_2) = (v_1 + 2v_2, v_2 - v_1)$.
+    \item $T(v_1, v_2) = (\sin(v_1) + v_2, v_1 - \cos(v_2))$.
+  \end{enumerate}
+\end{question}
+
+% ========================= Resolução 04 =========================
+\begin{resolution}
+  \vspace{-24pt}
+  \begin{enumerate}[label=\alph*)]
+    \item Seja $\alpha$, $\beta \in \mathbb{R}$, $(a_1, a_2)$ e $(b_1, b_2) \in \mathbb{R}^2$, têm-se:
+          \begin{align}
+            T(\alpha(a_1,a_2) + \beta(b_1,b_2))               & := \alpha T(a_1, a_2) + \beta T(b_1, b_2)  \\
+            T(\alpha a_1 + \beta b_1, \alpha a_2 + \beta b_2) & = \alpha (a_1^2, a_2) + \beta (b_1^2, b_2)
+          \end{align}
+          \begin{align}
+            ((\alpha a_1 + \beta b_1)^2, \alpha a_2 + \beta b_2) & = (\alpha a_1^2 + \beta b_1^2, \alpha a_2 + \beta b_2)
+          \end{align}
+          A igualdade resultante é claramente falsa. Logo, a função $T$ não é uma transformação linear.
+
+    \item  Seja $\alpha$, $\beta \in \mathbb{R}$, $(a_1, a_2)$ e $(b_1, b_2) \in \mathbb{R}^2$, têm-se:
+          \begin{align}
+            T(\alpha(a_1,a_2) + \beta(b_1,b_2))               & := \alpha T(a_1, a_2) + \beta T(b_1, b_2)                        \\
+            T(\alpha a_1 + \beta b_1, \alpha a_2 + \beta b_2) & = \alpha (a_1 + 2a_2, a_2 - a_1) + \beta (b_1 + 2b_2, b_2 - b_1)
+          \end{align}
+          \vspace{-58pt}
+          \begin{multline}
+            ((\alpha a_1 + \beta b_1) - 2 (\alpha a_2 + \beta b_2), (\alpha a_2 + \beta b_2) - (\alpha a_1 + \beta b_1))  \\ = \alpha (a_1 + 2a_2, a_2 - a_1) + \beta (b_1 + 2b_2, b_2 - b_1)
+          \end{multline}
+          \vspace{-58pt}
+          \begin{multline}
+            (\alpha (a_1 - 2 \alpha_2) + \beta (b_1 - 2 \beta b_1), \alpha(a_2 - a_1) + \beta(b_2 - b_1)) \\ = (\alpha (a_1 - 2 \alpha_2) + \beta (b_1 - 2 \beta b_1), \alpha(a_2 - a_1) + \beta(b_2 - b_1))
+          \end{multline}
+          Devido a igualdade resultante ser verdadeira, então a função $T$ é uma transformação linear, cuja matriz padrão é:
+          \begin{equation}
+            A_T = \begin{bmatrix}
+              1  & 2 \\
+              -1 & 1
+            \end{bmatrix}
+          \end{equation}
+
+    \item  Seja $\alpha$, $\beta \in \mathbb{R}$, $(a_1, a_2)$ e $(b_1, b_2) \in \mathbb{R}^2$, têm-se:
+          \begin{align}
+            T(\alpha(a_1,a_2) + \beta(b_1,b_2))               & := \alpha T(a_1, a_2) + \beta T(b_1, b_2)                                          \\
+            T(\alpha a_1 + \beta b_1, \alpha a_2 + \beta b_2) & = \alpha (\sin a_1 + a_2, a_1 - \cos a_2) + \beta (\sin b_1 + b_2, b_1 - \cos b_2)
+          \end{align}
+          \vspace{-58pt}
+          \begin{multline}
+            (\sin(\alpha a_1 + \beta b_1) + (\alpha a_2 + \beta b_2), (\alpha a_1 + \beta b_1) - \cos(\alpha a_2 + \beta b_2)) \\ = (\alpha (\sin a_1 + a_2) + \beta (\sin b_1 + b_2), \alpha (a_1 - \cos a_2) + \beta (b_1 - \cos b_2))
+          \end{multline}
+          \vspace{-58pt}
+          \begin{multline}
+            (\sin(\alpha a_1 + \beta b_1) + (\alpha a_2 + \beta b_2), (\alpha a_1 + \beta b_1) - \cos(\alpha a_2 + \beta b_2)) \\ = ((\alpha \sin a_1 + \beta \sin b_1) + (\alpha a_2  + \beta b_2), (\alpha a_1 + \beta b_1) - (\alpha \cos a_2  + \beta \cos b_2))
+          \end{multline}
+          \vspace{-50pt}
+          \begin{gather}
+            (\sin(\alpha a_1 + \beta b_1), - \cos(\alpha a_2 + \beta b_2)) = ((\alpha \sin a_1 + \beta \sin b_1), - (\alpha \cos a_2  + \beta \cos b_2))
+          \end{gather}
+          A desigualdade resultante é claramente falsa. Portanto, a função $T$ não é uma transformação linear.
+  \end{enumerate}
+\end{resolution}
+
+% =========================== Questão 05 ===========================
+\begin{question}
+  Use eliminação de Gauss-Jordan para calcular a matriz escalonada reduzida de cada uma das seguintes matrizes:
+  \begin{multicols}{3}
+    \begin{enumerate}[label=\alph*)]
+      \item $\begin{bmatrix}
+                1 & 2 \\ 3 & 4
+              \end{bmatrix}$.
+      \item $\begin{bmatrix}
+                2 & 3 & -1 \\ 4 & 1 & 3
+              \end{bmatrix}$.
+      \item $\begin{bmatrix}
+                1 & 2 \\ 3 & 6 \\ -1 & -2
+              \end{bmatrix}$.
+      \item $\begin{bmatrix}
+                3 & 9 & 3 \\ 1 & 3 & 0 \\ 1 & 3 & 2
+              \end{bmatrix}$.
+      \item $\begin{bmatrix}
+                -1 & 2 & 2 \\ 4 & -1 & 1 \\ 2 & 4 & 2
+              \end{bmatrix}$.
+      \item $\begin{bmatrix}
+                -1 & 2  & 7  & 2 \\
+                4  & -1 & -7 & 1 \\
+                2  & 4  & 10 & 2
+              \end{bmatrix}$.
+    \end{enumerate}
+  \end{multicols}
+  \vspace{8pt}
+\end{question}
+
+% ========================= Resolução 05 =========================
+\begin{resolution}
+  As matrizes escalonadas foram obtidas a partir do algoritmo implementado na atividade realizada na disciplina sobre a forma reduzida de Echelon.
+  \begin{multicols}{3}
+    \begin{enumerate}[label=\alph*)]
+      \item $\begin{bmatrix}
+                1 & 0 \\ 0 & 1
+              \end{bmatrix}$
+
+      \item  $\begin{bmatrix}
+                1 & 0 & 1  \\
+                0 & 1 & -1
+              \end{bmatrix}$
+
+      \item  $\begin{bmatrix}
+                1 & 2 \\ 0 & 0 \\ 0 & 0
+              \end{bmatrix}$
+
+      \item $\begin{bmatrix}
+                1 & 3 & 0 \\
+                0 & 0 & 1 \\
+                0 & 0 & 0
+              \end{bmatrix}$
+
+      \item $\begin{bmatrix}
+                1 & 0 & 0 \\
+                0 & 1 & 0 \\
+                0 & 0 & 1
+              \end{bmatrix}$
+
+      \item $\begin{bmatrix}
+                1 & 0 & -1 & 0 \\
+                0 & 1 & 3  & 0 \\
+                0 & 0 & 0  & 1
+              \end{bmatrix}$
+    \end{enumerate}
+  \end{multicols}
+\end{resolution}
+
+% =========================== Questão 06 ===========================
+\begin{question}
+  Use um software computacional para encontrar todas as soluções de ada um dos sistemas de equações lineares a seguir:
+  \begin{multicols}{2}
+    \begin{enumerate}[label=\alph*)]
+      \item $\begin{cases}
+                6v + 5w +3x-2y-2z=1 \\
+                3v-w+x+5y+4z=2      \\
+                3v + 4w+x+3y+4z=3   \\
+                2v+6w+x-2y-z=4
+              \end{cases}$.
+      \item $\begin{cases}
+                v-w+2x+6y+6z =3 \\
+                4v+3w-y+4z=0    \\
+                5v+2-2x-2y-2z=2 \\
+                w-2x+3y-2z=-1   \\
+                v+5w-x+5z=3
+              \end{cases}$.
+    \end{enumerate}
+  \end{multicols}
+  \vspace{8pt}
+\end{question}
+
+% ========================= Resolução 06 =========================
+\begin{resolution}
+  \vspace{-24pt}
+  \begin{enumerate}[label=\alph*)]
+    \item $v=\frac{3\left(-17w+31\right)}{2},\:x=53w-99,\:y=-\frac{-5w+1}{2},\:z=3\left(w-3\right)$
+    \item $v=-\frac{56}{80},\:x=-\frac{891}{80},\:y=-\frac{13}{10},\:w=-\frac{149}{20},\:z=\frac{477}{80}$.
+  \end{enumerate}
+\end{resolution}
+
+% =========================== Questão 07 ===========================
+\begin{question}
+  Determine qual dos seguintes conjuntos são e não são subespaços.
+  \begin{enumerate}[label=\alph*)]
+    \item $\{(x, y) \in \mathbb{R}^2 : x + 2y = 0\}$.
+    \item $\{(x, y) \in \mathbb{R}^2 : x+y \geq 0\}$.
+    \item $\{(x, y) \in \mathbb{R}^2 : xy > 0\}$.
+    \item $\{(x, y, z) \in \mathbb{R}^3 : xy + yz = 0\}$.
+  \end{enumerate}
+\end{question}
+
+% ========================= Resolução 07 =========================
+\begin{resolution}
+  \vspace{-24pt}
+  \begin{enumerate}[label=\alph*)]
+    \item Seja os vetores $(x_1, y_1)$ e $(x_2, y_2)$ pertencentes ao conjunto. A soma de ambos os vetores também deve pertencer ao conjunto. Assim:
+          \begin{equation}
+            (x_1, y_1) + (x_2, y_2) = (x_1 + x_2, y_1 + y_2).
+          \end{equation}
+          Como $x_1 = -2y_1$ e $x_2 = -2y_2$. Então,
+          \begin{equation}
+            (x_1, y_1) + (x_2, y_2) = (-2y_1-2y_2, y_1 + y_2).
+          \end{equation}
+          Logo,
+          \begin{gather}
+            -2y_1-2y_2 + 2 (y_1 + y_2) = 0 \\
+            0 = 0
+          \end{gather}
+          Portanto, o conjunto é fechado sob adição. Seja $\alpha \in \mathbb{R}$, temos que $\alpha (x_1, y_1)$ deve pertencer ao conjunto. Ou seja, $(\alpha x_1, \alpha y_1)$ pertence ao conjunto. No entanto:
+          \begin{gather}
+            \alpha x_1  + 2 \alpha y_1 = 0 \\
+            x_1  + 2 y_1 = 0
+          \end{gather}
+          Logo, o conjunto é fechado sob a multiplicação escalar. Além disso, o conjunto claramente contém o vetor nulo $(0,0)$. Portanto, o conjunto é um subespaço de $\mathbb{R}^2$.
+
+    \item Seja $\alpha \in \mathbb{R}^2$ e o vetor $(x_1, y_1)$ pertencente ao conjunto, têm-se que $\alpha (x_1, y_1)$ deve pertencer ao conjunto também. Assim:
+          \begin{gather}
+            \alpha x_1 + \alpha y_1 \geq 0
+          \end{gather}
+
+          Esta inequação nem sempre é verdadeira, dadas as regras estabelecidas ao conjunto. Se $x_1, y_1 \geq 0$ e $\alpha < 0$, a inequação é falsa. Portanto, o conjunto não é fechado sob a multiplicação escalar e, consequentemente, não é um subespaço de $\mathbb{R}^2$.
+
+    \item  Seja $\alpha \in \mathbb{R}^2$ e o vetor $(x_1, y_1)$ pertencente ao conjunto, têm-se que $\alpha (x_1, y_1)$ deve pertencer ao conjunto também. Assim:
+          \begin{gather}
+            \alpha x_1 y_1 > 0
+          \end{gather}
+
+          Esta inequação nem sempre é verdadeira, dadas as regras estabelecidas ao conjunto. Se $x_1, y_1 \geq 0$ e $\alpha < 0$, a inequação é falsa. Portanto, o conjunto não é fechado sob a multiplicação escalar e, consequentemente, não é um subespaço de $\mathbb{R}^2$
+
+    \item Seja os vetores $(x_1, y_1, z_1)$ e $(x_2, y_2, z_2)$ pertencentes ao conjunto. A soma de ambos os vetores também deve perecer ao conjunto. Temos que:
+          \begin{equation}
+            (x_1, y_1, z_1) + (x_2, y_2, z_2) = (x_1 + x_2, y_1 + y_2, z_1 + z_2).
+          \end{equation}
+          Como $x_i y_i + y_i z_i = 0$, $i = 1, 2$ e
+          \begin{equation}
+            (x_1 + x_2) (y_1 + y_2) + (y_1 + y_2)(z_1 + z_2) = 0.
+          \end{equation}
+          Têm-se:
+          \begin{gather}
+            x_1y_1 + x_1y_2 + x_2 y_1 + x_2 y_2 + y_1 z_1 + y_1 z_2 + y_2 z_1 + y_2 z_2 = 0 \\
+            x_1y_2 + x_2 y_1 + y_1 z_2 + y_2 z_1 = 0
+          \end{gather}
+
+          Não há regras no conjunto que garantem que a equação resultante seja sempre verdadeira. Portanto, o conjunto não é fechado sob a adição e, consequentemente, não é um subconjunto de $\mathbb{R}^3$.
+  \end{enumerate}
+\end{resolution}
+
+% =========================== Questão 08 ===========================
+\begin{question}
+  Determine qual dos seguintes conjuntos são e não linearmente independentes.
+  \begin{enumerate}[label=\alph*)]
+    \item $\{(1, 2), (3, 4)\}$.
+    \item $\{(1, 0, 1), (1, 1, 1)\}$.
+    \item $\{(1, 0, -1), (1, 1, 1), (1, 2, -1)\}$.
+    \item $\{(1, 2, 3), (4, 5, 6), (7, 8, 9)\}$.
+    \item $\{(1, 1), (2, 1), (3, -2)\}$.
+    \item $\{(2, 1, 0), (0,0,0), (1, 1, 2)\}$.
+    \item $\{(1, 2, 4, 1), (2, 4, -1, 3), (-1, 1, 1, -1)\}$.
+  \end{enumerate}
+\end{question}
+
+% ========================= Resolução 08 =========================
+\begin{resolution}
+  \vspace{-24pt}
+  \begin{enumerate}[label=\alph*)]
+    \item O conjunto é LI pois os vetores não podem ser obtidos por meio de um combinação linear entre eles.
+    \item O conjunto é LI pois os vetores não podem ser obtidos por meio de um combinação linear entre eles.
+    \item O conjunto é LI pois os vetores não podem ser obtidos por meio de um combinação linear entre eles.
+    \item O conjunto é LI pois os vetores não podem ser obtidos por meio de um combinação linear entre eles.
+    \item O conjunto é LD pois pelo menos um dos vetores pode ser obtido como combinação linear dos demais:
+          \begin{equation}
+            (3, -2) = - 7 (1, 1) + 5 (2, 1)
+          \end{equation}
+    \item O conjunto é LD pois contém o vetor nulo.
+    \item O conjunto é LI pois os vetores não podem ser obtidos por meio de um combinação linear entre eles.
+  \end{enumerate}
+\end{resolution}
+
+% =========================== Questão 09 ===========================
+\begin{question}
+  Use um software computacional para determinar qual dos seguintes conjuntos de vetores gera todo o $\mathbb{R}^4$.
+  \begin{enumerate}[label=\alph*)]
+    \item $\{(1, 2, 3, 4), (3, 1, 4, 2), (2, 4, 1, 3)\}$.
+    \item $\{(4, 2, 5, 2), (3, 1, 2, 4), (1, 4, 2, 3), (3, 1, 4, 2)\}$.
+    \item $\{(4, 4, 4, 3), (3, 3, -1, 1), (-1, 2, 1, 2), (1, 0, 1, -1), (3, 3, 2, 2)\}$.
+  \end{enumerate}
+\end{question}
+
+% ========================= Resolução 09 =========================
+\begin{resolution}
+  \vspace{-24pt}
+  \begin{enumerate}[label=\alph*)]
+    \item Não, o conjunto não é gerador do espaço vetorial $\mathbb{R}^4$ pois contém apenas 3 vetores, quantidade menor que a dimensão do espaço vetorial.
+    \item Sim, o conjunto é gerador do espaço vetorial $\mathbb{R}^4$.
+    \item Sim, o conjunto é gerador do espaço vetorial $\mathbb{R}^4$.
+  \end{enumerate}
+\end{resolution}
+
+% =========================== Questão 10 ===========================
+\begin{question}
+  Use um software computacional para determinar se $v = (1, 2, 3, 4, 5)$ estar ou não na imagem (range) da matriz dada.
+  \begin{multicols}{2}
+    \begin{enumerate}[label=\alph*)]
+      \item $\begin{bmatrix}
+                3  & -1 & 1  & 0 & -1 \\
+                2  & 1  & -1 & 4 & 0  \\
+                1  & 1  & -1 & 1 & 2  \\
+                2  & 1  & 2  & 0 & 0  \\
+                -1 & 3  & -1 & 3 & 2
+              \end{bmatrix}$.
+      \item $\begin{bmatrix}
+                4  & 1  & 2  & 3 & 2 & 2 & -1 \\
+                0  & -1 & 4  & 2 & 0 & 4 & 2  \\
+                -1 & 2  & 0  & 2 & 4 & 3 & 3  \\
+                3  & 1  & -1 & 0 & 2 & 2 & 3  \\
+                -1 & 0  & -1 & 4 & 3 & 0 & 3
+              \end{bmatrix}$.
+    \end{enumerate}
+  \end{multicols}
+  \vspace{8pt}
+\end{question}
+
+% ========================= Resolução 10 =========================
+\begin{resolution}
+  \vspace{-24pt}
+  \begin{enumerate}[label=\alph*)]
+    \item Não, o vetor não pertence à imagem da matriz.
+    \item Sim, o vetor pertence à imagem da matriz.
+  \end{enumerate}
+\end{resolution}
+
+% =========================== Questão 11 ===========================
+\begin{question}
+  Para quais valor de $k$ o seguinte conjunto de vetores é linearmente independente?
+  \vspace{-12pt}
+  $$\{(1, 2, 3), (-1, k, 1), (1, 1, 0)\}$$
+\end{question}
+
+% ========================= Resolução 11 =========================
+\begin{resolution}
+  Para determinar os valores de \( k \) para os quais o conjunto de vetores \( \{(1, 2, 3), (-1, k, 1), (1, 1, 0)\} \) é linearmente independente, é necessário verificar se a única solução da combinação linear
+  \begin{equation}
+    c_1(1, 2, 3) + c_2(-1, k, 1) + c_3(1, 1, 0) = (0, 0, 0)
+  \end{equation}
+  é a trivial, ou seja, \( c_1 = c_2 = c_3 = 0 \). Isso leva à seguinte equação matricial:
+  \begin{equation}
+    \begin{bmatrix}
+      1 & -1 & 1 \\
+      2 & k  & 1 \\
+      3 & 1  & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+      c_1 \\
+      c_2 \\
+      c_3
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+      0 \\
+      0 \\
+      0
+    \end{bmatrix}
+  \end{equation}
+  O conjunto de vetores será linearmente independente se o determinante da matriz acima for diferente de zero:
+  \begin{equation}
+    \text{det} \begin{bmatrix}
+      1 & -1 & 1 \\
+      2 & k  & 1 \\
+      3 & 1  & 0
+    \end{bmatrix}
+  \end{equation}
+  Calculando o determinante, temos:
+  \begin{equation}
+    \text{det} = 1 \begin{vmatrix}
+      k & 1 \\
+      1 & 0
+    \end{vmatrix} - (-1) \begin{vmatrix}
+      2 & 1 \\
+      3 & 0
+    \end{vmatrix} + 1 \begin{vmatrix}
+      2 & k \\
+      3 & 1
+    \end{vmatrix}
+  \end{equation}
+
+  Calculando os determinantes 2x2:
+
+  \begin{itemize}
+    \item \( \begin{vmatrix}
+            k & 1 \\
+            1 & 0
+          \end{vmatrix} = (k)(0) - (1)(1) = -1 \)
+
+    \item \( \begin{vmatrix}
+            2 & 1 \\
+            3 & 0
+          \end{vmatrix} = (2)(0) - (1)(3) = -3 \)
+
+    \item \( \begin{vmatrix}
+            2 & k \\
+            3 & 1
+          \end{vmatrix} = (2)(1) - (k)(3) = 2 - 3k \)
+  \end{itemize}
+  Substituindo esses valores no determinante original:
+  \begin{gather}
+    \text{det} = 1(-1) - (-1)(-3) + 1(2 - 3k) \\
+    \text{det} = -1 - 3 + (2 - 3k) \\
+    \text{det} = -4 + 2 - 3k = -2 - 3k
+  \end{gather}
+  Para que os vetores sejam linearmente independentes, precisamos que:
+  \begin{equation}
+    -2 - 3k \neq 0
+  \end{equation}
+  Resolvendo a inequação:
+  \begin{equation}
+    -3k \neq 2 \quad \Rightarrow \quad k \neq -\frac{2}{3}
+  \end{equation}
+  Portanto, o conjunto de vetores \( \{(1, 2, 3), (-1, k, 1), (1, 1, 0)\} \) é linearmente independente para todos os valores de \( k \) exceto \( k = -\frac{2}{3} \). \\
+\end{resolution}
+
+% =========================== Questão 12 ===========================
+\begin{question}
+  Para cada uma das matrizes \( A \) a seguir, encontre bases para cada um dos seguintes subespaços: \( \operatorname{range}(A) \), \( \operatorname{null}(A) \), \( \operatorname{range}(A^T) \) e \( \operatorname{null}(A^T) \).
+  \begin{multicols}{3}
+    \begin{enumerate}[label=\alph*)]
+      \item $\begin{bmatrix}
+                1 & 2 & 0 & 3 & 0 \\
+                0 & 0 & 1 & 1 & 0 \\
+                0 & 0 & 0 & 0 & 1
+              \end{bmatrix}$
+      \item $\begin{bmatrix}
+                0 & 0 & 1 & 1 \\
+                0 & 1 & 1 & 0 \\
+                1 & 1 & 0 & 0
+              \end{bmatrix}$
+
+      \item $\begin{bmatrix}
+                0  & -4 & 0 & 2 & 1 \\
+                -1 & 2  & 1 & 2 & 1 \\
+                -2 & 0  & 2 & 6 & 3
+              \end{bmatrix}$
+    \end{enumerate}
+  \end{multicols}
+  \vspace{8pt}
+\end{question}
+
+% ========================= Resolução 12 =========================
+\begin{resolution}
+  \vspace{-24pt}
+  \begin{enumerate}[label=\alph*)]
+    \item A matriz contém três vetores colunas LI (1, 3, 5). Desta forma, o $\operatorname{range}(A)$ é determinado pelo conjunto gerador contendo estes vetores LI. Ou seja,
+          \begin{equation}
+            \operatorname{range}(A) = \operatorname{span} (\{(1, 0, 0), (0, 1, 0), (0, 0, 1)\}).
+          \end{equation}
+          O $\operatorname{null}(A)$ ou $\operatorname{kernel}(A)$ é formado pela base definida pelos vetores colunas das variáveis livres. Desta forma:
+          \begin{equation}
+            \operatorname{null}(A) = \operatorname{span} (\{(2, 0, 0), (3, 1, 0)\}).
+          \end{equation}
+          De forma semelhante, têm que $\operatorname{range}(A^{\top})$ é determinado pelo conjunto gerador contendo estes vetores linhas LI.
+          \begin{equation}
+            \operatorname{range}(A) = \operatorname{span} (\{(1, 2, 0, 3, 0), (0, 0, 1, 1, 0), (0, 0, 0, 0, 1)\}).
+          \end{equation}
+          A forma escalonada reduzida da matriz $A^{\top}$ é:
+          \begin{equation}
+            \tilde A =\begin{bmatrix}
+              1 & 0 & 0 & 0 & 0 \\
+              0 & 1 & 0 & 0 & 0 \\
+              0 & 0 & 1 & 0 & 0 \\
+            \end{bmatrix} ^{\top}
+          \end{equation}
+          Não há variáveis livres, logo:
+          \begin{equation}
+            \operatorname{null}(A^{\top}) = \{0\}
+          \end{equation}
+    \item A matriz contém três vetores colunas LI (1, 2, 3). Desta forma, o $\operatorname{range}(A)$ é determinado pelo conjunto gerador contendo estes vetores LI. Ou seja,
+          \begin{equation}
+            \operatorname{range}(A) = \operatorname{span} (\{(0, 0, 1), (0, 1, 1), (1, 1, 0)\}).
+          \end{equation}
+          O $\operatorname{null}(A)$ ou $\operatorname{kernel}(A)$ é formado pela base definida pelos vetores colunas das variáveis livres. Desta forma:
+          \begin{equation}
+            \operatorname{null}(A) = \operatorname{span} (\{(1, 0, 0)\}).
+          \end{equation}
+          De forma semelhante, têm que $\operatorname{range}(A^{\top})$ é determinado pelo conjunto gerador contendo estes vetores linhas LI.
+          \begin{equation}
+            \operatorname{range}(A) = \operatorname{span} (\{(0, 0, 1, 1), (0, 1, 1, 0), (1, 1, 0, 0)\}).
+          \end{equation}
+          A forma escalonada reduzida da matriz $A^{\top}$ é:
+          \begin{equation}
+            \tilde A =\begin{bmatrix}
+              1 & 0 & 0 & 0 \\
+              0 & 1 & 0 & 0 \\
+              0 & 0 & 1 & 0 \\
+            \end{bmatrix} ^{\top}
+          \end{equation}
+          Não há variáveis livres, logo:
+          \begin{equation}
+            \operatorname{null}(A^{\top}) = \{0\}
+          \end{equation}
+
+    \item A matriz contém dois vetores colunas LI (1, 2). Desta forma, o $\operatorname{range}(A)$ é determinado pelo conjunto gerador contendo estes vetores LI. Ou seja,
+          \begin{equation}
+            \operatorname{range}(A) = \operatorname{span} (\{(0, -1, -2), (-4, 2, 0)\}).
+          \end{equation}
+          O $\operatorname{null}(A)$ ou $\operatorname{kernel}(A)$ é formado pela base definida pelos vetores colunas das variáveis livres. Desta forma:
+          \begin{equation}
+            \operatorname{null}(A) = \operatorname{span} (\{(0, 1, 2), (2, 2, 6), (1, 1, 3)\}).
+          \end{equation}
+          De forma semelhante, têm que $\operatorname{range}(A^{\top})$ é determinado pelo conjunto gerador contendo estes vetores linhas LI.
+          \begin{equation}
+            \operatorname{range}(A) = \operatorname{span} (\{(0, -4, 0, 2, 1), (-1, 2, 1, 2, 1)\}).
+          \end{equation}
+          Assim,
+          \begin{equation}
+            \operatorname{null}(A^{\top}) = \operatorname{span}(\{1, 2, 0, 0, 0\})
+          \end{equation}
+  \end{enumerate}
+\end{resolution}
+
+% =========================== Questão 13 ===========================
+\begin{question}
+  Dado
+  \begin{equation}
+    \begin{bmatrix}
+      2  & -1 & 0  & 0  & 0  & 0  \\
+      -1 & 3  & -1 & 0  & 1  & 0  \\
+      0  & -1 & 4  & -1 & 0  & 0  \\
+      0  & 0  & -1 & 4  & -1 & 0  \\
+      0  & 0  & 0  & -1 & 3  & -1 \\
+      0  & 1  & 0  & 0  & -1 & 2
+    \end{bmatrix}
+  \end{equation}
+  \vspace{8pt}
+  Utilize um software computacional para calcular decomposição LU da matriz $A$.
+\end{question}
+
+% ========================= Resolução 13 =========================
+\begin{resolution}
+  Foi obtida a seguinte matriz L:
+  \begin{equation}
+    L = \begin{bmatrix}
+      1    & 0    & 0           & 0           & 0           & 0 \\
+      -0.5 & 1    & 0           & 0           & 0           & 0 \\
+      0    & -0.4 & 1           & 0           & 0           & 0 \\
+      0    & 0    & -0.27777778 & 1           & 0           & 0 \\
+      0    & 0    & 0           & -0.26865672 & 1           & 0 \\
+      0    & 0.4  & 0.11111111  & 0.02985075  & -0.51351351 & 1
+    \end{bmatrix},
+  \end{equation}
+  e matriz U:
+  \begin{equation}
+    U = \begin{bmatrix}
+      2 & -1  & 0   & 0          & 0           & 0          \\
+      0 & 2.5 & -1  & 0          & 1           & 0          \\
+      0 & 0   & 3.6 & -1         & 0.4         & 0          \\
+      0 & 0   & 0   & 3.72222222 & -0.88888889 & 0          \\
+      0 & 0   & 0   & 0          & 2.76119403  & -1         \\
+      0 & 0   & 0   & 0          & 0           & 1.48648649
+    \end{bmatrix},
+  \end{equation}
+\end{resolution}
+
+
+% =========================== Questão 13 ===========================
+\begin{question}
+  Prove que a transformação linear $T: \mathbb{R}^3 \rightarrow P_2(\mathbb{R})$ definida por:
+  \begin{equation}
+    T(a, b, c) = (a-b) + (c-a) x + (b+c) x^2
+  \end{equation}
+  é um isomorfismo de $\mathbb{R}^3$ em $P_2(\mathbb{R})$.
+\end{question}
+
+% ========================= Resolução 13 =========================
+\begin{resolution}
+  Para a transformação linear ser isomorfa, a função que rege a transformação deve ser bijetiva, ou seja, ser tanto injetiva quanto sobrejetiva. Para ser injetiva, basta que o núcleo contenha apenas o elemento nulo. Ou seja, $T(a, b, c) = 0$, somente para $a, b, c$ nulos. Assim,
+  \begin{equation}
+    (a-b) + (c-a)x + (b+c)x^2 = 0 + 0 x + 0 x^2
+  \end{equation}
+  \begin{gather}
+    a - b = 0 \Rightarrow a = b \\
+    c - a = 0 \Rightarrow c = a \Rightarrow c = b \\
+    b+c = 0 \Rightarrow b = -c \Rightarrow b = -b \Rightarrow b = 0, c = 0, a = 0
+  \end{gather}
+  A única solução para $T(a, b, c) = 0$ é a solução trivial. Portanto, o kernel contém apenas o vetor nulo e, consequentemente, a transformações é injetiva. 
+  
+  Para a transformação ser sobrejetiva, basta que os vetores que formam uma base de $\mathbb{R}^3$ gerem vetores que forem uma base de $P_2(\mathbb{R})$. Escolhendo a base canônica de $\mathbb{R^3}$, temos:
+  \begin{align}
+    T(1, 0, 0) &= 1 - x &
+    T(0, 1, 0) &= -1 + x^2 &
+    T(0, 0, 1) &= x + x^2
+  \end{align}
+  Verificando se os vetores são LIs,
+  \begin{equation}
+    \alpha (1 - x) + \beta (-1 + x^2) + \gamma (x + x^2) = 0 + 0 x + 0 x^2
+  \end{equation}
+  ou seja, 
+  \vspace{-12pt}
+  \begin{align}
+    \alpha - \beta &= 0 &
+    -\alpha + \gamma &= 0 &
+    \beta + \gamma &= 0 
+  \end{align}
+  Logo, $\gamma = \alpha = \beta$. Desta forma, $2\beta = 0 \Rightarrow \beta = 0$. Portanto, há apenas uma solução, a solução trivial $(0,0,0)$ e, consequentemente, os vetores $1-x$, $-1 + x^2$ e $x + x^2$ formam uma base de $P_2(\mathbb{R})$.
+  Assim, conclui-se que a transformação é sobrejetiva. Como é injetiva também, ela é bijetiva. E, portanto, a transformação é isomórfica.
+
+
+\end{resolution}

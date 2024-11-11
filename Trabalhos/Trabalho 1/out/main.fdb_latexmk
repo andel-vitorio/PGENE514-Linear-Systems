@@ -1,15 +1,15 @@
 # Fdb version 4
-["bibtex out/main"] 0 "out/main.aux" "out/main.bbl" "out/main" 1727296051.79299 0
+["bibtex out/main"] 0 "out/main.aux" "out/main.bbl" "out/main" 1727297699.28566 0
   "/usr/local/texlive/2023/texmf-dist/bibtex/bst/ieeetran/IEEEtranN.bst" 1440712899 63583 d34cb6c328acc69716207f4a3421ad46 ""
-  "out/Pre-textual/capa.aux" 1727295973.06009 975 597e52576b7df0b5ab74eb76b9e2616c "pdflatex"
+  "out/Pre-textual/capa.aux" 1727297698.74082 975 597e52576b7df0b5ab74eb76b9e2616c "pdflatex"
   "out/main.aux" 0 -1 0 "pdflatex"
   "references.bib" 0 -1 0 ""
   (generated)
   "out/main.bbl"
   "out/main.blg"
   (rewritten before read)
-["pdflatex"] 1727296049.70671 "/home/andel/Documentos/Mestrado/Disciplinas/PGENE514-Linear-Systems/Trabalhos/Trabalho 1/main.tex" "out/main.pdf" "main" 1727296051.79319 0
-  "/home/andel/Documentos/Mestrado/Disciplinas/PGENE514-Linear-Systems/Trabalhos/Trabalho 1/main.tex" 1727296047.57475 1197 cadd855a5ab0346fe521b3048d7a8b58 ""
+["pdflatex"] 1727297697.47814 "/home/andel/Documentos/Mestrado/Disciplinas/PGENE514-Linear-Systems/Trabalhos/Trabalho 1/main.tex" "out/main.pdf" "main" 1727297699.28583 0
+  "/home/andel/Documentos/Mestrado/Disciplinas/PGENE514-Linear-Systems/Trabalhos/Trabalho 1/main.tex" 1727297695.39385 1197 8277cb01c2cf68f99c9cc2d4220fd510 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ebgaramond/ebg_ljow5q.enc" 1679344195 3064 ad039a5bf6faa075ad3278d742de72a1 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ebgaramond/ebg_tcdnmr.enc" 1679344195 3038 e164542e716a689948526cfb8c023ec2 ""
@@ -280,11 +280,11 @@
   "Logos/ufam.pdf" 1727195236.48393 74907 d45545ea092b4a0beb82527f5b6ef624 ""
   "Pre-textual/capa.tex" 1727195236.48693 270 91dd5fbc23b29c37ec49a690da420cfe ""
   "Pre-textual/folha-de-rosto.tex" 1727195236.48793 214 82f84fd2dc31d5fc6c66787e9b13ff69 ""
-  "main.tex" 1727296047.57475 1197 cadd855a5ab0346fe521b3048d7a8b58 ""
-  "out/Pre-textual/capa.aux" 1727296051.00882 975 ad8e82fdef7224ea6b2ed93e9b265569 "pdflatex"
-  "out/main.aux" 1727296051.20082 1852 5e4a9186bd9d951a0bdfefeb81e2c839 "pdflatex"
+  "main.tex" 1727297695.39385 1197 8277cb01c2cf68f99c9cc2d4220fd510 ""
+  "out/Pre-textual/capa.aux" 1727297698.74082 975 597e52576b7df0b5ab74eb76b9e2616c "pdflatex"
+  "out/main.aux" 1727297698.87582 1846 2a910594069ca7f2d1c1dfbe7ee01c66 "pdflatex"
   "out/main.bbl" 0 -1 0 "bibtex out/main"
-  "out/main.out" 1727296051.20282 1096 3648b75a19eda9635b4444e13f1b9323 "pdflatex"
+  "out/main.out" 1727297698.87782 1096 3648b75a19eda9635b4444e13f1b9323 "pdflatex"
   "workconfig.sty" 1727195236.50293 3528 0f120e320bf0b0f7830b79cb7bfbf74c ""
   (generated)
   "out/Pre-textual/capa.aux"
