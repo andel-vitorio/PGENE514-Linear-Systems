@@ -1,0 +1,41 @@
+% !TEX program = xelatex
+% !TEX options = -synctex=1 -output-directory=./out -interaction=nonstopmode -file-line-error "%DOC%"
+
+\documentclass[
+  a4paper,
+	oneside, 
+	12pt
+]{report} 
+
+\usepackage{workconfig}
+\usepackage{mdframed}
+\newmdtheoremenv{teorema}{Teorema}
+
+\newcommand{\instituicao}{UNIVERSIDADE FEDERAL DO AMAZONAS \\ PROGRAMA DE PÓS GRADUAÇÃO EM ENGENHARIA ELÉTRICA}
+\newcommand{\titulo}{LISTA 3 DE SISTEMAS LINEARES}
+\newcommand{\apresentacao}{Este trabalho foi preparado como parte dos requisitos da disciplina \emph{Sistemas Lineares} oferecida pelo Programa de Pós-graduação em Engenharia Elétrica da Universidade Federal do Amazonas.}
+\newcommand{\autor}{Andevaldo da Encarnação Vitório}
+\newcommand{\local}{MANAUS-AM \\ 2024}
+\newcommand{\orientador}{Prof. Dr. João Edgar Chaves Filho}
+
+
+\begin{document}
+
+% Capa
+\input{Pre-textual/capa}
+\ifthenelse{\boolean{@twoside}}{\cleardoublepage}{}
+
+% Folha de Rosto
+\input{Pre-textual/folha-de-rosto}
+\ifthenelse{\boolean{@twoside}}{\cleardoublepage}{}
+
+% Capítulos
+\input{Chapters/chapter1.tex}
+\ifthenelse{\boolean{@twoside}}{\cleardoublepage}{}
+
+% Referências
+\bibliographystyle{IEEEtranN}
+\bibliography{references.bib}
+\ifthenelse{\boolean{@twoside}}{\cleardoublepage}{}
+
+\end{document}
