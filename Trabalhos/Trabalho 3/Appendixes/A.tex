@@ -1,0 +1,42 @@
+\chapter{Algoritmos Implementados}
+
+O código a seguir realiza a compressão de imagens utilizando a linguagem {\it Python} e os seus pacotes \textit{numpy} e \textit{matplotlib}.
+
+\vspace{8pt}
+\begin{lstlisting}[language=Python, caption={Implementação do algoritmo de compressão de imagens usando SVD.}, label={cod:a1}]
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.image import imread
+
+def compress_image(image, k):
+  """
+  Aplica a decomposição SVD e retorna a imagem reconstruída com rank k.
+  :param image: Matriz representando a imagem (grayscale ou canal de cor).
+  :param k: Número de componentes a serem mantidos.
+  :return: Imagem reconstruída com rank k.
+  """
+  U, S, Vt = np.linalg.svd(image, full_matrices=False)
+  S_k = np.diag(S[:k])  # Reduz os valores singulares para os k primeiros
+  return U[:, :k] @ S_k @ Vt[:k, :]
+
+
+# Carregar imagem em escala de cinza
+image = imread("image.jpeg")  # Caminho da imagem
+if image.ndim == 3:  # Converte para escala de cinza, se necessário
+  image = np.mean(image, axis=2)
+
+# Parâmetros de compressão
+ranks = [5, 20, 50, 100]  # Níveis de compressão (postos)
+fig, axs = plt.subplots(2, 2, figsize=(10, 10))
+
+# Aplicar compressão e exibir resultados
+for i, k in enumerate(ranks):
+  row, col = divmod(i, 2)
+  compressed_image = compress_image(image, k)
+  axs[row, col].imshow(compressed_image, cmap='gray')
+  axs[row, col].set_title(f"Posto {k}")
+  axs[row, col].axis('off')
+
+plt.tight_layout()
+plt.show()
+\end{lstlisting}

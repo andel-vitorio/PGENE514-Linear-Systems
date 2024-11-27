@@ -1,0 +1,63 @@
+\documentclass[
+  a4paper,
+	oneside, 
+	12pt
+]{report} 
+
+\usepackage{workconfig}
+
+\newcommand{\instituicao}{UNIVERSIDADE FEDERAL DO AMAZONAS \\ PROGRAMA DE PÓS GRADUAÇÃO EM ENGENHARIA ELÉTRICA}
+\newcommand{\titulo}{DECOMPOSIÇÃO EM VALORES SIGULARES}
+\newcommand{\apresentacao}{Este trabalho foi preparado como parte dos requisitos da disciplina \emph{Sistemas Lineares} oferecida pelo Programa de Pós-graduação em Engenharia Elétrica da Universidade Federal do Amazonas.}
+\newcommand{\autor}{Andevaldo da Encarnação Vitório}
+\newcommand{\local}{MANAUS-AM \\ 2024}
+\newcommand{\orientador}{Prof. Dr. João Edgar Chaves Filho}
+
+
+\begin{document}
+
+
+% Capa
+\include{Pre-textual/capa}
+\ifthenelse{\boolean{@twoside}}{\cleardoublepage}{}
+
+% Folha de Rosto
+\input{Pre-textual/folha-de-rosto}
+\ifthenelse{\boolean{@twoside}}{\cleardoublepage}{}
+
+% Resumo
+\input{pre-textual/resumo}
+\ifthenelse{\boolean{@twoside}}{\cleardoublepage}{}
+
+% % Abstract
+% \input{pre-textual/abstract}
+% \ifthenelse{\boolean{@twoside}}{\cleardoublepage}{}
+
+% Sumário
+\tableofcontents
+\checkoddpageandclear
+
+% Capítulos
+\input{Chapters/chapter1.tex}
+\ifthenelse{\boolean{@twoside}}{\cleardoublepage}{}
+
+% Capítulos
+\input{Chapters/chapter2.tex}
+\ifthenelse{\boolean{@twoside}}{\cleardoublepage}{}
+
+% Capítulos
+\input{Chapters/chapter3.tex}
+\ifthenelse{\boolean{@twoside}}{\cleardoublepage}{}
+
+% Referências
+\bibliographystyle{IEEEtranN}
+\bibliography{references.bib}
+\ifthenelse{\boolean{@twoside}}{\cleardoublepage}{}
+
+% Apêndices
+\appendix
+\input{Appendixes/A}
+\ifthenelse{\boolean{@twoside}}{\cleardoublepage}{}
+
+
+\end{document}
