@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.1.8)  27 NOV 2024 15:41
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.1.8)  18 DEC 2024 15:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/andel/Documentos/Mestrado/Disciplinas/PGENE514-Linear-Systems/Listas/Lista 3/main"
-(/home/andel/Documentos/Mestrado/Disciplinas/PGENE514-Linear-Systems/Listas/Lista 3/main.tex
+**"/home/andel/Documentos/Mestrado/Disciplinas/PGENE514-Linear-Systems/Listas/Lista 4/main"
+(/home/andel/Documentos/Mestrado/Disciplinas/PGENE514-Linear-Systems/Listas/Lista 4/main.tex
 LaTeX2e <2023-11-01>
 L3 programming layer <2024-01-04>
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/report.cls
@@ -1072,7 +1072,7 @@ LaTeX Font Info:    ... okay on input line 22.
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: twoside 
+* modes: 
 * h-part:(L,W,R)=(85.35826pt, 455.24411pt, 56.9055pt)
 * v-part:(T,H,B)=(85.35826pt, 702.78308pt, 56.9055pt)
 * \paperwidth=597.50787pt
@@ -1080,13 +1080,13 @@ LaTeX Font Info:    ... okay on input line 22.
 * \textwidth=455.24411pt
 * \textheight=702.78308pt
 * \oddsidemargin=13.08827pt
-* \evensidemargin=-15.36449pt
+* \evensidemargin=13.08827pt
 * \topmargin=-27.62566pt
 * \headheight=15.71393pt
 * \headsep=25.0pt
 * \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=85.0pt
+* \marginparwidth=35.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
 * \skip\footins=10.8pt plus 4.0pt minus 2.0pt
@@ -1094,8 +1094,8 @@ LaTeX Font Info:    ... okay on input line 22.
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
+* \@twosidefalse
+* \@mparswitchfalse
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
@@ -1176,9 +1176,7 @@ LaTeX Font Info:    Font shape `TU/EBGaramond(0)/b/n' will be
 (Font)              scaled to size 12.0pt on input line 8.
  [1
 
-]) [2
-
-] (./Pre-textual/folha-de-rosto.tex
+]) (./Pre-textual/folha-de-rosto.tex
 LaTeX Font Info:    Font shape `TU/EBGaramond(0)/m/it' will be
 (Font)              scaled to size 12.0pt on input line 12.
 LaTeX Font Info:    Font shape `TU/EBGaramond(0)/m/n' will be
@@ -1192,172 +1190,44 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)) [3] [4
-
-] (./Chapters/chapter1.tex
+)) (./Chapters/chapter1.tex [1]
 Cap\'{\i }tulo 1.
 LaTeX Font Info:    Font shape `TU/EBGaramond(0)/m/n' will be
 (Font)              scaled to size 24.88pt on input line 1.
 LaTeX Font Info:    Font shape `TU/EBGaramond(0)/b/n' will be
 (Font)              scaled to size 24.88pt on input line 1.
-Package mdframed Info: mdframed works in twoside mode on input line 5.
-
-LaTeX Warning: Reference `mdf@pagelabel-1' on page 5 undefined on input line 43.
-
-[5
+[2
 
 ]
-Package mdframed Info: mdframed works in twoside mode on input line 82.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-2' on page 6 undefined on input line 110.
-
-[6]
-
-LaTeX Warning: Reference `mdf@pagelabel-3' on page 7 undefined on input line 110.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7] [8]
-Package mdframed Info: mdframed works in twoside mode on input line 269.
-
-Underfull \vbox (badness 2744) has occurred while \output is active []
-
- [9]
-Package mdframed Info: Not enough space on this page on input line 287.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-4' on page 10 undefined on input line 287.
-
-
-Overfull \hbox (0.83748pt too wide) in paragraph at lines 290--292
-\TU/EBGaramond(0)/m/n/12 Para determinar as bases dos quatro subespaços fundamentais de uma matriz $\OML/cmm/m/it/12 A$ \TU/EBGaramond(0)/m/n/12 ($\OML/cmm/m/it/12 C\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A\OT1/cmr/m/n/12 )$\TU/EBGaramond(0)/m/n/12 , $\OML/cmm/m/it/12 N\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A\OT1/cmr/m/n/12 )$\TU/EBGaramond(0)/m/n/12 , $\OML/cmm/m/it/12 C\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A[]\OT1/cmr/m/n/12 )$\TU/EBGaramond(0)/m/n/12 ,
- []
-
-[10]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13]
-Package mdframed Info: mdframed works in twoside mode on input line 504.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-5' on page 14 undefined on input line 520.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14] [15]
-Package mdframed Info: mdframed works in twoside mode on input line 680.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-6' on page 16 undefined on input line 702.
-
-[16]
-
-LaTeX Warning: Reference `mdf@pagelabel-7' on page 17 undefined on input line 702.
-
-[17] [18] [19]
-Package mdframed Info: mdframed works in twoside mode on input line 893.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-8' on page 20 undefined on input line 909.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [20]
-Package mdframed Info: mdframed works in twoside mode on input line 952.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-9' on page 21 undefined on input line 966.
-
-[21] [22] [23]
-Overfull \hbox (14.74443pt too wide) in paragraph at lines 1045--1047
-[]\TU/EBGaramond(0)/m/n/12 Os produtos escalares entre os vetores $[]$, $[]$ e $[]$
- []
-
-[24]
-Package mdframed Info: mdframed works in twoside mode on input line 1089.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-10' on page 25 undefined on input line 1104.
-
-[25]
-Package mdframed Info: mdframed works in twoside mode on input line 1122.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-11' on page 26 undefined on input line 1129.
-
-[26] [27]
-Overfull \hbox (15.65338pt too wide) detected at line 1214
-\OMS/cmsy/m/n/12 h\OML/cmm/m/it/12 w; v[]\OMS/cmsy/m/n/12 i \OT1/cmr/m/n/12 = [] [] + [] (0) + [] [] = \OMS/cmsy/m/n/12 ^^@[] \OT1/cmr/m/n/12 + [] = \OMS/cmsy/m/n/12 ^^@[] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@[]\OML/cmm/m/it/12 :
- []
-
-Package mdframed Info: mdframed works in twoside mode on input line 1229.
-
-LaTeX Warning: Reference `mdf@pagelabel-12' on page 28 undefined on input line 1231.
-
-
-Underfull \vbox (badness 5787) has occurred while \output is active []
-
- [28]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [29]
-Package mdframed Info: mdframed works in twoside mode on input line 1257.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-13' on page 30 undefined on input line 1265.
-
-Package mdframed Info: mdframed works in twoside mode on input line 1292.
-
-LaTeX Warning: Reference `mdf@pagelabel-14' on page 30 undefined on input line 1304.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [30]
-Package mdframed Info: mdframed works in twoside mode on input line 1358.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-15' on page 31 undefined on input line 1365.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [31]) [32]
+Package mdframed Info: Not enough space on this page on input line 62.
+ [3]
+Package mdframed Info: Not enough space on this page on input line 147.
+ [4] [5]
+LaTeX Font Info:    Font shape `TU/EBGaramond(0)/b/n' will be
+(Font)              scaled to size 8.0pt on input line 247.
+LaTeX Font Info:    Font shape `TU/EBGaramond(0)/b/n' will be
+(Font)              scaled to size 6.0pt on input line 247.
+ [6]
+Package mdframed Info: Not enough space on this page on input line 258.
+ [7] [8])
 No file main.bbl.
-
+[9] [10] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./out/main.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2024-01-04>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 8FDB4FFF48B2A42480FE38D586F30F46;224.
  ) 
 Here is how much of TeX's memory you used:
- 50839 strings out of 474823
- 1234413 string characters out of 5759526
- 2162327 words of memory out of 5000000
- 72296 multiletter control sequences out of 15000+600000
- 568986 words of font info for 83 fonts, out of 8000000 for 9000
+ 50822 strings out of 474823
+ 1234152 string characters out of 5759526
+ 2167300 words of memory out of 5000000
+ 72277 multiletter control sequences out of 15000+600000
+ 569002 words of font info for 85 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 132i,12n,135p,789b,987s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 132i,11n,135p,574b,985s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on ./out/main.pdf (32 pages).
+Output written on ./out/main.pdf (11 pages).

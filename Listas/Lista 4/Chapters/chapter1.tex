@@ -3,284 +3,100 @@
 % =========================== Questão 01 ===========================
 
 \begin{question}
-  Determine se o subespaços são ortogonais.
-  \begin{enumerate}[label=\alph*)]
-    \item $S_1 = \operatorname{span}\left\{\begin{bmatrix}
-              3 \\ 2 \\ -2
-            \end{bmatrix}, \begin{bmatrix}
-              0 \\ 1 \\ 0
-            \end{bmatrix}\right\}, \;
-            S_2 = \operatorname{span}\left\{
-            \begin{bmatrix}
-              2 \\ -3 \\ 0
-            \end{bmatrix}
-            \right\}$
-
-    \item $S_1 = \operatorname{span}\left\{\begin{bmatrix}
-              -3 \\ 0 \\ 1
-            \end{bmatrix}\right\}, \;
-            S_2 = \operatorname{span}\left\{
-            \begin{bmatrix}
-              2 \\ 1 \\ 6
-            \end{bmatrix}, \;
-            \begin{bmatrix}
-              0 \\ 1 \\ 0
-            \end{bmatrix}
-            \right\}$
-
-    \item $S_1 = \operatorname{span}\left\{\begin{bmatrix}
-              1 \\ 1 \\ 1 \\1
-            \end{bmatrix}\right\}, \;
-            S_2 = \operatorname{span}\left\{
-            \begin{bmatrix}
-              -1 \\ 1 \\ -1 \\ 1
-            \end{bmatrix}, \;
-            \begin{bmatrix}
-              0 \\ 2 \\ -2 \\ 0
-            \end{bmatrix}
-            \right\}$
-  \end{enumerate}
+  Encontre os autovalores e os autovetores das seguintes matrizes:
+  \begin{multicols}{3}
+    \begin{enumerate}[label=\alph*)]
+      \item $\begin{bmatrix}
+                1 & -2 \\ -2 & 1
+              \end{bmatrix}$
+      \item $\begin{bmatrix}
+                1 & -\frac{2}{3} \\ \frac{1}{2} & \frac{1}{6}
+              \end{bmatrix}$
+      \item $\begin{bmatrix}
+                3 & 1 \\ -1 & 1
+              \end{bmatrix}$
+      \item $\begin{bmatrix}
+                1 & 2 \\ -1 & 1
+              \end{bmatrix}$
+      \item $\begin{bmatrix}
+                3 & -1 & 0 \\ -1 & 2 & -1 \\ 0 & -1 & 3
+              \end{bmatrix}$
+      \item $\begin{bmatrix}
+                -1 & -1 & 4 \\ 1 & 3 & -2 \\ 1 & 1 & -1
+              \end{bmatrix}$
+      \item $\begin{bmatrix}
+                1 & -3 & 11 \\ 2 & -6 & 16 \\ 1 & -3 & 7
+              \end{bmatrix}$
+      \item $\begin{bmatrix}
+                2 & -1 & -1 \\ -2 & 1 & 1 \\ 1 & 0 & 1
+              \end{bmatrix}$
+      \item $\begin{bmatrix}
+                -4 & 4 & 2 \\ 3 & 4 & -1 \\ -3 & -2 & 3
+              \end{bmatrix}$
+      \item $\begin{bmatrix}
+                3 & 4 & 0 & 0 \\ 4 & 3 & 0 & 0 \\ 0 & 0 & 1 & 3 \\ 0 & 0 & 4 & 5
+              \end{bmatrix}$
+      \item $\begin{bmatrix}
+                4 & 0 & 0 & 0 \\ 1 & 3 & 0 & 0 \\ -1 & 1 & 2 & 0 \\ 1 & -1  & 1 & 1
+              \end{bmatrix}$
+    \end{enumerate}
+  \end{multicols}
 \end{question}
 
 % ========================= Resolução 01 =========================
 \begin{resolution}
-  Dois subespaços \( S_1 \) e \( S_2 \) são ortogonais se qualquer vetor de \( S_1 \) é ortogonal a qualquer vetor de \( S_2 \), ou seja, se o produto interno entre todos os pares de vetores de \( S_1 \) e \( S_2 \) é zero.
 
-  \begin{enumerate}[label=\alph*)]
-    \item Produto entre \(\begin{bmatrix} 3 & 2 & -2 \end{bmatrix}^{\top}\) e \(\begin{bmatrix} 2 & -3 & 0 \end{bmatrix}^{\top}\):
-          \[
-            \begin{bmatrix} 3 & 2 & -2 \end{bmatrix}^{\top} \cdot \begin{bmatrix} 2 & -3 & 0 \end{bmatrix}^{\top} = 3 \cdot 2 + 2 \cdot (-3) + (-2) \cdot 0 = 6 - 6 + 0 = 0.
-          \]
-          Produto entre \(\begin{bmatrix} 0 & 1 & 0 \end{bmatrix}^{\top}\) e \(\begin{bmatrix} 2 & -3 & 0 \end{bmatrix}^{\top}\):
-          \[
-            \begin{bmatrix} 0 & 1 & 0 \end{bmatrix}^{\top} \cdot \begin{bmatrix} 2 & -3 & 0 \end{bmatrix}^{\top} = 0 \cdot 2 + 1 \cdot (-3) + 0 \cdot 0 = -3.
-          \]
-          O produto interno do segundo par não é zero, logo, \( S_1 \) e \( S_2 \) não são ortogonais.
-    \item Produto entre \(\begin{bmatrix} -3 & 0 & 1 \end{bmatrix}^{\top}\) e \(\begin{bmatrix} 2 & 1 & 6 \end{bmatrix}^{\top}\):
-          \[
-            \begin{bmatrix} -3 & 0 & 1 \end{bmatrix}^{\top} \cdot \begin{bmatrix} 2 & 1 & 6 \end{bmatrix}^{\top} = (-3) \cdot 2 + 0 \cdot 1 + 1 \cdot 6 = -6 + 6 = 0.
-          \]
-          Produto entre \(\begin{bmatrix} -3 & 0 & 1 \end{bmatrix}^{\top}\) e \(\begin{bmatrix} 0 & 1 & 0 \end{bmatrix}^{\top}\):
-          \[
-            \begin{bmatrix} -3 & 0 & 1 \end{bmatrix}^{\top} \cdot \begin{bmatrix} 0 & 1 & 0 \end{bmatrix}^{\top} = (-3) \cdot 0 + 0 \cdot 1 + 1 \cdot 0 = 0.
-          \]
-          Todos os produtos internos são zero, logo, \( S_1 \) e \( S_2 \) são ortogonais.
-
-    \item Produto entre \(\begin{bmatrix} 1 & 1 & 1 & 1 \end{bmatrix}^{\top}\) e \(\begin{bmatrix} -1 & 1 & -1 & 1 \end{bmatrix}^{\top}\):
-          \[
-            \begin{bmatrix} 1 & 1 & 1 & 1 \end{bmatrix}^{\top} \cdot \begin{bmatrix} -1 & 1 & -1 & 1 \end{bmatrix}^{\top} = 1 \cdot (-1) + 1 \cdot 1 + 1 \cdot (-1) + 1 \cdot 1 = -1 + 1 - 1 + 1 = 0.
-          \]
-          Produto entre \(\begin{bmatrix} 1 & 1 & 1 & 1 \end{bmatrix}^{\top}\) e \(\begin{bmatrix} 0 & 2 & -2 & 0 \end{bmatrix}^{\top}\):
-          \[
-            \begin{bmatrix} 1 & 1 & 1 & 1 \end{bmatrix}^{\top} \cdot \begin{bmatrix} 0 & 2 & -2 & 0 \end{bmatrix}^{\top} = 1 \cdot 0 + 1 \cdot 2 + 1 \cdot (-2) + 1 \cdot 0 = 0.
-          \]
-          Todos os produtos internos são zero, logo, \( S_1 \) e \( S_2 \) são ortogonaisx.
-  \end{enumerate}
 \end{resolution}
 
 % =========================== Questão 02 ===========================
 \begin{question}
-  Encontre a projeção do vetor $v$ sobre o espaço $S$:
+  \vspace{-24pt}
   \begin{enumerate}[label=\alph*)]
-    \item $S = \operatorname{span}\left\{
-            \begin{bmatrix}
-              0 \\ 0 \\ -1 \\ 1
-            \end{bmatrix}, \;
-            \begin{bmatrix}
-              0 \\ 1 \\ 1 \\ 1
-            \end{bmatrix}
-            \right\}$, $v = \begin{bmatrix}
-              1 \\ 0 \\ 1 \\ 1
-            \end{bmatrix}$.
+    \item Calcule os autovalores e os autovetores correspondentes de $A = \begin{bmatrix}
+              1 & 4 & 4 \\ 3 & -1 & 0 \\ 0 & 2 & 3
+            \end{bmatrix}$
 
-    \item $S = \operatorname{span}\left\{
-            \begin{bmatrix}
-              -1 \\ 2 \\ 0 \\ 0
-            \end{bmatrix}, \;
-            \begin{bmatrix}
-              0 \\ 0 \\ 1 \\ 0
-            \end{bmatrix}, \;
-            \begin{bmatrix}
-              0 \\ 0 \\ 0 \\ 1
-            \end{bmatrix}
-            \right\}$, $v = \begin{bmatrix}
-              1 \\ 1 \\ 1 \\ 1
-            \end{bmatrix}$.
+    \item Calcule o traço de $A$ e verifique que é igual a soma dos autovalores.
+    \item Encontre o determinante de $A$ e verifique que é igual ao produto dos autovalores.
   \end{enumerate}
 \end{question}
 
 % ========================= Resolução 02 =========================
 \begin{resolution}
-  A projeção de um vetor \( v \) sobre um subespaço \( S \) pode ser obtida resolvendo o sistema linear associado à projeção ortogonal. Se os vetores \(\{u_1, u_2, \ldots, u_k\}\) são geradores de \( S \), a projeção de \( v \) sobre $S$ é dada por:
-
-  \begin{equation}
-    \operatorname{proj}_S(v) = \sum\limits_{i=1}^k \operatorname{proj}_{u_i}(v) = U (U^T U)^{-1} U^T v,
-  \end{equation}
-  onde \( U \) é a matriz cujas colunas são os vetores geradores de \( S \).
-
-  \begin{enumerate}[label=\alph*)]
-    \item Dada a matriz \( U \):
-          \[
-            U = \begin{bmatrix}
-              0  & 0 \\
-              0  & 1 \\
-              -1 & 1 \\
-              1  & 1
-            \end{bmatrix},
-          \]
-          o produto \( U^T U \) é:
-          \[
-            U^T U = \begin{bmatrix}
-              0 & 0 & -1 & 1 \\
-              0 & 1 & 1  & 1
-            \end{bmatrix}
-            \begin{bmatrix}
-              0  & 0 \\
-              0  & 1 \\
-              -1 & 1 \\
-              1  & 1
-            \end{bmatrix}
-            = \begin{bmatrix}
-              2 & 0 \\
-              0 & 3
-            \end{bmatrix}.
-          \]
-          A inversa de \( U^T U \) é dada por:
-          \[
-            (U^T U)^{-1} = \begin{bmatrix}
-              \frac{1}{2} & 0           \\
-              0           & \frac{1}{3}
-            \end{bmatrix}.
-          \]
-          O produto \( U^T v \), onde \( v = \begin{bmatrix} 1 & 0 & 1 & 1 \end{bmatrix}^{\top} \), é:
-          \[
-            U^T v = \begin{bmatrix}
-              0 & 0 & -1 & 1 \\
-              0 & 1 & 1  & 1
-            \end{bmatrix}
-            \begin{bmatrix}
-              1 \\ 0 \\ 1 \\ 1
-            \end{bmatrix}
-            = \begin{bmatrix}
-              0 \\ 2
-            \end{bmatrix}.
-          \]
-          Assim, a projeção de \( v \) no subespaço gerado pelas colunas de \( U \), denotada por \( \operatorname{proj}_S(v) \), é calculada como:
-          \[
-            \operatorname{proj}_S(v) = U (U^T U)^{-1} U^T v = U \begin{bmatrix}
-              \frac{1}{2} & 0           \\
-              0           & \frac{1}{3}
-            \end{bmatrix} \begin{bmatrix}
-              0 \\ 2
-            \end{bmatrix}.
-          \]
-          Primeiro, calculamos:
-          \[
-            (U^T U)^{-1} U^T v = \begin{bmatrix}
-              \frac{1}{2} & 0           \\
-              0           & \frac{1}{3}
-            \end{bmatrix}
-            \begin{bmatrix}
-              0 \\ 2
-            \end{bmatrix}
-            = \begin{bmatrix}
-              0 \\ \frac{2}{3}
-            \end{bmatrix}.
-          \]
-          Em seguida, multiplicamos pela matriz \( U \):
-          \[
-            \operatorname{proj}_S(v) = U \begin{bmatrix}
-              0 \\ \frac{2}{3}
-            \end{bmatrix}
-            = \begin{bmatrix}
-              0 \\ \frac{2}{3} \\[8pt] \frac{2}{3} \\[8pt] \frac{2}{3}
-            \end{bmatrix}.
-          \]
-
-    \item Considerando a matriz \( U \):
-          \[
-            U = \begin{bmatrix}
-              -1 & 0 & 0 \\
-              2  & 0 & 0 \\
-              0  & 1 & 0 \\
-              0  & 0 & 1
-            \end{bmatrix},
-          \]
-          o produto \( U^T U \) resulta em:
-          \[
-            U^T U = \begin{bmatrix}
-              5 & 0 & 0 \\
-              0 & 1 & 0 \\
-              0 & 0 & 1
-            \end{bmatrix}.
-          \]
-          A inversa de \( U^T U \) é:
-          \[
-            (U^T U)^{-1} = \begin{bmatrix}
-              \frac{1}{5} & 0 & 0 \\
-              0           & 1 & 0 \\
-              0           & 0 & 1
-            \end{bmatrix}.
-          \]
-          O produto \( U^T v \), com \( v = \begin{bmatrix} 1 & 1 & 1 & 1 \end{bmatrix}^{\top} \), é:
-          \[
-            U^T v = \begin{bmatrix}
-              -1 & 2 & 0 & 0 \\
-              0  & 0 & 1 & 0 \\
-              0  & 0 & 0 & 1
-            \end{bmatrix}
-            \begin{bmatrix}
-              1 \\ 1 \\ 1 \\ 1
-            \end{bmatrix}
-            = \begin{bmatrix}
-              1 \\ 1 \\ 1
-            \end{bmatrix}.
-          \]
-          A projeção \( \operatorname{proj}_S(v) \) é dada por:
-          \[
-            \operatorname{proj}_S(v) = U (U^T U)^{-1} U^T v = U \begin{bmatrix}
-              \frac{1}{5} & 0 & 0 \\
-              0           & 1 & 0 \\
-              0           & 0 & 1
-            \end{bmatrix} \begin{bmatrix}
-              1 \\ 1 \\ 1
-            \end{bmatrix}.
-          \]
-          Calculando:
-          \[
-            (U^T U)^{-1} U^T v = \begin{bmatrix}
-              \frac{1}{5} \\ 1 \\ 1
-            \end{bmatrix}.
-          \]
-          Finalmente, temos:
-          \[
-            \operatorname{proj}_S(v) = U \begin{bmatrix}
-              \frac{1}{5} \\ 1 \\ 1
-            \end{bmatrix}
-            = \begin{bmatrix}
-              -\frac{1}{5} \\ \frac{2}{5} \\ 1 \\ 1
-            \end{bmatrix}.
-          \]
-  \end{enumerate}
 
 \end{resolution}
 
 % =========================== Questão 03 ===========================
 \begin{question}
-  Encontre as bases para os quatro subespaços fundamentais  da matriz $A$:
-  \begin{multicols}{2}
+  Encontre os autovalores e a base de cada autoespaço das seguinte matrizes:
+  \begin{multicols}{3}
     \begin{enumerate}[label=\alph*)]
-      \item $A = \begin{bmatrix}
-                1 & 2 & 3 \\ 0 & 1 & 0
+      \item $\begin{bmatrix}
+                4 & -4 \\ 1 & 0
               \end{bmatrix}$
-      \item $A = \begin{bmatrix}
-                1 & 0 & 0 \\ 0 & 1 & 1 \\ 1 & 1 & 1 \\ 1 & 2 & 2
+      \item $\begin{bmatrix}
+                6 & -8 \\ 4  & -6
               \end{bmatrix}$
-      \item $A = \begin{bmatrix}
-                0 & -1 & 1 \\ 1 & 2 & 0 \\ 1 & 1 & 1
+      \item $\begin{bmatrix}
+                3 & -2 \\ 4 & -1
               \end{bmatrix}$
-      \item $A = \begin{bmatrix}
-                1 & 0 & -1 \\ 0 & -1 & 1 \\ 1 & 1 & 0 \\ 1 & 0 & 1
+      \item $\begin{bmatrix}
+                i & -1 \\1 & i
+              \end{bmatrix}$
+      \item $\begin{bmatrix}
+                4 & -1 & -1 \\ 0 & 3 & 0 \\ 1 & -1 & 2
+              \end{bmatrix}$
+      \item $\begin{bmatrix}
+                -6 & 0 & -8 \\ -4 & 2 & -4 \\ 4 & 0 & 6
+              \end{bmatrix}$
+      \item $\begin{bmatrix}
+                -2 & 1 & -1 \\ 5 & -3 & 6 \\ 5 & -1 & 4
+              \end{bmatrix}$
+      \item $\begin{bmatrix}
+                1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ -1 & 1 & -1 & 0 \\ 1 & 0 & -1 & 0
+              \end{bmatrix}$
+      \item $\begin{bmatrix}
+                -1 & 0 & 1 & 2 \\ 0 & 1 & 0 & 1 \\ -1 & -4 & 1 & -2 \\ 0 & 1 & 0 & 1
               \end{bmatrix}$
     \end{enumerate}
   \end{multicols}
@@ -288,1129 +104,326 @@
 
 % ========================= Resolução 03 =========================
 \begin{resolution}
-  Para determinar as bases dos quatro subespaços fundamentais de uma matriz \( A \) (\( C(A) \), \( N(A) \), \( C(A^T) \), \( N(A^T) \)), os seguintes passos são realizados:
 
-  \begin{itemize}
-    \item Espaço Nulo \( \operatorname{ker}(A) \): Resolve-se a equação \( A x = 0 \) para encontrar os vetores que compõem o espaço nulo.
-    \item Espaço Coluna \( C(A) \): Identificam-se as colunas linearmente independentes de \( A \), utilizando escalonamento ou decomposição.
-    \item Espaço Linha \( C(A^T) \): Identificam-se as linhas linearmente independentes de \( A \), que correspondem às colunas linearmente independentes de \( A^T \).
-    \item Espaço Nulo à Esquerda \( \operatorname{ker}(A^T) \): Resolve-se a equação \( A^T y = 0 \).
-  \end{itemize}
-
-  \begin{enumerate}[label=\alph*)]
-    \item Para determinar o espaço coluna (\( C(A) \)), encontra-se as colunas independentes por meio da eliminação:
-          \[
-            C(A) = \operatorname{span}\left\{
-            \begin{bmatrix} 1 \\ 0 \end{bmatrix},
-            \begin{bmatrix} 2 \\ 1 \end{bmatrix}
-            \right\}.
-          \]
-          Para determinar o espaço nulo (\( \operatorname{ker}(A) \)), resolve-se \( A x = 0 \):
-          \[
-            \begin{bmatrix}
-              1 & 2 & 3 \\
-              0 & 1 & 0
-            \end{bmatrix}
-            \begin{bmatrix}
-              x_1 \\ x_2 \\ x_3
-            \end{bmatrix} =
-            \begin{bmatrix}
-              0 \\ 0
-            \end{bmatrix}.
-          \]
-          O que leva às equações:
-          \[
-            x_1 + 2x_2 + 3x_3 = 0, \quad x_2 = 0.
-          \]
-          Logo:
-          \[
-            x_1 = -3x_3, \quad x_2 = 0, \quad x_3 = x_3.
-          \]
-          A base é:
-          \[
-            \operatorname{ker}(A) = \operatorname{span}\left\{
-            \begin{bmatrix}
-              -3 \\ 0 \\ 1
-            \end{bmatrix}
-            \right\}.
-          \]
-          Para determinar o espaço linha (\( C(A^T) \)), segue-se o mesmo procedimento:
-          \[
-            C(A^T) = \operatorname{span}\left\{
-            \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix},
-            \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}
-            \right\}.
-          \]
-          Para determinar o espaço nulo à esquerda (\( \operatorname{ker}(A^T) \)), resolve-se \( A^T y = 0 \):
-          \[
-            \begin{bmatrix}
-              1 & 0 \\
-              2 & 1 \\
-              3 & 0
-            \end{bmatrix}
-            \begin{bmatrix}
-              y_1 \\ y_2
-            \end{bmatrix} =
-            \begin{bmatrix}
-              0 \\ 0 \\ 0
-            \end{bmatrix}.
-          \]
-          O que implica que:
-          \[
-            y_1 = 0, \quad y_2 = 0.
-          \]
-          Logo:
-          \[
-            \operatorname{ker} (A^T) = \{0\}.
-          \]
-
-    \item Para determinar o espaço coluna (\( C(A) \)), encontra-se as colunas independentes por meio da eliminação:
-          \[
-            C(A) = \operatorname{span}\left\{
-            \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix},
-            \begin{bmatrix} -1 \\ 2 \\ 1 \end{bmatrix}
-            \right\}.
-          \]
-          Para determinar o espaço nulo (\( \operatorname{ker}(A) \)), resolve-se \( A x = 0 \):
-          \[
-            \begin{bmatrix}
-              0 & -1 & 1 \\
-              1 & 2  & 0 \\
-              1 & 1  & 1
-            \end{bmatrix}
-            \begin{bmatrix}
-              x_1 \\ x_2 \\ x_3
-            \end{bmatrix} =
-            \begin{bmatrix}
-              0 \\ 0 \\ 0
-            \end{bmatrix}.
-          \]
-          O que leva às equações:
-          \[
-            -x_2 + x_3 = 0, \quad x_1 + x_2 = 0, \quad x_1 + x_2 + x_3 = 0.
-          \]
-          Logo:
-          \[
-            x_1 = 0, \quad x_2 = 0, \quad x_3 = 0.
-          \]
-          A base é:
-          \[
-            \operatorname{ker}(A) = \{0\}.
-          \]
-          Para determinar o espaço linha (\( C(A^T) \)), segue-se o mesmo procedimento:
-          \[
-            C(A^T) = \operatorname{span}\left\{
-            \begin{bmatrix} 0 \\ -1 \\ 1 \end{bmatrix},
-            \begin{bmatrix} 1 \\ 2 \\ 0 \end{bmatrix}
-            \right\}.
-          \]
-          Para determinar o espaço nulo à esquerda (\( \operatorname{ker}(A^T) \)), resolve-se \( A^T y = 0 \):
-          \[
-            \begin{bmatrix}
-              0  & 1 & 1 \\
-              -1 & 2 & 1 \\
-              1  & 0 & 1
-            \end{bmatrix}
-            \begin{bmatrix}
-              y_1 \\ y_2 \\ y_3
-            \end{bmatrix} =
-            \begin{bmatrix}
-              0 \\ 0 \\ 0
-            \end{bmatrix}.
-          \]
-          O que leva às equações:
-          \[
-            y_2 + y_3 = 0, \quad - y_1 - 2 y_2 + y_3 = 0, \quad y_1 + y_3 = 0.
-          \]
-          Logo:
-          \[
-            \operatorname{ker}(A^T) = \{0\}.
-          \]
-
-    \item Para determinar o espaço coluna (\( C(A) \)), encontra-se as colunas independentes por meio da eliminação:
-          \[
-            C(A) = \operatorname{span}\left\{
-            \begin{bmatrix} 1 \\ 0 \\ 1 \\ 1 \end{bmatrix},
-            \begin{bmatrix} 0 \\ 1 \\ 1 \\ 2 \end{bmatrix}
-            \right\}.
-          \]
-          Para determinar o espaço nulo (\( \operatorname{ker}(A) \)), resolve-se \( A x = 0 \):
-          \[
-            \begin{bmatrix}
-              1 & 0 & 0 \\
-              0 & 1 & 1 \\
-              1 & 1 & 1 \\
-              1 & 2 & 2
-            \end{bmatrix}
-            \begin{bmatrix}
-              x_1 \\ x_2 \\ x_3
-            \end{bmatrix} =
-            \begin{bmatrix}
-              0 \\ 0 \\ 0 \\ 0
-            \end{bmatrix}.
-          \]
-          O que leva às equações:
-          \[
-            x_1 = 0, \quad x_2 + x_3 = 0, \quad x_1 + x_2 + x_3 = 0, \quad x_1 + 2x_2 + 2x_3 = 0.
-          \]
-          Logo:
-          \[
-            x_1 = 0, \quad x_2 = -x_3, \quad x_3 = x_3.
-          \]
-          A base é:
-          \[
-            \operatorname{ker}(A) =  \operatorname{span}\left\{
-            \begin{bmatrix} 0 \\ -1 \\ 1 \end{bmatrix}
-            \right\}.
-          \]
-          Para determinar o espaço linha (\( C(A^T) \)), segue-se o mesmo procedimento:
-          \[
-            C(A^T) = \operatorname{span}\left\{
-            \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix},
-            \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix}
-            \right\}.
-          \]
-          Para determinar o espaço nulo à esquerda (\( \operatorname{ker}(A^T) \)), resolve-se \( A^T y = 0 \):
-          \[
-            \begin{bmatrix}
-              1
-
-                & 0 & 1 & 1 \\
-              0 & 1 & 1 & 2 \\
-              0 & 0 & 0 & 0
-            \end{bmatrix}
-            \begin{bmatrix}
-              y_1 \\ y_2 \\ y_3 \\ y_4
-            \end{bmatrix} =
-            \begin{bmatrix}
-              0 \\ 0 \\ 0 \\ 0
-            \end{bmatrix}.
-          \]
-          O que leva à equação:
-          \[
-            y_1 = -y_3 - y_4, \quad y_2 = -y_3 - 2y_4.
-          \]
-          Logo:
-          \[
-            \operatorname{ker}(A^T) = \operatorname{span}\left\{
-            \begin{bmatrix} -1 \\ -1 \\ 1 \\ 0 \end{bmatrix},
-            \begin{bmatrix} -1 \\ -2 \\ 0 \\ 1 \end{bmatrix}
-            \right\}.
-          \]
-  \end{enumerate}
 \end{resolution}
 
 % =========================== Questão 04 ===========================
 \begin{question}
-  Encontre as solução dos mínimos quadrados do sistemas $Ax = b$.
-  \begin{multicols}{2}
+  Diagonalize as seguintes matrizes:
+  \begin{multicols}{3}
     \begin{enumerate}[label=\alph*)]
-      \item $A = \begin{bmatrix}
-                2 & 1 \\ 1 & 2 \\ 1 & 1
-              \end{bmatrix}$, $b = \begin{bmatrix}
-                2 \\ 0 \\ -3
-              \end{bmatrix}$.
-      \item $A = \begin{bmatrix}
-                1 & -1 & 1 \\ 1 & 1 & 1 \\ 0 & 1 & 1 \\ 1 & 0 & 1
-              \end{bmatrix}$, $b = \begin{bmatrix}
-                2 \\ 1 \\ 0 \\ 2
-              \end{bmatrix}$.
+      \item $\begin{bmatrix}
+                3 & -9 \\ 2 & -6
+              \end{bmatrix}$
+      \item $\begin{bmatrix}
+                5 & -4 \\ 2 & -1
+              \end{bmatrix}$
+      \item $\begin{bmatrix}
+                -4 & -2 \\ 5 & 2
+              \end{bmatrix}$
+      \item $\begin{bmatrix}
+                -2 & 3 & 1 \\ 0 & 1 & -1 \\ 0 & 0 & 3
+              \end{bmatrix}$
+      \item $\begin{bmatrix}
+                8 & 0 & -3 \\ -3 & 0 & -1 \\ 3 & 0 & -2
+              \end{bmatrix}$
+      \item $\begin{bmatrix}
+                3 & 3 & 5 \\ 5 & 6 & 5 \\ -5& -8 & -7
+              \end{bmatrix}$
+      \item $\begin{bmatrix}
+                2 & 5 & 5 \\ 0 & 2 & 0 \\ 0 & -5 & -3
+              \end{bmatrix}$
+      \item $\begin{bmatrix}
+                1 & 0 & -1 & 1 \\ 0 & 2 & -1 & 1 \\ 0 & 0 & -1 & 0 \\ 0 & 0 & 0 & -2
+              \end{bmatrix}$
+      \item $\begin{bmatrix}
+                0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0
+              \end{bmatrix}$
+      \item $\begin{bmatrix}
+                2 & 1 & -1 & 0 \\ -3 & -2 & 0 & 1 \\ 0 & 0 & 1 & -2 \\ 0 & 0 & 1 & -1
+              \end{bmatrix}$
     \end{enumerate}
   \end{multicols}
 \end{question}
 
 % ========================= Resolução 04 =========================
 \begin{resolution}
-  A solução dos mínimos quadrados de um sistema \( Ax = b \) é dada pela minimização da norma \( \|Ax - b\|^2 \), o que resulta na equação normal:
-  \[
-    A^T A x = A^T b.
-  \]
 
-  \begin{enumerate}[label=\alph*)]
-    \item O primeiro passo consiste em calcular \( A^T A \):
-          \[
-            A^T A = \begin{bmatrix}
-              2 & 1 & 1 \\
-              1 & 2 & 1
-            \end{bmatrix}
-            \begin{bmatrix}
-              2 & 1 \\
-              1 & 2 \\
-              1 & 1
-            \end{bmatrix} =
-            \begin{bmatrix}
-              6 & 5 \\
-              5 & 6
-            \end{bmatrix}.
-          \]
-
-          Em seguida, calcula-se \( A^T b \):
-          \[
-            A^T b = \begin{bmatrix}
-              2 & 1 & 1 \\
-              1 & 2 & 1
-            \end{bmatrix}
-            \begin{bmatrix}
-              2 \\
-              0 \\
-              -3
-            \end{bmatrix} =
-            \begin{bmatrix}
-              1 \\
-              -1
-            \end{bmatrix}.
-          \]
-
-          Por fim, resolve-se o sistema \( A^T A x = A^T b \):
-          \[
-            \begin{bmatrix}
-              6 & 5 \\
-              5 & 6
-            \end{bmatrix}
-            \begin{bmatrix}
-              x_1 \\
-              x_2
-            \end{bmatrix} =
-            \begin{bmatrix}
-              1 \\
-              -1
-            \end{bmatrix}.
-          \]
-          O sistema resultante é:
-          \[
-            6x_1 + 5x_2 = 1, \quad 5x_1 + 6x_2 = -1.
-          \]
-          A solução obtida por substituição é:
-          \[
-            x_1 = 1, \quad x_2 = -1.
-          \]
-
-          Portanto, a solução é:
-          \[
-            x = \begin{bmatrix}
-              1 \\
-              -1
-            \end{bmatrix}.
-          \]
-
-    \item Inicialmente, calcula-se \( A^T A \):
-          \[
-            A^T A = \begin{bmatrix}
-              1  & 1 & 0 & 1 \\
-              -1 & 1 & 1 & 0 \\
-              1  & 1 & 1 & 1
-            \end{bmatrix}
-            \begin{bmatrix}
-              1 & -1 & 1 \\
-              1 & 1  & 1 \\
-              0 & 1  & 1 \\
-              1 & 0  & 1
-            \end{bmatrix} =
-            \begin{bmatrix}
-              3 & 0 & 3 \\
-              0 & 3 & 1 \\
-              3 & 1 & 4
-            \end{bmatrix}.
-          \]
-
-          Em seguida, calcula-se \( A^T b \):
-          \[
-            A^T b = \begin{bmatrix}
-              1  & 1 & 0 & 1 \\
-              -1 & 1 & 1 & 0 \\
-              1  & 1 & 1 & 1
-            \end{bmatrix}
-            \begin{bmatrix}
-              2 \\
-              1 \\
-              0 \\
-              2
-            \end{bmatrix} =
-            \begin{bmatrix}
-              5  \\
-              -1 \\
-              5
-            \end{bmatrix}.
-          \]
-
-          Finalmente, resolve-se o sistema \( A^T A x = A^T b \):
-          \[
-            \begin{bmatrix}
-              3 & 0 & 3 \\
-              0 & 3 & 1 \\
-              3 & 1 & 4
-            \end{bmatrix}
-            \begin{bmatrix}
-              x_1 \\
-              x_2 \\
-              x_3
-            \end{bmatrix} =
-            \begin{bmatrix}
-              5  \\
-              -1 \\
-              5
-            \end{bmatrix}.
-          \]
-          O sistema resultante é:
-          \[
-            \begin{aligned}
-              3x_1 + 3x_3       & = 5,  \\
-              3x_2 + x_3        & = -1, \\
-              3x_1 + x_2 + 4x_3 & = 5.
-            \end{aligned}
-          \]
-          A solução obtida por substituição é:
-          \[
-            x_1 = \frac{7}{6}, \quad x_2 = -\frac{1}{2}, \quad x_3 = \frac{1}{2}.
-          \]
-
-          Portanto, a solução é:
-          \[
-            x = \begin{bmatrix}
-              \frac{7}{6}  \\[8pt]
-              -\frac{1}{2} \\[8pt]
-              \frac{1}{2}
-            \end{bmatrix}.
-          \]
-
-  \end{enumerate}
 \end{resolution}
 
 % =========================== Questão 05 ===========================
 \begin{question}
-  Encontre a complemente ortogonal $S^{\perp}$ e encontre a soma direta $S \oplus S^{\perp}$:
-  \begin{multicols}{2}
-    \begin{enumerate}[label=\alph*)]
-      \item $S = \operatorname{span}\left\{
-              \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix},
-              \begin{bmatrix} 2 \\ 0 \\ 1 \end{bmatrix}
-              \right\}$.
-      \item $S = \operatorname{span}\left\{
-              \begin{bmatrix} 0 \\ 1 \\ -1 \\ 1 \end{bmatrix}
-              \right\}$.
-      \item $= \operatorname{span}\left\{
-              \begin{bmatrix} 0 \\ -2 \\ 1 \end{bmatrix}
-              \right\}$.
-      \item $ S = \operatorname{span}\left\{
-              \begin{bmatrix} 0 \\ 1 \\ -1 \\ 1 \\ -1 \end{bmatrix},
-              \begin{bmatrix} 0 \\ 1 \\ 0 \\ 2 \\ -1 \end{bmatrix},
-              \begin{bmatrix} 2 \\ 0 \\ 1 \\ 0 \\ 2 \end{bmatrix}
-              \right\}$.
-    \end{enumerate}
-  \end{multicols}
+  Escreva abaixo um matriz real que tenha:
+  \begin{enumerate}[label=\alph*)]
+    \item autovalores $-1$, $3$ e autovalores correspondentes $\begin{bmatrix}-1 \\ 2\end{bmatrix}, \begin{bmatrix} 1 \\ 1\end{bmatrix}$;
+    \item autovalores $0,2, -2$ e autovalores correspondentes $\begin{bmatrix}-1 \\ 1 \\ 0\end{bmatrix}, \begin{bmatrix} 2 \\ -1 \\ 1\end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 3\end{bmatrix}$;
+    \item um autovalor de  $3$ e um autovalor correspondente $\begin{bmatrix}2\\ -3 \end{bmatrix}, \begin{bmatrix} 1\\ 2\end{bmatrix}$;
+    \item autovalores $-1 + 2i$ e autovalor correspondente $\begin{bmatrix}1+ i \\ 3i\end{bmatrix}$;
+    \item autovalores $-2$ e autovalor correspondente $\begin{bmatrix}-2 \\ 0 \\ -1\end{bmatrix}$;
+  \end{enumerate}
   \vspace{8pt}
 \end{question}
 
 % ========================= Resolução 05 =========================
 \begin{resolution}
-  Para determinar o complemento ortogonal \( S^\perp \), é necessário encontrar o conjunto de vetores \( x \) tais que \( x \cdot s = 0 \) para todos os vetores \( s \in S \). Isso equivale a resolver \( A^T x = 0 \), onde \( A \) é a matriz cujas colunas são os geradores de \( S \). A soma direta \( S \oplus S^\perp \) equivale ao espaço completo, com \( \dim(S) + \dim(S^\perp) = \dim(\text{espaço total}) \).
 
-  \begin{enumerate}[label=\alph*)]
-    \item Primeiramente, constrói-se a matriz \( A \):
-          \[
-            A = \begin{bmatrix}
-              0 & 2 \\
-              1 & 0 \\
-              0 & 1
-            \end{bmatrix}.
-          \]
-
-          Em seguida, resolve-se \( A^T x = 0 \):
-          O sistema é:
-          \[
-            \begin{bmatrix}
-              0 & 1 & 0 \\
-              2 & 0 & 1
-            \end{bmatrix}
-            \begin{bmatrix}
-              x_1 \\
-              x_2 \\
-              x_3
-            \end{bmatrix}
-            = 0.
-          \]
-
-          Expandindo:
-          \[
-            \begin{aligned}
-              x_2        & = 0,                      \\
-              2x_1 + x_3 & = 0 \implies x_3 = -2x_1.
-            \end{aligned}
-          \]
-
-          Logo, o complemento ortogonal \( S^\perp \):
-          \[
-            S^\perp = \operatorname{span}\left\{
-            \begin{bmatrix}
-              1 \\ 0 \\ -2
-            \end{bmatrix}
-            \right\}.
-          \]
-
-          E a soma direta \( S \oplus S^\perp \):
-          Como \( S \) tem dimensão 2 e \( S^\perp \) tem dimensão 1, temos:
-          \[
-            S \oplus S^\perp = \mathbb{R}^3.
-          \]
-
-
-    \item  Construindo a matriz \( A \):
-          \[
-            A = \begin{bmatrix}
-              0  \\
-              1  \\
-              -1 \\
-              1
-            \end{bmatrix}.
-          \]
-
-          Resolvendo \( A^T x = 0 \):
-          \[
-            \begin{bmatrix}
-              0 & 1 & -1 & 1
-            \end{bmatrix}
-            \begin{bmatrix}
-              x_1 \\
-              x_2 \\
-              x_3 \\
-              x_4
-            \end{bmatrix}
-            = 0.
-          \]
-
-          Expandindo:
-          \[
-            x_2 - x_3 + x_4 = 0 \Rightarrow x_2 = x_3 + x_4.
-          \]
-
-          Complemento ortogonal \( S^\perp \):
-          \( S^\perp \) é o espaço das soluções do sistema, dado por:
-          \[
-            S^\perp = \operatorname{span}\left\{
-            \begin{bmatrix}
-              0 \\ 1 \\ 1 \\ 0
-            \end{bmatrix},
-            \begin{bmatrix}
-              0 \\ 1 \\ 0 \\ 1
-            \end{bmatrix}
-            \right\}.
-          \]
-
-          Soma direta \( S \oplus S^\perp \):
-          Como \( S \) tem dimensão 1 e \( S^\perp \) tem dimensão 2, temos:
-          \[
-            S \oplus S^\perp = \mathbb{R}^3.
-          \]
-
-    \item Construindo-se a matriz \( A \):
-          \[
-            A = \begin{bmatrix}
-              0  \\
-              -2 \\
-              1
-            \end{bmatrix}.
-          \]
-
-          Resolver \( A^T x = 0 \):
-          O sistema é:
-          \[
-            \begin{bmatrix}
-              0 & -2 & 1
-            \end{bmatrix}
-            \begin{bmatrix}
-              x_1 \\
-              x_2 \\
-              x_3
-            \end{bmatrix}
-            = 0.
-          \]
-
-          Expandindo:
-          \[
-            -2x_2 + x_3 = 0 \implies x_3 = 2x_2.
-          \]
-
-          Complemento ortogonal \( S^\perp \):
-          \[
-            S^\perp = \operatorname{span}\left\{
-            \begin{bmatrix}
-              1 \\ 0 \\ 0
-            \end{bmatrix},
-            \begin{bmatrix}
-              0 \\ 1 \\ 2
-            \end{bmatrix}
-            \right\}.
-          \]
-
-          Soma direta \( S \oplus S^\perp \):
-          Como \( S \) tem dimensão 1 e \( S^\perp \) tem dimensão 2, temos:
-          \[
-            S \oplus S^\perp = \mathbb{R}^3.
-          \]
-
-    \item Construindo-se a matriz \( A \):
-          \[
-            A = \begin{bmatrix}
-              0  & 0  & 2 \\
-              1  & 1  & 0 \\
-              -1 & 0  & 1 \\
-              1  & 2  & 0 \\
-              -1 & -1 & 2
-            \end{bmatrix}.
-          \]
-
-          Resolver \( A^T x = 0 \):
-          O sistema é:
-          \[
-            A^T x = 0.
-          \]
-          Calculando \( S^\perp \) (usando escalonamento ou outras técnicas), temos:
-
-          Complemento ortogonal \( S^\perp \):
-          \[
-            S^\perp = \operatorname{span}\left\{
-            \begin{bmatrix}
-              1 \\ 0 \\ 0 \\ 0 \\ 0
-            \end{bmatrix},
-            \begin{bmatrix}
-              0 \\ 1 \\ 0 \\ 0 \\ 0
-            \end{bmatrix},
-            \begin{bmatrix}
-              0 \\ 0 \\ 1 \\ 0 \\ 0
-            \end{bmatrix}
-            \right\}.
-          \]
-
-          Soma direta \( S \oplus S^\perp \):
-          Como \( S \) tem dimensão 3 e \( S^\perp \) tem dimensão 3, temos:
-          \[
-            S \oplus S^\perp = \mathbb{R}^6.
-          \]
-  \end{enumerate}
 \end{resolution}
 
 % =========================== Questão 06 ===========================
 \begin{question}
-  Encontre a fatoração QR de cada matriz:
-  \begin{multicols}{3}
-    \begin{enumerate}[label=\alph*)]
-      \item $\begin{bmatrix}
-                1 & 1 \\ 0 & 1 \\ 1 & 0
-              \end{bmatrix}$.
-      \item $\begin{bmatrix}
-                1 & 0 \\ 0 & 0 \\ 1 & 1 \\ 1 & 2
-              \end{bmatrix}$.
-      \item $\begin{bmatrix}
-                1 & 0 & -1 \\ 1 & 2 & 0 \\ 1 & 2 & 0 \\ 1 & 0 & 0
-              \end{bmatrix}$
-    \end{enumerate}
-  \end{multicols}
-  \vspace{8pt}
+  Encontre uma base para o complemento ortogonal de cada um dos conjuntos a seguir no espaço de produto interno indicado.
+  \begin{itemize}
+    \item[(a)] $\{(0,0,0)\} \subset \mathbb{R}^3$;
+    \item[(b)] $\{(1,1,1), (2,1,0)\} \subset \mathbb{R}^3$.
+  \end{itemize}
 \end{question}
 
 % ========================= Resolução 06 =========================
 \begin{resolution}
-  Por meio do algoritmo implementado no trabalho pedido, temos:
-  \begin{enumerate}[label=\alph*)]
-    \item $\begin{bmatrix}
-              1 & 1 \\ 0 & 1 \\ 1 & 0
-            \end{bmatrix} = \begin{bmatrix}
-              0.71 & 0.41  \\
-              0.   & 0.82  \\
-              0.71 & -0.41 \\
-            \end{bmatrix} \begin{bmatrix}
-              1.41 & 0.71 \\
-              0.   & 1.22
-            \end{bmatrix}$.
-    \item $\begin{bmatrix}
-              1 & 0 \\ 0 & 0 \\ 1 & 1 \\ 1 & 2
-            \end{bmatrix} = \begin{bmatrix}
-              0.58 & -0.71 \\
-              0.   & 0.    \\
-              0.58 & 0.    \\
-              0.58 & 0.71  \\
-            \end{bmatrix} \begin{bmatrix}
-              1.73 & 1.73 \\
-              0.   & 1.41
-            \end{bmatrix}$.
-    \item $\begin{bmatrix}
-              1 & 0 & -1 \\ 1 & 2 & 0 \\ 1 & 2 & 0 \\ 1 & 0 & 0
-            \end{bmatrix} = \begin{bmatrix}
-              0.5 & -0.5 & -0.71 \\
-              0.5 & 0.5  & 0.    \\
-              0.5 & 0.5  & 0.    \\
-              0.5 & -0.5 & 0.71
-            \end{bmatrix} \begin{bmatrix}
-              2. & 2. & -0.5 \\
-              0. & 2. & 0.5  \\
-              0. & 0. & 0.71
-            \end{bmatrix}$.
-  \end{enumerate}
+
 \end{resolution}
 
 % =========================== Questão 07 ===========================
 \begin{question}
-  Determine se o conjunto de vetores em $\mathbb{R}^{n}$ é ortogonal. Se o conjunto é ortogonal, então determine se ele é ortonormal também e se o conjunto é base para $\mathbb{R}^{n}$.
-  \begin{enumerate}[label=\alph*)]
-    \item $\{(2, -4), (2, 1)\}$
-    \item $\{(-2, 5), (4, 0)\}$
-    \item $\left\{\left(\frac{4}{5}, \frac{4}{5}\right), \left(\frac{-4}{5}, \frac{3}{5}\right)\right\}$
-    \item $\left\{(2, 1), \left(\frac{1}{3}, -\frac{2}{3}\right)\right\}$
-    \item $\left\{(4, -1, 1), (-1, 0, 4), (-4, -17, -1)\right\}$
-    \item $\left\{(2, -4, 2), (0, 2, 4), (-10, -4, 2)\right\}$
-    \item $\left\{\left(\frac{\sqrt{2}}{3}, 0, -\frac{\sqrt{2}}{6}\right), \left(0, \frac{2\sqrt{5}}{5}, -\frac{\sqrt{5}}{5}\right), \left(\frac{\sqrt{5}}{5}, 0, \frac{1}{2}\right)\right\}$
-    \item $\left\{\left(\frac{\sqrt{2}}{3}, 0, \frac{\sqrt{2}}{2}\right), \left(-\frac{\sqrt{6}}{6}, \frac{\sqrt{6}}{3}, \frac{\sqrt{6}}{6}\right), \left(\frac{\sqrt{3}}{3}, \frac{\sqrt{3}}{3}, -\frac{\sqrt{3}}{3}\right)\right\}$
-    \item $\left\{(2, 5, -3), (4, 2, 6)\right\}$
-    \item $\left\{(-6, 3, 2, 1), (2, 0, 6, 0)\right\}$
-  \end{enumerate}
+  Calcule uma base de cada um dos quatro subespaços fundamentais das seguintes matrizes e verifique que elas satisfazem as relações de ortogonalidade:
+  \begin{multicols}{2}
+    \begin{itemize}
+      \item[(a)] $\begin{bmatrix}
+                1 & 2 \\
+                3 & 6
+              \end{bmatrix}$;
+      \item[(b)] $\begin{bmatrix}
+                2 & 1  & 3 & 1 \\
+                4 & -1 & 2 & 3
+              \end{bmatrix}$.
+    \end{itemize}
+  \end{multicols}
+  \vspace{8pt}
 \end{question}
 
 % ========================= Resolução 07 =========================
 \begin{resolution}
-  Para verificar se os conjuntos são ortogonais, calcula-se o produto escalar entre os vetores. Se o produto escalar entre todos os pares de vetores for zero, o conjunto é ortogonal. Se o conjunto for ortogonal, verifica-se se é ortonormal ao calcular o módulo (\(\|v\|\)) de cada vetor. Para ser ortonormal, todos os vetores devem ter módulo igual a 1. Se o conjunto tem \(n\) vetores linearmente independentes em \(\mathbb{R}^n\), ele forma uma base para \(\mathbb{R}^n\).
 
-  \begin{enumerate}[label=\alph*)]
-    \item O produto escalar entre os vetores \((2, -4)\) e \((2, 1)\) é calculado da seguinte forma:
-          \[
-            (2, -4) \cdot (2, 1) = 2 \cdot 2 + (-4) \cdot 1 = 4 - 4 = 0.
-          \]
-          Portanto, os vetores são ortogonais. O módulo dos vetores é dado por:
-          \[
-            \|(2, -4)\| = \sqrt{2^2 + (-4)^2} = \sqrt{4 + 16} = \sqrt{20},
-          \]
-          \[
-            \|(2, 1)\| = \sqrt{2^2 + 1^2} = \sqrt{4 + 1} = \sqrt{5}.
-          \]
-          Como os vetores não possuem módulo unitário, o conjunto não é ortonormal. Considerando que existem dois vetores em \(\mathbb{R}^2\) e eles são linearmente independentes, o conjunto forma uma base para \(\mathbb{R}^2\).
-
-    \item O produto escalar entre os vetores \((-2, 5)\) e \((4, 0)\) é calculado como:
-          \[
-            (-2, 5) \cdot (4, 0) = -2 \cdot 4 + 5 \cdot 0 = -8.
-          \]
-          Assim, o conjunto não é ortogonal.
-
-    \item O produto escalar entre os vetores \(\left(\frac{4}{5}, \frac{4}{5}\right)\) e \(\left(\frac{-4}{5}, \frac{3}{5}\right)\) resulta em:
-          \[
-            \left(\frac{4}{5}, \frac{4}{5}\right) \cdot \left(\frac{-4}{5}, \frac{3}{5}\right) = \frac{4}{5} \cdot \frac{-4}{5} + \frac{4}{5} \cdot \frac{3}{5} = -\frac{16}{25} + \frac{12}{25} = -\frac{4}{25}.
-          \]
-          Portanto, o conjunto não é ortogonal.
-
-    \item O produto escalar entre \((2, 1)\) e \(\left(\frac{1}{3}, -\frac{2}{3}\right)\) é dado por:
-          \[
-            (2, 1) \cdot \left(\frac{1}{3}, -\frac{2}{3}\right) = 2 \cdot \frac{1}{3} + 1 \cdot \left(-\frac{2}{3}\right) = \frac{2}{3} - \frac{2}{3} = 0.
-          \]
-          Assim, os vetores são ortogonais. O módulo dos vetores é calculado como:
-          \[
-            \|(2, 1)\| = \sqrt{2^2 + 1^2} = \sqrt{4 + 1} = \sqrt{5},
-          \]
-          \[
-            \left\|\left(\frac{1}{3}, -\frac{2}{3}\right)\right\| = \sqrt{\left(\frac{1}{3}\right)^2 + \left(-\frac{2}{3}\right)^2} = \sqrt{\frac{1}{9} + \frac{4}{9}} = \sqrt{\frac{5}{9}} = \frac{\sqrt{5}}{3}.
-          \]
-          Como os vetores não têm módulo unitário, o conjunto não é ortonormal. Considerando que existem dois vetores em \(\mathbb{R}^2\) e eles são linearmente independentes, o conjunto forma uma base para \(\mathbb{R}^2\).
-
-    \item Os produtos escalares entre os vetores \((4, -1, 1)\), \((-1, 0, 4)\) e \((-4, -17, -1)\) são os seguintes:
-          \begin{itemize}
-            \item \((4, -1, 1) \cdot (-1, 0, 4) = -4 + 0 + 4 = 0\),
-            \item \((4, -1, 1) \cdot (-4, -17, -1) = -16 + 17 - 1 = 0\),
-            \item \((-1, 0, 4) \cdot (-4, -17, -1) = 4 + 0 - 4 = 0\).
-          \end{itemize}
-          O conjunto é ortogonal. O módulo dos vetores é dado por:
-          \begin{itemize}
-            \item \(\|(4, -1, 1)\| = \sqrt{4^2 + (-1)^2 + 1^2} = \sqrt{16 + 1 + 1} = \sqrt{18}\),
-            \item \(\|(-1, 0, 4)\| = \sqrt{(-1)^2 + 0^2 + 4^2} = \sqrt{1 + 16} = \sqrt{17}\),
-            \item \(\|(-4, -17, -1)\| = \sqrt{(-4)^2 + (-17)^2 + (-1)^2} = \sqrt{16 + 289 + 1} = \sqrt{306}\).
-          \end{itemize}
-          Como os vetores não possuem módulo unitário, o conjunto não é ortonormal.  Como há três vetores em \(\mathbb{R}^3\) e eles são linearmente independentes, o conjunto forma uma base para \(\mathbb{R}^3\).
-
-    \item Os produtos escalares entre os vetores \((2, -4, 2)\), \((0, 2, 4)\) e \((-10, -4, 2)\) são os seguintes:
-          \begin{itemize}
-            \item \((2, -4, 2) \cdot (0, 2, 4) = 0 - 8 + 8 = 0\),
-            \item \((2, -4, 2) \cdot (-10, -4, 2) = -20 + 16 + 4 = 0\),
-            \item \((0, 2, 4) \cdot (-10, -4, 2) = 0 - 8 + 8 = 0\).
-          \end{itemize}
-          O conjunto é ortogonal. O módulo dos vetores é dado por:
-          \begin{itemize}
-            \item \(\|(2, -4, 2)\| = \sqrt{2^2 + (-4)^2 + 2^2} = \sqrt{4 + 16 + 4} = \sqrt{24}\),
-            \item \(\|(0, 2, 4)\| = \sqrt{0^2 + 2^2 + 4^2} = \sqrt{20}\),
-            \item \(\|(-10, -4, 2)\| = \sqrt{(-10)^2 + (-4)^2 + 2^2} = \sqrt{100 + 16 + 4} = \sqrt{120}\).
-          \end{itemize}
-          Como os vetores não possuem módulo unitário, o conjunto não é ortonormal. Como há três vetores em \(\mathbb{R}^3\) e eles são linearmente independentes, o conjunto forma uma base para \(\mathbb{R}^3\).
-
-    \item O primeiro produto escalar é:
-          \[
-            \left(\frac{\sqrt{2}}{3}, 0, -\frac{\sqrt{2}}{6}\right) \cdot \left(0, \frac{2\sqrt{5}}{5}, -\frac{\sqrt{5}}{5}\right) = 0 + 0 + \frac{\sqrt{2}}{6} \cdot \frac{\sqrt{5}}{5} \neq 0.
-          \]
-          Logo, o conjunto não é ortogonal.
-
-    \item Os produtos escalares entre os vetores \(\left(\frac{\sqrt{2}}{3}, 0, \frac{\sqrt{2}}{2}\right)\), \(\left(-\frac{\sqrt{6}}{6}, \frac{\sqrt{6}}{3}, \frac{\sqrt{6}}{6}\right)\) e \(\left(\frac{\sqrt{3}}{3}, \frac{\sqrt{3}}{3}, -\frac{\sqrt{3}}{3}\right)\) são os seguintes:
-          \begin{itemize}
-            \item Primeiro e segundo vetores:
-                  \[
-                    \left(\frac{\sqrt{2}}{3}, 0, \frac{\sqrt{2}}{2}\right) \cdot \left(-\frac{\sqrt{6}}{6}, \frac{\sqrt{6}}{3}, \frac{\sqrt{6}}{6}\right) = -\frac{\sqrt{12}}{18} + 0 + \frac{\sqrt{12}}{12} = 0.
-                  \]
-            \item Primeiro e terceiro vetores:
-                  \[
-                    \left(\frac{\sqrt{2}}{3}, 0, \frac{\sqrt{2}}{2}\right) \cdot \left(\frac{\sqrt{3}}{3}, \frac{\sqrt{3}}{3}, -\frac{\sqrt{3}}{3}\right) = \frac{\sqrt{6}}{9} + 0 - \frac{\sqrt{6}}{6} = 0.
-                  \]
-            \item Segundo e terceiro vetores:
-                  \[
-                    \left(-\frac{\sqrt{6}}{6}, \frac{\sqrt{6}}{3}, \frac{\sqrt{6}}{6}\right) \cdot \left(\frac{\sqrt{3}}{3}, \frac{\sqrt{3}}{3}, -\frac{\sqrt{3}}{3}\right) = -\frac{\sqrt{18}}{18} + \frac{\sqrt{18}}{9} - \frac{\sqrt{18}}{18} = 0.
-                  \]
-          \end{itemize}
-          O conjunto é ortogonal. O módulo do primeiro vetor é
-          \[
-            \sqrt{\left(\frac{\sqrt{2}}{3}\right)^2 + 0^2 + \left(\frac{\sqrt{2}}{2}\right)^2} \neq 1.
-          \]
-          Portanto, o conjunto não é ortonormal. Como há três vetores em \(\mathbb{R}^3\) e eles são linearmente independentes, o conjunto forma uma base para \(\mathbb{R}^3\).
-
-    \item O produto escalar entre os vetores \((2, 5, -3)\) e \((4, 2, 6)\) é dado por:
-          \[
-            (2, 5, -3) \cdot (4, 2, 6) = 8 + 10 - 18 = 0.
-          \]
-          O conjunto é ortogonal. O módulo dos vetores é:
-          \[
-            \|(2, 5, -3)\| = \sqrt{2^2 + 5^2 + (-3)^2} = \sqrt{4 + 25 + 9} = \sqrt{38} \neq 1.
-          \]
-          O conjunto não é ortonormal. Como há dois vetores em \(\mathbb{R}^3\), o conjunto não é base para \(\mathbb{R}^3\).
-
-    \item O produto escalar entre \((-6, 3, 2, 1)\) e \((2, 0, 6, 0)\) é dado por:
-          \[
-            (-6, 3, 2, 1) \cdot (2, 0, 6, 0) = -12 + 0 + 12 + 0 = 0.
-          \]
-          O conjunto é ortogonal. O módulo dos vetores é:
-          \[
-            \|(-6, 3, 2, 1)\| = \sqrt{(-6)^2 + 3^2 + 2^2 + 1^2} = \sqrt{36 + 9 + 4 + 1} = \sqrt{50} \neq 1.
-          \]
-          O conjunto não é ortonormal. Como há dois vetores em \(\mathbb{R}^4\), o conjunto não é base para \(\mathbb{R}^4\).
-  \end{enumerate}
 \end{resolution}
 
 % =========================== Questão 08 ===========================
 \begin{question}
-  Aplique o processo de ortogonalização Gram-Schmidt para transformar a base para $\mathbb{R}^{n}$ dada em um base ortonormal. Use os vetores na ordem e que eles são dados.
-  \vspace{-12pt}
-  \begin{multicols}{2}
-    \begin{enumerate}[label=\alph*)]
-      \item $B = \{(3, 4), (1, 0)\}$
-      \item $B = \{(-1, 2), (1, 0)\}$
-      \item $B = \{(0, 1), (2, 5)\}$
-      \item $B = \{(4, -3), (3, 2)\}$
-      \item $B = \{(2, 1, -2), (1, 2, 2), (2, -2, 1)\}$
-      \item $B = \{(1, 0, 0), (1, 1, 1), (1, 1, -1)\}$
-      \item $B = \{(4, -3,0), (1, 2, 0), (0, 0, 4)\}$
-      \item $B = \{(0, 1, 2), (2, 0, 0), (1, 1, 1)\}$
-    \end{enumerate}
-  \end{multicols}
+  Calcule a decomposição QR da matriz:
+  \[
+    A = \begin{bmatrix}
+      1  & 3 & 3  \\
+      2  & 2 & -2 \\
+      -2 & 2 & 1
+    \end{bmatrix}.
+  \]
 \end{question}
 
 % ========================= Resolução 08 =========================
 \begin{resolution}
-  Por meio do algoritmo imeplementado no trabalho pedido nesta disicplinas, temos:
-  \begin{enumerate}[label=\alph*)]
-    \item $B = \{(0.6, 0.8), (0.8, -0.6)\}$
-    \item $B = \{(-0.45, 0.89), (0.89, 0.45)\}$
-    \item $B = \{(0, 1), (1, 0)\}$
-    \item $B = \{(0.8, -0.6), (0.6, 0.8)\}$
-    \item $B = \{(0.67, 0.33, -0.67), (0.33, 0.67, 0.67), (0.67, -0.67, 0.33)\}$
-    \item $B = \{(1, 0, 0), (0, 0.71, 0.71), (0, 0.71, -0.71)\}$
-    \item $B = \{(0.8, -0.6, 0.), (0.6, 0.8, 0), (0, 0, 1)\}$
-    \item $B = \{(0, 0.45, 0.89), (1, 0, 0), (0, 0.89, -0.45)\}$
-  \end{enumerate}
+
 \end{resolution}
 
 % =========================== Questão 09 ===========================
 \begin{question}
-  Encontre a matriz de coordenadas de $w$ relativo a base ortonormal de $B$ em $\mathbb{R}^{n}$.
-  \begin{enumerate}[label=\alph*)]
-    \item $w = (1, 2), B = \left\{\left(-\frac{2\sqrt{13}}{13}, \frac{3\sqrt{13}}{13}\right), \left(\frac{3\sqrt{13}}{13}, \frac{2\sqrt{13}}{13}\right)\right\}$.
-    \item $w = (4, -3), B = \left\{\left(-\frac{\sqrt{3}}{3}, \frac{\sqrt{6}}{3}\right), \left(-\frac{\sqrt{6}}{3}, \frac{\sqrt{3}}{3}\right)\right\}$.
-    \item $w = (2, -2, 1), B = \left\{\left(-\frac{\sqrt{10}}{10}, 0, \frac{3\sqrt{10}}{10}\right), (0, 1, 0), \left(-\frac{3\sqrt{10}}{10}, 0, \frac{\sqrt{10}}{10}\right)\right\}$.
-  \end{enumerate}
+  Calcule a decomposição em valores singulares (SVD) da matriz $A$:
+  \[
+    A = \begin{bmatrix}
+      1  & 2 & 3 \\
+      -1 & 0 & 1 \\
+      3  & 2 & 1
+    \end{bmatrix}.
+  \]
 \end{question}
 
 % ========================= Resolução 09 =========================
 \begin{resolution}
-  Para encontrar a matriz de coordenadas de \( w \) relativo à base ortonormal \( B \), usamos o fato de que, para bases ortonormais, a coordenada de \( w \) em relação a cada vetor \( v_i \) da base é o produto interno de \( w \) com \( v_i \). Ou seja, se \( B = \{v_1, v_2, \dots, v_n\} \), então:
 
-  \[
-    [w]_B = \begin{bmatrix}
-      \langle w, v_1 \rangle \\
-      \langle w, v_2 \rangle \\
-      \vdots                 \\
-      \langle w, v_n \rangle
-    \end{bmatrix}.
-  \]
-
-  O produto interno no \( \mathbb{R}^n \) é dado por:
-  \[
-    \langle u, v \rangle = \sum_{i=1}^n u_i v_i.
-  \]
-
-  \begin{enumerate}[label=\alph*)]
-    \item Os vetores da base são:
-          \[
-            v_1 = \left(-\frac{2\sqrt{13}}{13}, \frac{3\sqrt{13}}{13}\right), \quad v_2 = \left(\frac{3\sqrt{13}}{13}, \frac{2\sqrt{13}}{13}\right).
-          \]
-
-          Coordenada relativa a \( v_1 \):
-          \[
-            \langle w, v_1 \rangle = \left(1\right)\left(-\frac{2\sqrt{13}}{13}\right) + \left(2\right)\left(\frac{3\sqrt{13}}{13}\right) = -\frac{2\sqrt{13}}{13} + \frac{6\sqrt{13}}{13} = \frac{4\sqrt{13}}{13}.
-          \]
-
-          Coordenada relativa a \( v_2 \):
-          \[
-            \langle w, v_2 \rangle = \left(1\right)\left(\frac{3\sqrt{13}}{13}\right) + \left(2\right)\left(\frac{2\sqrt{13}}{13}\right) = \frac{3\sqrt{13}}{13} + \frac{4\sqrt{13}}{13} = \frac{7\sqrt{13}}{13}.
-          \]
-
-          Matriz de coordenadas:
-          \[
-            [w]_B = \begin{bmatrix}
-              \frac{4\sqrt{13}}{13} \\[8pt]
-              \frac{7\sqrt{13}}{13}
-            \end{bmatrix}.
-          \]
-
-    \item Os vetores da base são:
-          \[
-            v_1 = \left(-\frac{\sqrt{3}}{3}, \frac{\sqrt{6}}{3}\right), \quad v_2 = \left(-\frac{\sqrt{6}}{3}, \frac{\sqrt{3}}{3}\right).
-          \]
-
-          Coordenada relativa a \( v_1 \):
-          \[
-            \langle w, v_1 \rangle = \left(4\right)\left(-\frac{\sqrt{3}}{3}\right) + \left(-3\right)\left(\frac{\sqrt{6}}{3}\right) = -\frac{4\sqrt{3}}{3} - \frac{3\sqrt{6}}{3} = -\frac{4\sqrt{3} + 3\sqrt{6}}{3}.
-          \]
-
-          Coordenada relativa a \( v_2 \):
-          \[
-            \langle w, v_2 \rangle = \left(4\right)\left(-\frac{\sqrt{6}}{3}\right) + \left(-3\right)\left(\frac{\sqrt{3}}{3}\right) = -\frac{4\sqrt{6}}{3} - \frac{3\sqrt{3}}{3} = -\frac{4\sqrt{6} + 3\sqrt{3}}{3}.
-          \]
-
-          Matriz de coordenadas:
-          \[
-            [w]_B = \begin{bmatrix}
-              -\frac{4\sqrt{3} + 3\sqrt{6}}{3} \\[8pt]
-              -\frac{4\sqrt{6} + 3\sqrt{3}}{3}
-            \end{bmatrix}.
-          \]
-
-    \item Os vetores da base são:
-          \[
-            v_1 = \left(-\frac{\sqrt{10}}{10}, 0, \frac{3\sqrt{10}}{10}\right), \quad v_2 = (0, 1, 0), \quad v_3 = \left(-\frac{3\sqrt{10}}{10}, 0, \frac{\sqrt{10}}{10}\right).
-          \]
-
-          Coordenada relativa a \( v_1 \):
-          \[
-            \langle w, v_1 \rangle = \left(2\right)\left(-\frac{\sqrt{10}}{10}\right) + \left(-2\right)(0) + \left(1\right)\left(\frac{3\sqrt{10}}{10}\right) = -\frac{2\sqrt{10}}{10} + \frac{3\sqrt{10}}{10} = \frac{\sqrt{10}}{10}.
-          \]
-
-          Coordenada relativa a \( v_2 \):
-          \[
-            \langle w, v_2 \rangle = \left(2\right)(0) + \left(-2\right)(1) + \left(1\right)(0) = -2.
-          \]
-
-          Coordenada relativa a \( v_3 \):
-          \[
-            \langle w, v_3 \rangle = \left(2\right)\left(-\frac{3\sqrt{10}}{10}\right) + \left(-2\right)(0) + \left(1\right)\left(\frac{\sqrt{10}}{10}\right) = -\frac{6\sqrt{10}}{10} + \frac{\sqrt{10}}{10} = -\frac{5\sqrt{10}}{10} = -\frac{\sqrt{10}}{2}.
-          \]
-
-          Matriz de coordenadas:
-          \[
-            [w]_B = \begin{bmatrix}
-              \frac{\sqrt{10}}{10} \\[8pt]
-              -2                   \\[8pt]
-              -\frac{\sqrt{10}}{2}
-            \end{bmatrix}.
-          \]
-
-  \end{enumerate}
 \end{resolution}
 
 % =========================== Questão 10 ===========================
 \begin{question}
-  Considere o conjunto de polinômios $S = \{1, t, t^2\}$ definida sobre o intervalo $-1 \leq t \leq 1$. Usando o processo de ortogonalização de Gram-Schmidt, obtenha o conjunto orthonormal.
+  Considere o seguinte conjunto de vetores em $\mathbb{R}^2$ (com o produto interno convencional):
+  \[
+    S = \left\{ \mathbf{v}_1 =
+    \begin{bmatrix}
+      3 \\
+      1
+    \end{bmatrix}, \mathbf{v}_2 =
+    \begin{bmatrix}
+      2 \\
+      2
+    \end{bmatrix} \right\}.
+  \]
+  Agora, realize o processo de Gram-Schmidt para obter um conjunto ortogonal de vetores.
 \end{question}
 
 % ========================= Resolução 10 =========================
 \begin{resolution}
-  Para obter um conjunto ortonormal a partir de \( S = \{1, t, t^2\} \) no intervalo \( -1 \leq t \leq 1 \) usando o processo de Gram-Schmidt, considera-se o produto interno definido como:
-  $$ \langle f, g \rangle = \int_{-1}^1 f(t) g(t) \, dt.$$
-  Primeiramente, define-se \( q_1 = 1 \), já que o vetor constante é ortogonal por construção. Em seguida, o vetor \( t \) é ortogonalizado por meio da subtração de sua projeção em \( q_1 \), dada por
-  $$ \text{proj}_{q_1}(t) = \frac{\langle t, q_1 \rangle}{\langle q_1, q_1 \rangle} q_1.$$
-  Calculando \( \langle t, q_1 \rangle = \int_{-1}^1 t \cdot 1 \, dt = 0 \), conclui-se que \( q_2 = t \), pois \( \text{proj}_{q_1}(t) = 0 \).
 
-  Para ortogonalizar \( t^2 \), considera-se
-  $$ q_3 = t^2 - \text{proj}_{q_1}(t^2) - \text{proj}_{q_2}(t^2),$$
-  com as projeções definidas por:
-  $$ \text{proj}_{q_1}(t^2) = \frac{\langle t^2, q_1 \rangle}{\langle q_1, q_1 \rangle} q_1, \quad \text{proj}_{q_2}(t^2) = \frac{\langle t^2, q_2 \rangle}{\langle q_2, q_2 \rangle} q_2.$$
-  Calcula-se
-  $$ \langle t^2, q_1 \rangle = \int_{-1}^1 t^2 \cdot 1 \, dt = \frac{2}{3},$$
-  $$ \langle q_1, q_1 \rangle = \int_{-1}^1 1 \cdot 1 \, dt = 2,$$
-  $$ \langle q_2, q_2 \rangle = \int_{-1}^1 t^2 \, dt = \frac{2}{3}$$
-  $$ \langle t^2, q_2 \rangle = \int_{-1}^1 t^3 \, dt = 0 .$$
-  Assim, \( \text{proj}_{q_1}(t^2) = \frac{\frac{2}{3}}{2} \cdot q_1 = \frac{1}{3} \cdot 1 \), enquanto \( \text{proj}_{q_2}(t^2) = 0 \), resultando em \( q_3 = t^2 - \frac{1}{3} \).
-
-  Para normalizar os vetores, calcula-se suas normas. Para \( q_1 \), obtém-se \( \|q_1\| = \sqrt{\langle q_1, q_1 \rangle} = \sqrt{2} \), levando a \( e_1 = \frac{q_1}{\|q_1\|} = \frac{1}{\sqrt{2}} \). Para \( q_2 \), \( \|q_2\| = \sqrt{\frac{2}{3}} \), resultando em \( e_2 = \frac{q_2}{\|q_2\|} = \sqrt{\frac{3}{2}} t \). Finalmente, para \( q_3 \), calcula-se \( \langle q_3, q_3 \rangle = \int_{-1}^1 \left(t^2 - \frac{1}{3}\right)^2 \, dt = \frac{2}{45} \), o que dá \( \|q_3\| = \sqrt{\frac{2}{45}} \), resultando em \( e_3 = \frac{q_3}{\|q_3\|} = \sqrt{\frac{45}{2}} \left(t^2 - \frac{1}{3}\right) \). Assim, o conjunto ortonormal obtido é:
-  $$\left\{\frac{1}{\sqrt{2}}, \sqrt{\frac{3}{2}} t, \sqrt{\frac{45}{2}} \left(t^2 - \frac{1}{3}\right)\right\}.$$
 \end{resolution}
 
 % =========================== Questão 11 ===========================
 \begin{question}
-  Encontre o fatoração QR da matriz abaixo:
-  $$\begin{bmatrix}
-      1  & 2  & 3 \\
-      -1 & -2 & 4 \\
-      2  & 0  & 3 \\
-      -5 & -3 & 1
-    \end{bmatrix}$$
+  Seja
+  \[
+    A =
+    \begin{bmatrix}
+      -1 & 2 & -1 \\
+      0  & 1 & 3  \\
+      -1 & 2 & 5
+    \end{bmatrix}.
+  \]
+  \begin{itemize}
+    \item[a.] Encontre $P(\lambda)$, o polinômio característico de $A$.
+    \item[b.] Encontre os autovalores de $A$.
+    \item[c.] Mostre que $P(A) = 0$.
+  \end{itemize}
+
 \end{question}
 
 % ========================= Resolução 11 =========================
 \begin{resolution}
-  Utilizando o algoritmo implementado, obtemos:
-  \begin{equation}
-    \begin{bmatrix}
-      1  & 2  & 3 \\
-      -1 & -2 & 4 \\
-      2  & 0  & 3 \\
-      -5 & -3 & 1
-    \end{bmatrix} =
-    \begin{bmatrix}
-      0.18  & 0.6   & 0.78 \\
-      -0.18 & -0.6  & 0.49 \\
-      0.36  & -0.53 & 0.34 \\
-      -0.9  & 0.03  & 0.19
-    \end{bmatrix}
-    \begin{bmatrix}
-      5.57 & 3.41 & 0.    \\
-      0.   & 2.31 & -2.16 \\
-      0.   & 0.   & 5.51
-    \end{bmatrix}
-  \end{equation}
+
 \end{resolution}
 
 % =========================== Questão 12 ===========================
 \begin{question}
-  Resolva o seguinte conjunto de equações lineares usando a fatorações QR:
-  \begin{equation*}
+  Seja a matriz $3 \times 3$ $A$ definida como:
+  \[
+    A =
     \begin{bmatrix}
-      1 & 2 & 1 \\ -2 & 3 & 4 \\ 1 & 0 & 5
-    \end{bmatrix} \begin{bmatrix}
-      x_1 \\ x_2 \\ x_3
-    \end{bmatrix} =
-    \begin{bmatrix}
-      6 \\ 20 \\ 14
-    \end{bmatrix}
-  \end{equation*}
+      0 & 1 & 0 \\
+      1 & 0 & 1 \\
+      0 & 1 & 0
+    \end{bmatrix}.
+  \]
+  Calcule $A^{2004}$ e $e^{At}$.
 \end{question}
 
 % ========================= Resolução 12 =========================
 \begin{resolution}
-  Temos que a matriz de transformação pode ser decompostas nas seguintes matrizes:
-  $$\begin{bmatrix}
-      1 & 2 & 1 \\ -2 & 3 & 4 \\ 1 & 0 & 5
-    \end{bmatrix} = \begin{bmatrix}
-      0.41  & 0.83 & -0.38 \\
-      -0.82 & 0.52 & 0.25  \\
-      0.41  & 0.21 & 0.89
-    \end{bmatrix}
-    \begin{bmatrix}
-      2.45 & -1.63 & -0.82 \\
-      0.   & 3.21  & 3.94  \\
-      0.   & 0.    & 5.08
-    \end{bmatrix}$$
-  Calculando $y = Q^{\top}b$, temos:
-  \begin{equation*}
-    y = \begin{bmatrix}
-      0.41  & 0.83 & -0.38 \\
-      -0.82 & 0.52 & 0.25  \\
-      0.41  & 0.21 & 0.89
-    \end{bmatrix} ^{\top} \begin{bmatrix}
-      6 \\ 20 \\ 14
-    \end{bmatrix} = \begin{bmatrix}
-      -8.16 \\
-      18.25 \\
-      15.24
-    \end{bmatrix}
-  \end{equation*}
-  Por fim, calculamos $Rx = y$:
-  \begin{equation*}
-    \begin{bmatrix}
-      2.45 & -1.63 & -0.82 \\
-      0.   & 3.21  & 3.94  \\
-      0.   & 0.    & 5.08
-    \end{bmatrix}
-    \begin{bmatrix}
-      x_1 \\ x_2 \\ x_3
-    \end{bmatrix} = \begin{bmatrix}
-      -8.16 \\
-      18.25 \\
-      15.24
-    \end{bmatrix}
-  \end{equation*}
-  Assim,
-  \begin{equation}
-    x_1 = -1.00, \quad x_2 = 2.00, \quad x_3 = 3.00
-  \end{equation}
 
 \end{resolution}
 
 % =========================== Questão 13 ===========================
 \begin{question}
-  Resolva o seguinte conjunto de equações lineares usando fatoração QR.
-  \begin{align*}
-    x_1 + 2 x_2 + 3 x_3 & = 14 \\
-    4x_1 + 5x_2 + 6x_3  & = 32 \\
-    7x_1 - 3x_2 -2x_3   & = -5
-  \end{align*}
+  Encontre a representação no espaço de estados para os seguintes sistemas dinâmicos na forma canônica controlável:
+  \begin{itemize}
+    \item[a.] $\dfrac{d^3 y(t)}{dt^3} + 3 \dfrac{d^2 y(t)}{dt^2} + 4 \dfrac{dy(t)}{dt} + 2y(t) = 7u(t)$.
+  \end{itemize}
 \end{question}
 
 % ========================= Resolução 13 =========================
 \begin{resolution}
-  Temos que a matriz de transformação pode ser decompostas nas seguintes matrizes:
-  $$\begin{bmatrix}
-      1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & -3 & -2
-    \end{bmatrix} = \begin{bmatrix}
-      0.12 & 0.32 & 0.94  \\
-      0.49 & 0.8  & -0.34 \\
-      0.86 & -0.5 & 0.06
+
+\end{resolution}
+
+
+% =========================== Questão 14 ===========================
+\begin{question}
+  Determine se as seguintes matrizes são definidas positivas / semi-definidas ou definidas negativas / semi-definidas:
+  \begin{multicols}{3}
+    \begin{itemize}
+      \item[a.] $A = \begin{bmatrix} 3 & 2 \\ 2 & 3 \end{bmatrix}$;
+      \item[b.] $B = \begin{bmatrix} 1 & 2 \\ 2 & 4 \end{bmatrix}$;
+      \item[c.] $C = \begin{bmatrix} 1 & -2 \\ -2 & -6 \end{bmatrix}$.
+    \end{itemize}
+  \end{multicols}
+  \vspace{8pt}
+\end{question}
+
+% ========================= Resolução 14 =========================
+\begin{resolution}
+
+\end{resolution}
+
+
+% =========================== Questão 15 ===========================
+\begin{question}
+  Considere o sistema no tempo discreto:
+  \[
+    x(k+1) =
+    \begin{bmatrix}
+      0 & 1 & 0 & 0 \\
+      0 & 0 & 1 & 0 \\
+      0 & 0 & 0 & 1 \\
+      0 & 0 & 0 & 0
+    \end{bmatrix}
+    x(k) +
+    \begin{bmatrix}
+      1 \\ 0 \\ 0 \\ 0
+    \end{bmatrix}
+    u(k),
+    \quad y(k) =
+    \begin{bmatrix}
+      1 & 0 & 0 & 0
+    \end{bmatrix}
+    x(k).
+  \]
+  \begin{itemize}
+    \item[a.] Encontre a matriz de transição de estados $A^k$.
+    \item[b.] Encontre $y(k)$ se $x(0) = [1 \ 1 \ 1 \ 1]^T$ e $u(k) = 0$.
+    \item[c.] Encontre $y(k)$ se $x(0) = [1 \ 1 \ 1 \ 1]^T$ e $u(k) = 1$ para $k \geq 0$.
+  \end{itemize}
+
+\end{question}
+
+% ========================= Resolução 15 =========================
+\begin{resolution}
+
+\end{resolution}
+
+% =========================== Questão 16 ===========================
+\begin{question}
+  O seguinte sistema é controlável? Ele é observável?
+  \[
+    \begin{bmatrix}
+      x_1(k+1) \\
+      x_2(k+1) \\
+      x_3(k+1)
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+      0  & 1  & 0  \\
+      1  & 0  & 1  \\
+      -1 & -2 & -3
     \end{bmatrix}
     \begin{bmatrix}
-      8.12 & 0.12 & 1.6  \\
-      0.   & 6.16 & 6.78 \\
-      0.   & 0.   & 0.66
-    \end{bmatrix}$$
-  Calculando $y = Q^{\top}b$, temos:
-  \begin{equation*}
-    y = \begin{bmatrix}
-      0.12 & 0.32 & 0.94  \\
-      0.49 & 0.8  & -0.34 \\
-      0.86 & -0.5 & 0.06
-    \end{bmatrix} ^{\top} \begin{bmatrix}
-      14 \\ 32 \\ -5
-    \end{bmatrix} = \begin{bmatrix}
-      13.17 \\
-      32.67 \\
-      1.98
+      x_1(k) \\
+      x_2(k) \\
+      x_3(k)
     \end{bmatrix}
-  \end{equation*}
-  Por fim, calculamos $Rx = y$:
-  \begin{equation*}
+    +
     \begin{bmatrix}
-      8.12 & 0.12 & 1.6  \\
-      0.   & 6.16 & 6.78 \\
-      0.   & 0.   & 0.66
+      1  & 0  \\
+      0  & 1  \\
+      -1 & -2
     \end{bmatrix}
     \begin{bmatrix}
-      x_1 \\ x_2 \\ x_3
-    \end{bmatrix} = \begin{bmatrix}
-      13.17 \\
-      32.67 \\
-      1.98
+      u_1(k) \\
+      u_2(k)
+    \end{bmatrix}.
+  \]
+  \[
+    \begin{bmatrix}
+      y_1(k) \\
+      y_2(k)
     \end{bmatrix}
-  \end{equation*}
-  Assim,
-  \begin{equation}
-    x_1 = 1.00, \quad x_2 = 2.00, \quad x_3 = 3.00
-  \end{equation}
+    =
+    \begin{bmatrix}
+      1 & -1 & 2 \\
+      0 & 1  & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+      x_1(k) \\
+      x_2(k) \\
+      x_3(k)
+    \end{bmatrix}.
+  \]
+\end{question}
+
+% ========================= Resolução 16 =========================
+\begin{resolution}
+
 \end{resolution}
 
