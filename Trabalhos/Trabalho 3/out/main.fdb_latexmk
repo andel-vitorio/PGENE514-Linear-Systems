@@ -1,15 +1,15 @@
 # Fdb version 4
-["bibtex out/main"] 0 "out/main.aux" "out/main.bbl" "out/main" 1732720878.84772 0
+["bibtex out/main"] 0 "out/main.aux" "out/main.bbl" "out/main" 1732736522.26005 0
   "/usr/local/texlive/2023/texmf-dist/bibtex/bst/ieeetran/IEEEtranN.bst" 1440712899 63583 d34cb6c328acc69716207f4a3421ad46 ""
-  "out/Pre-textual/capa.aux" 1732720878.36427 975 597e52576b7df0b5ab74eb76b9e2616c "pdflatex"
+  "out/Pre-textual/capa.aux" 1732736514.3685 975 597e52576b7df0b5ab74eb76b9e2616c "pdflatex"
   "out/main.aux" 0 -1 0 "pdflatex"
   "references.bib" 0 -1 0 ""
   (generated)
   "out/main.bbl"
   "out/main.blg"
   (rewritten before read)
-["pdflatex"] 1732720877.68189 "/home/andel/Documentos/Mestrado/Disciplinas/PGENE514-Linear-Systems/Trabalhos/Trabalho 3/main.tex" "out/main.pdf" "main" 1732720878.84787 0
-  "/home/andel/Documentos/Mestrado/Disciplinas/PGENE514-Linear-Systems/Trabalhos/Trabalho 3/main.tex" 1732720814.87814 1430 5032e3fabfaad1b0b536e37e794ec4fc ""
+["pdflatex"] 1732736520.63915 "/home/andel/Documentos/Mestrado/Disciplinas/PGENE514-Linear-Systems/Trabalhos/Trabalho 3/main.tex" "out/main.pdf" "main" 1732736522.2602 0
+  "/home/andel/Documentos/Mestrado/Disciplinas/PGENE514-Linear-Systems/Trabalhos/Trabalho 3/main.tex" 1732736518.62631 1624 351db3f0925187db40b85b83bcf36b8b ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ebgaramond/ebg_ljow5q.enc" 1679344195 3064 ad039a5bf6faa075ad3278d742de72a1 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/ebgaramond/ebg_tcdnmr.enc" 1679344195 3038 e164542e716a689948526cfb8c023ec2 ""
@@ -280,12 +280,12 @@
   "Logos/ufam.pdf" 1732715433.09238 74907 d45545ea092b4a0beb82527f5b6ef624 ""
   "Pre-textual/capa.tex" 1732715433.09438 270 91dd5fbc23b29c37ec49a690da420cfe ""
   "Pre-textual/folha-de-rosto.tex" 1732715433.09538 214 82f84fd2dc31d5fc6c66787e9b13ff69 ""
-  "main.tex" 1732720814.87814 1430 5032e3fabfaad1b0b536e37e794ec4fc ""
-  "out/Pre-textual/capa.aux" 1732720878.36427 975 597e52576b7df0b5ab74eb76b9e2616c "pdflatex"
-  "out/main.aux" 1732720878.60726 2870 cee947d6c8413e6219193246131ab104 "pdflatex"
+  "main.tex" 1732736518.62631 1624 351db3f0925187db40b85b83bcf36b8b ""
+  "out/Pre-textual/capa.aux" 1732736521.61829 975 ad8e82fdef7224ea6b2ed93e9b265569 "pdflatex"
+  "out/main.aux" 1732736521.94329 2878 f06f4a899e50486ea6839d453d2ecaba "pdflatex"
   "out/main.bbl" 0 -1 0 "bibtex out/main"
-  "out/main.out" 1732720878.60826 1520 bbcb3b1f9e1dfa746f72432099327a25 "pdflatex"
-  "out/main.toc" 1732720878.60826 784 470a7f6f766b3b2562b4179201cc8178 "pdflatex"
+  "out/main.out" 1732736521.94429 1520 bbcb3b1f9e1dfa746f72432099327a25 "pdflatex"
+  "out/main.toc" 1732736521.94429 788 cced322141629f605c4ad55a148404cb "pdflatex"
   "workconfig.sty" 1732715433.10838 3528 0f120e320bf0b0f7830b79cb7bfbf74c ""
   (generated)
   "out/Pre-textual/capa.aux"

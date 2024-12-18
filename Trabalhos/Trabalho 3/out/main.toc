@@ -1,10 +1,10 @@
 \babel@toc {brazil}{}\relax 
-\contentsline {chapter}{\numberline {1}Introdução}{3}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Decomposição em Valores Singulares}{4}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Fundamentos Matemáticos}{4}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Construção das Matrizes}{4}{subsection.2.1.1}%
-\contentsline {section}{\numberline {2.2}Aplicações em Processamento de Imagens}{5}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Compressão de Imagens}{5}{subsection.2.2.1}%
-\contentsline {section}{\numberline {2.3}Exemplo Prático}{6}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Conclusão}{9}{chapter.3}%
-\contentsline {chapter}{\numberline {A}Algoritmos Implementados}{10}{appendix.A}%
+\contentsline {chapter}{\numberline {1}Introdução}{7}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Decomposição em Valores Singulares}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Fundamentos Matemáticos}{9}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Construção das Matrizes}{9}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Aplicações em Processamento de Imagens}{10}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Compressão de Imagens}{10}{subsection.2.2.1}%
+\contentsline {section}{\numberline {2.3}Exemplo Prático}{11}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Conclusão}{15}{chapter.3}%
+\contentsline {chapter}{\numberline {A}Algoritmos Implementados}{17}{appendix.A}%
