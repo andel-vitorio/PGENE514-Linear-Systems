@@ -626,7 +626,7 @@
       3 & -9 \\ 2 & -6
     \end{bmatrix} = \begin{bmatrix}
       -0.8321 & -0.55 \\
-      -0.555   & 0.832
+      -0.555  & 0.832
     \end{bmatrix} \begin{bmatrix}
       11.4 & 0 \\ 0 & 2.81 \times 10^{-16}
     \end{bmatrix} \begin{bmatrix}
@@ -772,6 +772,66 @@
 % ========================= Resolução 05 =========================
 \begin{resolution}
 
+  {\bf (a)} Autovalores \( \lambda_1 = -1 \), \( \lambda_2 = 3 \) e autovetores \( v_1 = \begin{bmatrix} -1 \\ 2 \end{bmatrix} \), \( v_2 = \begin{bmatrix} 1 \\ 1 \end{bmatrix} \).
+  Forma diagonalizável:
+  \[
+    A = P \Lambda P^{-1}, \quad \Lambda = \begin{bmatrix} -1 & 0 \\ 0 & 3 \end{bmatrix}, \, P = \begin{bmatrix} -1 & 1 \\ 2 & 1 \end{bmatrix}.
+  \]
+  A matriz resultante é:
+  \[
+    A = \begin{bmatrix} 1.67 & 1.33 \\ 2.67 & 0.333 \end{bmatrix}.
+  \]
+
+  {\bf (b)} Autovalores \( \lambda_1 = 0 \), \( \lambda_2 = 2 \), \( \lambda_3 = -2 \) e autovetores \( v_1 = \begin{bmatrix} -1 \\ 1 \\ 0 \end{bmatrix} \), \( v_2 = \begin{bmatrix} 2 \\ -1 \\ 1 \end{bmatrix} \), \( v_3 = \begin{bmatrix} 0 \\ 1 \\ 3 \end{bmatrix} \).
+  Forma diagonalizável:
+  \[
+    A = P \Lambda P^{-1}, \quad \Lambda = \begin{bmatrix} 0 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & -2 \end{bmatrix}, \, P = \begin{bmatrix} -1 & 2 & 0 \\ 1 & -1 & 1 \\ 0 & 1 & 3 \end{bmatrix}.
+  \]
+  Invertendo \( P \), calcula-se \( A \):
+  \[
+    A = \begin{bmatrix} 6 & 6 & -2 \\ -2 & -2 & 0 \\ 6 & 6 & -4 \end{bmatrix}.
+  \]
+
+  {\bf (c)} Autovalor \( \lambda = 3 \) e autovetores \( v_1 = \begin{bmatrix} 2 \\ -3 \end{bmatrix} \), \( v_2 = \begin{bmatrix} 1 \\ 2 \end{bmatrix} \). Os vetores fornecidos formam uma base do autoespaço de \( \lambda = 3 \). Logo,
+  \[
+    3 a_{11}  - a_{12} = 9 \quad 3 a_{21} - a_{22}  = -3 ,
+  \]
+  Assim, a matriz \( A \) é:
+  \begin{equation}
+    A = \begin{bmatrix}
+      3 & 0 \\ 0 & 3
+    \end{bmatrix}
+  \end{equation}
+
+  {\bf (d)} Autovalor \( \lambda = -1 + 2i \) e autovetor \( v = \begin{bmatrix} 1 + i \\ 3i \end{bmatrix} \). Para uma matriz com autovalores complexos, a matriz será do tipo:
+  \[
+    \begin{bmatrix} a_{11} + 1 - 2i & a_{12} \\ a_{21} & a_{22} + 1 -2i \end{bmatrix} \begin{bmatrix}
+      1 + i \\ 3i
+    \end{bmatrix} = \begin{bmatrix}
+      0 \\ 0
+    \end{bmatrix}.
+  \]
+  \[
+    (a_{11} + 1 - 2i)(1 + i) + a_{12} \cdot 3i = 0.
+  \]
+  Selecionando $a_{12} = 0$, temos $a_{11} = -1 + 2i$.
+  \[
+    a_{21}(1 + i) + (a_{22} + 1 - 2i) \cdot 3i = 0.
+  \]
+  Selecionando $a_{21}  = 0$, temos $a_{22} = -1 + 2i$.
+  Logo,
+  \begin{equation}
+    \begin{bmatrix}
+      -1 + 2i & 0       \\
+      0       & -1 + 2i
+    \end{bmatrix}
+  \end{equation}
+
+  {\bf (e)} Autovalor \( \lambda = -2 \) e autovetor \( v = \begin{bmatrix} -2 \\ 0 \\ -1 \end{bmatrix} \).
+  Neste caso, a matriz \( A \) é escalonada com \( \lambda = -2 \) e o autoespaço é gerado pelo vetor dado:
+  \[
+    A = -2I = \begin{bmatrix} -2 & 0 & 0 \\ 0 & -2 & 0 \\ 0 & 0 & -2 \end{bmatrix}.
+  \]
 \end{resolution}
 
 % =========================== Questão 06 ===========================
@@ -786,6 +846,30 @@
 % ========================= Resolução 06 =========================
 \begin{resolution}
 
+  {\bf (a)} O conjunto dado contém apenas o vetor nulo. O complemento ortogonal é o conjunto de todos os vetores em \( \mathbb{R}^3 \), pois qualquer vetor é ortogonal ao vetor nulo. Assim, uma base para o complemento ortogonal é a base canônica de \( \mathbb{R}^3 \):
+  \[
+    \mathcal{B} = \left\{ \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix} \right\}.
+  \]
+
+  {\bf (b)} Para encontrar o complemento ortogonal, busca-se os vetores \( v = (x, y, z) \in \mathbb{R}^3 \) que satisfazem:
+  \[
+    \begin{aligned}
+      (1, 1, 1) \cdot (x, y, z) & = 0, \\
+      (2, 1, 0) \cdot (x, y, z) & = 0.
+    \end{aligned}
+  \]
+  Escrevendo as equações:
+  \[
+    x + y + z = 0, \quad 2x + y = 0.
+  \]
+  Resolvendo o sistema, temos da segunda equação: \( y = -2x \). Substituindo na primeira equação:
+  \[
+    x - 2x + z = 0 \implies -x + z = 0 \implies z = x.
+  \]
+  O vetor \( v \) assume a forma \( v = x \begin{bmatrix} 1 \\ -2 \\ 1 \end{bmatrix} \). Assim, o complemento ortogonal é gerado por este vetor, e a base é:
+  \[
+    \mathcal{B} = \left\{ \begin{bmatrix} 1 \\ -2 \\ 1 \end{bmatrix} \right\}.
+  \]
 \end{resolution}
 
 % =========================== Questão 07 ===========================
@@ -809,6 +893,55 @@
 % ========================= Resolução 07 =========================
 \begin{resolution}
 
+  {\bf (a)} Matriz \( A = \begin{bmatrix} 1 & 2 \\ 3 & 6 \end{bmatrix} \)
+
+  \vspace{12pt}
+  As colunas de \( A \) são linearmente dependentes (\( \text{rank}(A) = 1 \)). A base de \( \mathcal{C}(A) \) é formada pela primeira coluna:
+  \[
+    \mathcal{C}(A) = \text{span}\left\{ \begin{bmatrix} 1 \\ 3 \end{bmatrix} \right\}.
+  \]
+  Resolvendo \( A \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = 0 \):
+  \[
+    \begin{bmatrix} 1 & 2 \\ 3 & 6 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}.
+  \]
+  A solução é \( x_1 + 2x_2 = 0 \), ou seja, \( x_1 = -2x_2 \). O núcleo é:
+  \[
+    \mathcal{N}(A) = \text{span}\left\{ \begin{bmatrix} -2 \\ 1 \end{bmatrix} \right\}.
+  \]
+  As linhas de \( A \) são linearmente dependentes. A base de \( \mathcal{C}(A^T) \) é a primeira linha:
+  \[
+    \mathcal{C}(A^T) = \text{span}\left\{ \begin{bmatrix} 1 \\ 2 \end{bmatrix} \right\}.
+  \]
+  Resolvendo \( A^T \begin{bmatrix} y_1 \\ y_2 \end{bmatrix} = 0 \):
+  \[
+    \begin{bmatrix} 1 & 3 \\ 2 & 6 \end{bmatrix} \begin{bmatrix} y_1 \\ y_2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}.
+  \]
+  A solução é \( y_2 = -3y_1 \). O núcleo é:
+  \[
+    \mathcal{N}(A^T) = \text{span}\left\{ \begin{bmatrix} -3 \\ 1 \end{bmatrix} \right\}.
+  \]
+
+  Logo, temos \( \mathcal{C}(A) \perp \mathcal{N}(A^T) \) e \( \mathcal{C}(A^T) \perp \mathcal{N}(A) \).
+
+  \vspace{24pt}
+  {\bf (b)} Matriz \( A = \begin{bmatrix} 2 & 1 & 3 & 1 \\ 4 & -1 & 2 & 3 \end{bmatrix} \)
+
+  Oposto as colunas de \( A \), reduzimos \( A \) por escalonamento. O posto de \( A \) é \( 2 \), então duas colunas formam a base:
+  \[
+    \mathcal{C}(A) = \text{span}\left\{ \begin{bmatrix} 2 \\ 4 \end{bmatrix}, \begin{bmatrix} 1 \\ -1 \end{bmatrix} \right\}.
+  \]
+  Resolvendo \( A \begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \end{bmatrix} = 0 \). A solução do sistema fornece dois vetores independentes:
+  \[
+    \mathcal{N}(A) = \text{span}\left\{ \begin{bmatrix} -1 \\ 0 \\ 1 \\ 0 \end{bmatrix}, \begin{bmatrix} -1 \\ -3 \\ 0 \\ 1 \end{bmatrix} \right\}.
+  \]
+  As linhas de \( A \) são linearmente independentes, então ambas formam a base:
+  \[
+    \mathcal{C}(A^T) = \text{span}\left\{ \begin{bmatrix} 2 \\ 1 \\ 3 \\ 1 \end{bmatrix}, \begin{bmatrix} 4 \\ -1 \\ 2 \\ 3 \end{bmatrix} \right\}.
+  \]
+  O núcleo é nulo, pois \( \text{rank}(A^T) = 2 \), e \( A^T \) não possui vetores livres.
+
+  Relações de Ortogonalidade: \( \mathcal{C}(A) \perp \mathcal{N}(A^T) \) e \( \mathcal{C}(A^T) \perp \mathcal{N}(A) \).
+
 \end{resolution}
 
 % =========================== Questão 08 ===========================
@@ -825,7 +958,24 @@
 
 % ========================= Resolução 08 =========================
 \begin{resolution}
-
+  Usando o algoritmo implementado como requisitado durante a disciplina, temos:
+  $$
+    A = \begin{bmatrix}
+      1  & 3 & 3  \\
+      2  & 2 & -2 \\
+      -2 & 2 & 1
+    \end{bmatrix} =
+    \begin{bmatrix}
+      0.33  & 0.67 & 0.67  \\
+      0.67  & 0.33 & -0.67 \\
+      -0.67 & 0.67 & -0.33
+    \end{bmatrix}
+    \begin{bmatrix}
+      3 & 1 & -1 \\
+      0 & 4 & 2  \\
+      0 & 0 & 3
+    \end{bmatrix}.
+  $$
 \end{resolution}
 
 % =========================== Questão 09 ===========================
@@ -842,7 +992,27 @@
 
 % ========================= Resolução 09 =========================
 \begin{resolution}
-
+  Usando o algoritmo implementado como requisitado durante a disciplina, temos:
+  \begin{multline*}
+    A = \begin{bmatrix}
+      1  & 2 & 3 \\
+      -1 & 0 & 1 \\
+      3  & 2 & 1
+    \end{bmatrix} =
+    \begin{bmatrix}
+      -0.707 & -0.577 & -0.408 \\
+      0      & -0.577 & 0.816  \\
+      -0.707 & 0.577  & 0.408
+    \end{bmatrix} \\ \times \begin{bmatrix}
+      4.90 & 0    & 0                    \\
+      0    & 2.45 & 0                    \\
+      0    & 0    & 3.46 \times 10^{-16}
+    \end{bmatrix} \begin{bmatrix}
+      -0.577 & -0.577               & -0.577 \\
+      0.707  & -1.11 \cdot 10^{-16} & 0.707  \\
+      0.408  & -0.816               & 0.408
+    \end{bmatrix}
+  \end{multline*}
 \end{resolution}
 
 % =========================== Questão 10 ===========================
@@ -864,7 +1034,27 @@
 
 % ========================= Resolução 10 =========================
 \begin{resolution}
+  Segue a resolução do problema utilizando o processo de Gram-Schmidt:
 
+  Dado o conjunto \( S = \{\mathbf{v}_1, \mathbf{v}_2\} \), os vetores ortogonais \( \{\mathbf{u}_1, \mathbf{u}_2\} \) são obtidos pelo seguinte procedimento:
+
+  Primeiro, define-se \( \mathbf{u}_1 = \mathbf{v}_1 \), ou seja:
+  \[
+    \mathbf{u}_1 = \begin{bmatrix} 3 \\ 1 \end{bmatrix}.
+  \]
+
+  Agora, calcula-se \( \mathbf{u}_2 \), subtraindo de \( \mathbf{v}_2 \) a projeção de \( \mathbf{v}_2 \) sobre \( \mathbf{u}_1 \):
+  \[
+    \mathbf{u}_2 = \mathbf{v}_2 - \text{proj}_{\mathbf{u}_1}(\mathbf{v}_2),
+  \]
+  onde:
+  \[
+    \text{proj}_{\mathbf{u}_1}(\mathbf{v}_2) = \frac{\langle \mathbf{v}_2, \mathbf{u}_1 \rangle}{\langle \mathbf{u}_1, \mathbf{u}_1 \rangle} \mathbf{u}_1.
+  \]
+  Assim, o conjunto ortogonal é:
+  \[
+    \{\mathbf{u}_1, \mathbf{u}_2\} = \left\{ \begin{bmatrix} 0.95 \\ 0.32 \end{bmatrix}, \begin{bmatrix} -0.32 \\ 0.95 \end{bmatrix} \right\}.
+  \]
 \end{resolution}
 
 % =========================== Questão 11 ===========================
@@ -883,12 +1073,39 @@
     \item[b.] Encontre os autovalores de $A$.
     \item[c.] Mostre que $P(A) = 0$.
   \end{itemize}
-
 \end{question}
 
 % ========================= Resolução 11 =========================
 \begin{resolution}
+  {\bf (a)} O polinômio característico é dado por \( P(\lambda) = \det(A - \lambda I) \), onde \( I \) é a matriz identidade. Calcula-se:
+  \[
+    A - \lambda I = \begin{bmatrix}
+      -1 - \lambda & 2           & -1          \\
+      0            & 1 - \lambda & 3           \\
+      -1           & 2           & 5 - \lambda
+    \end{bmatrix}.
+  \]
+  A partir do determinante:
+  \[
+    P(\lambda) = \det\begin{bmatrix}
+      -1 - \lambda & 2           & -1          \\
+      0            & 1 - \lambda & 3           \\
+      -1           & 2           & 5 - \lambda
+    \end{bmatrix} = -\lambda^3+5\lambda^2+8\lambda-6.
+  \]
 
+  {\bf (b)}  Os autovalores são as raízes de \( P(\lambda) = 0 \):
+  \[
+    P(\lambda) = -\lambda^3+5\lambda^2+8\lambda-6 = 0.
+  \]
+  Assim, os autovalores de \( A \) são:
+  \[
+    \lambda_1 \approx \:0.57005\dots ,\:\lambda_2 \approx \:-1.71331\dots ,\:\lambda_3 \approx \:6.14325\dots .
+  \]
+
+  {\bf (c)}
+
+  Substituindo \( A \) no polinômio \( P(A) = -A^3 + 7A^2 + 8A - 32I \), verifica-se que a matriz resultante é nula. Este resultado é garantido pelo Teorema de Cayley-Hamilton, que afirma que toda matriz quadrada satisfaz sua própria equação característica.
 \end{resolution}
 
 % =========================== Questão 12 ===========================
@@ -907,7 +1124,101 @@
 
 % ========================= Resolução 12 =========================
 \begin{resolution}
+  {\bf Cálculo de \( \bf A^{2004} \)}
 
+  Primeiramente, encontra-se a diagonalização de \( A \), ou seja, \( A = PDP^{-1} \), onde \( D \) é diagonal, contendo os autovalores de \( A \). Assim:
+  \[
+    A^{2004} = P D^{2004} P^{-1}.
+  \]
+  O polinômio característico de \( A \) é dado por \( P(\lambda) = \det(A - \lambda I) \), com:
+  \[
+    A - \lambda I = \begin{bmatrix}
+      -\lambda & 1        & 0        \\
+      1        & -\lambda & 1        \\
+      0        & 1        & -\lambda
+    \end{bmatrix}.
+  \]
+  Calcula-se:
+  \[
+    P(\lambda) = \det\begin{bmatrix}
+      -\lambda & 1        & 0        \\
+      1        & -\lambda & 1        \\
+      0        & 1        & -\lambda
+    \end{bmatrix} = -\lambda^3+2\lambda.
+  \]
+  Logo:
+  \[
+    P(\lambda) = \lambda(\lambda^2 - 2).
+  \]
+  Os autovalores são:
+  \[
+    \lambda_1 = 0, \quad \lambda_2 = \sqrt{2}, \quad \lambda_3 = -\sqrt{2}.
+  \]
+  Para \( \lambda_1 = 0 \):
+  \[
+    (A - 0I)\mathbf{v} = A\mathbf{v} = 0, \quad \mathbf{v}_1 = \begin{bmatrix} 1 \\ 0 \\ -1 \end{bmatrix}.
+  \]
+  Para \( \lambda_2 = \sqrt{2} \):
+  \[
+    (A - \sqrt{2}I)\mathbf{v} = 0, \quad \mathbf{v}_2 = \begin{bmatrix} 1 \\ \sqrt{2} \\ 1 \end{bmatrix}.
+  \]
+  Para \( \lambda_3 = -\sqrt{2} \):
+  \[
+    (A + \sqrt{2}I)\mathbf{v} = 0, \quad \mathbf{v}_3 = \begin{bmatrix} 1 \\ -\sqrt{2} \\ 1 \end{bmatrix}.
+  \]
+  A matriz \( D \) é diagonal, com os autovalores:
+  \[
+    D = \begin{bmatrix}
+      0 & 0        & 0         \\
+      0 & \sqrt{2} & 0         \\
+      0 & 0        & -\sqrt{2}
+    \end{bmatrix}.
+  \]
+  A matriz \( P \) contém os autovetores como colunas:
+  \[
+    P = \begin{bmatrix}
+      1  & 1        & 1         \\
+      0  & \sqrt{2} & -\sqrt{2} \\
+      -1 & 1        & 1
+    \end{bmatrix}.
+  \]
+  Como \( D^{2004} \) é:
+  \[
+    D^{2004} = \begin{bmatrix}
+      0^{2004} & 0                 & 0                  \\
+      0        & (\sqrt{2})^{2004} & 0                  \\
+      0        & 0                 & (-\sqrt{2})^{2004}
+    \end{bmatrix}
+    = \begin{bmatrix}
+      0 & 0        & 0        \\
+      0 & 2^{1002} & 0        \\
+      0 & 0        & 2^{1002}
+    \end{bmatrix},
+  \]
+  tem-se:
+  \[
+    A^{2004} = P D^{2004} P^{-1}.
+  \]
+
+  {\bf Cálculo de \(\bf e^{At} \)}
+
+  A exponencial de matriz é dada por:
+  \[
+    e^{At} = P e^{Dt} P^{-1},
+  \]
+  onde:
+  \[
+    e^{Dt} = \begin{bmatrix}
+      e^{0t} & 0             & 0              \\
+      0      & e^{\sqrt{2}t} & 0              \\
+      0      & 0             & e^{-\sqrt{2}t}
+    \end{bmatrix}.
+  \]
+
+  Substituindo \( e^{Dt} \) e usando \( P \) e \( P^{-1} \), calcula-se \( e^{At} \):
+  \begin{equation*}
+    e^{At} = \begin{bmatrix}\frac{2+e^{\sqrt{2}t}+e^{-\sqrt{2}t}}{4}&\frac{-e^{-\sqrt{2}t}+e^{\sqrt{2}t}}{2\sqrt{2}}&\frac{-2+e^{\sqrt{2}t}+e^{-\sqrt{2}t}}{4}\\[16pt] \frac{e^{-\sqrt{2}t}+e^{\sqrt{2}t}}{2\sqrt{2}}&\frac{-e^{-\sqrt{2}t}+e^{\sqrt{2}t}}{2}&\frac{e^{-\sqrt{2}t}+e^{\sqrt{2}t}}{2\sqrt{2}}\\[16pt] \frac{-2+e^{\sqrt{2}t}+e^{-\sqrt{2}t}}{4}&\frac{-e^{-\sqrt{2}t}+e^{\sqrt{2}t}}{2\sqrt{2}}&\frac{2+e^{\sqrt{2}t}+e^{-\sqrt{2}t}}{4}\end{bmatrix}
+  \end{equation*}
 \end{resolution}
 
 % =========================== Questão 13 ===========================

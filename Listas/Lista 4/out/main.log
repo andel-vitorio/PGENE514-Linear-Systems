@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.1.8)  18 DEC 2024 22:08
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.1.8)  18 DEC 2024 23:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1199,15 +1199,19 @@ LaTeX Font Info:    Font shape `TU/EBGaramond(0)/b/n' will be
 [2
 
 ] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19]
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 844.
+ [20] [21] [22] [23] [24]
 LaTeX Font Info:    Font shape `TU/EBGaramond(0)/b/n' will be
-(Font)              scaled to size 8.0pt on input line 852.
+(Font)              scaled to size 8.0pt on input line 1022.
 LaTeX Font Info:    Font shape `TU/EBGaramond(0)/b/n' will be
-(Font)              scaled to size 6.0pt on input line 852.
- [20]
-Package mdframed Info: Not enough space on this page on input line 887.
- [21] [22])
+(Font)              scaled to size 6.0pt on input line 1022.
+ [25] [26] [27] [28] [29]
+Package mdframed Info: Not enough space on this page on input line 1230.
+ [30])
 No file main.bbl.
-[23] 
+[31] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./out/main.aux)
  ***********
@@ -1218,12 +1222,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 8FDB4FFF48B2A42480FE38D586F30F46;224.
  ) 
 Here is how much of TeX's memory you used:
- 50830 strings out of 474823
- 1234384 string characters out of 5759526
+ 50834 strings out of 474823
+ 1234502 string characters out of 5759526
  2166300 words of memory out of 5000000
- 72285 multiletter control sequences out of 15000+600000
+ 72289 multiletter control sequences out of 15000+600000
  569002 words of font info for 85 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 132i,13n,135p,712b,985s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 132i,13n,135p,712b,989s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on ./out/main.pdf (24 pages).
+Output written on ./out/main.pdf (32 pages).
