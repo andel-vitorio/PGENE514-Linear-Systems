@@ -46,6 +46,354 @@
 % ========================= Resolução 01 =========================
 \begin{resolution}
 
+  {\bf (a)} \; Os autovalores \(\lambda\) são encontrados resolvendo o determinante da matriz característica \( A - \lambda I = 0 \), onde \( I \) é a matriz identidade.
+  \[
+    A - \lambda I =
+    \begin{bmatrix}
+      1 - \lambda & -2          \\
+      -2          & 1 - \lambda
+    \end{bmatrix}.
+  \]
+  O determinante é dado por:
+  \[
+    \det(A - \lambda I) = \det\begin{bmatrix}
+      1 - \lambda & -2          \\
+      -2          & 1 - \lambda
+    \end{bmatrix}.
+  \]
+  Calculando o determinante:
+  \[
+    \det(A - \lambda I) = (1 - \lambda)(1 - \lambda) - (-2)(-2),
+  \]
+  \[
+    \det(A - \lambda I) = (1 - \lambda)^2 - 4,
+  \]
+  \[
+    \det(A - \lambda I) = 1 - 2\lambda + \lambda^2 - 4,
+  \]
+  \[
+    \det(A - \lambda I) = \lambda^2 - 2\lambda - 3.
+  \]
+  Agora resolve-se a equação característica:
+  \[
+    \lambda^2 - 2\lambda - 3 = 0.
+  \]
+  Fatorando:
+  \[
+    \lambda^2 - 2\lambda - 3 = (\lambda - 3)(\lambda + 1) = 0.
+  \]
+  Portanto, os autovalores são:
+  \[
+    \lambda_1 = 3, \quad \lambda_2 = -1.
+  \]
+  Os autovetores são encontrados resolvendo \((A - \lambda I)v = 0\) para cada \(\lambda\). Para \(\lambda_1 = 3\):
+  \[
+    A - 3I = \begin{bmatrix}
+      1 - 3 & -2    \\
+      -2    & 1 - 3
+    \end{bmatrix}
+    = \begin{bmatrix}
+      -2 & -2 \\
+      -2 & -2
+    \end{bmatrix}.
+  \]
+
+  Resolvendo \((A - 3I)v = 0\):
+  \[
+    \begin{bmatrix}
+      -2 & -2 \\
+      -2 & -2
+    \end{bmatrix}
+    \begin{bmatrix}
+      v_1 \\ v_2
+    \end{bmatrix}
+    = \begin{bmatrix}
+      0 \\ 0
+    \end{bmatrix}.
+  \]
+
+  A equação reduzida é:
+  \[
+    -2v_1 - 2v_2 = 0 \quad \Rightarrow \quad v_1 + v_2 = 0.
+  \]
+
+  Escolhendo \(v_1 = 1\), então \(v_2 = -1\). O autovetor associado a \(\lambda_1 = 3\) é:
+  \[
+    v_1 = \begin{bmatrix}
+      1 \\ -1
+    \end{bmatrix}.
+  \]
+
+  Para \(\lambda_2 = -1\):
+  \[
+    A - (-1)I = \begin{bmatrix}
+      1 + 1 & -2    \\
+      -2    & 1 + 1
+    \end{bmatrix}
+    = \begin{bmatrix}
+      2  & -2 \\
+      -2 & 2
+    \end{bmatrix}.
+  \]
+
+  Resolvendo \((A + I)v = 0\):
+  \[
+    \begin{bmatrix}
+      2  & -2 \\
+      -2 & 2
+    \end{bmatrix}
+    \begin{bmatrix}
+      v_1 \\ v_2
+    \end{bmatrix}
+    = \begin{bmatrix}
+      0 \\ 0
+    \end{bmatrix}.
+  \]
+
+  A equação reduzida é:
+  \[
+    2v_1 - 2v_2 = 0 \quad \Rightarrow \quad v_1 = v_2.
+  \]
+
+  Escolhendo \(v_1 = 1\), então \(v_2 = 1\). O autovetor associado a \(\lambda_2 = -1\) é:
+  \[
+    v_2 = \begin{bmatrix}
+      1 \\ 1
+    \end{bmatrix}.
+  \]
+
+  {\bf (b)} \;
+  Resolve-se a equação característica \( \det(A - \lambda I) = 0 \), que resulta em:
+  \[
+    6\lambda^2 - 7\lambda + 3 = 0.
+  \]
+  Como o discriminante é negativo (\(\Delta = -23\)), os autovalores são complexos:
+  \[
+    \lambda_1 = \frac{7}{12} + i\frac{\sqrt{23}}{12}, \quad \lambda_2 = \frac{7}{12} - i\frac{\sqrt{23}}{12}.
+  \]
+  Para cada \(\lambda\), resolve-se o sistema \((A - \lambda I)v = 0\). Os autovetores associados são:
+  \[
+    v_1 = \begin{bmatrix} \frac{5}{6} + i\frac{\sqrt{23}}{6} \\ 1\end{bmatrix}, \quad
+    v_2 = \begin{bmatrix} \frac{5}{6} - i\frac{\sqrt{23}}{6} \\ 1 \end{bmatrix}.
+  \]
+
+  {\bf (c)} \;
+  Resolve-se a equação característica \( \det(A - \lambda I) = 0 \), que resulta em:
+  \[
+    \lambda^2-4\lambda+4 = 0.
+  \]
+  Logo, os autovalores são:
+  \[
+    \lambda_{1,2} = 2.
+  \]
+  Para cada \(\lambda\), resolve-se o sistema \((A - \lambda I)v = 0\), ou seja,
+  $$
+    \begin{bmatrix}
+      3 - \lambda & 1 \\ -1 & 1 - \lambda
+    \end{bmatrix} \begin{bmatrix}
+      v_1 \\ v_2
+    \end{bmatrix} = \begin{bmatrix}
+      0 \\ 0
+    \end{bmatrix} \Rightarrow
+    \begin{cases}
+      (3 - \lambda) v_1 + v_2 = 0 \\
+      -v_1 + (1 - \lambda) v_2 = 0
+    \end{cases} = \begin{cases}
+      v_1 + v_2 = 0 \\
+      -v_1 - v_2 = 0
+    \end{cases}
+  $$
+  Assim, os autovetores associados são:
+  \[
+    v_{1,2} = \begin{bmatrix} 1 \\ -1\end{bmatrix}
+  \]
+
+  {\bf (d)} \;
+  Resolve-se a equação característica \( \det(A - \lambda I) = 0 \), que resulta em:
+  \[
+    \lambda^2 - 2\lambda + 3 = 0.
+  \]
+  Como o discriminante é negativo (\(\Delta = -8\)), os autovalores são complexos:
+  \[
+    \lambda_1 = 1 + i\frac{\sqrt{2}}{2}, \quad \lambda_2 = \frac{7}{12} - i\frac{\sqrt{2}}{2}.
+  \]
+  Para cada \(\lambda\), resolve-se o sistema \((A - \lambda I)v = 0\), ou seja,
+  $$
+    \begin{bmatrix}
+      1 - \lambda & 2 \\ -1 & 1 - \lambda
+    \end{bmatrix} \begin{bmatrix}
+      v_1 \\ v_2
+    \end{bmatrix} = \begin{bmatrix}
+      0 \\ 0
+    \end{bmatrix} \Rightarrow
+    \begin{cases}
+      (1 - \lambda) v_1 + v_2 = 0 \\
+      -v_1 + (1 - \lambda) v_2 = 0
+    \end{cases}.
+  $$
+  Assim, os autovetores associados são:
+  \[
+    v_1 = \begin{bmatrix} -i\sqrt{2} \\ 1\end{bmatrix}, \quad
+    v_2 = \begin{bmatrix} i \sqrt{2} \\ 1 \end{bmatrix}.
+  \]
+
+  {\bf (e)} \;
+  Resolve-se a equação característica \( \det(A - \lambda I) = 0 \), que resulta em:
+  \[
+    -\lambda^3+8\lambda^2-19\lambda+12 = 0
+  \]
+  Logo, os autovalores são:
+  \[
+    \lambda_1 = 1, \quad \lambda_2 = 3, \quad \lambda_3 = 4.
+  \]
+  Para cada \(\lambda\), resolve-se o sistema \((A - \lambda I)v = 0\), ou seja,
+  $$
+    \begin{bmatrix}
+      3 - \lambda & -1 & 0 \\ -1 & 2 - \lambda & -1 \\ 0 & -1 & 3 - \lambda
+    \end{bmatrix} \begin{bmatrix}
+      v_1 \\ v_2 \\ v_3
+    \end{bmatrix} = \begin{bmatrix}
+      0 \\ 0 \\ 0
+    \end{bmatrix} \Rightarrow
+    \begin{cases}
+      (3 - \lambda) v_1 - v_2 = 0        \\
+      -v_1 + (2 - \lambda) v_2 - v_3 = 0 \\
+      -v_2 + (3 - \lambda) v_3 = 0
+    \end{cases}.
+  $$
+  Assim, os autovetores associados são:
+  \[
+    v_1 = \begin{bmatrix} 1 \\ 2 \\ 1\end{bmatrix}, \quad
+    v_2 = \begin{bmatrix} -1 \\ 0 \\ 1\end{bmatrix}, \quad
+    v_3 = \begin{bmatrix} 1 \\ -1 \\ 1 \end{bmatrix}.
+  \]
+
+  {\bf (f)} \;
+  Resolve-se a equação característica \( \det(A - \lambda I) = 0 \), que resulta em:
+  \[
+    -\lambda^3+\lambda^2+6\lambda-6=0
+  \]
+  Logo, os autovalores são:
+  \[
+    \lambda_1=1,\:\lambda_2=-\sqrt{6},\:\lambda_3=\sqrt{6}
+  \]
+  Para cada \(\lambda\), resolve-se o sistema \((A - \lambda I)v = 0\), ou seja,
+  $$
+    \begin{bmatrix}
+      -1 - \lambda & -1 & 4 \\ 1 & 3 - \lambda & -2 \\ 1 & 1 & -1 - \lambda
+    \end{bmatrix} \begin{bmatrix}
+      v_1 \\ v_2 \\ v_3
+    \end{bmatrix} = \begin{bmatrix}
+      0 \\ 0 \\ 0
+    \end{bmatrix} \Rightarrow
+    \begin{cases}
+      (-1 - \lambda) v_1 - v_2 + 4v_3 = 0 \\
+      -v_1 + (3 - \lambda) v_2 - 2v_3 = 0 \\
+      v_1 + v_2 + (-1 - \lambda) v_3 = 0
+    \end{cases}.
+  $$
+  Assim, os autovetores associados são:
+  \[
+    v_1 = \begin{bmatrix}2\\ 0\\ 1\end{bmatrix},\:
+    v_2 = \begin{bmatrix}-2-\sqrt{6}\\ 4-\sqrt{6}\\ 2\end{bmatrix},\:
+    v_3 = \begin{bmatrix}-2+\sqrt{6}\\ 4+\sqrt{6}\\ 2\end{bmatrix}.
+  \]
+
+  {\bf (g)} \;
+  Resolve-se a equação característica \( \det(A - \lambda I) = 0 \), que resulta em:
+  \[
+    -\lambda^3+12\lambda=0
+  \]
+  Logo, os autovalores são:
+  \[
+    \lambda_1=0,\:\lambda_2=-2\sqrt{3},\:\lambda_3=2\sqrt{3}.
+  \]
+  Para cada \(\lambda\), resolve-se o sistema \((A - \lambda I)v = 0\), ou seja,
+  $$
+    \begin{bmatrix}
+      -1 - \lambda & 3 & 11 \\ 2 & -6 - \lambda & 16 \\ 1 & -3 & 7 - \lambda
+    \end{bmatrix} \begin{bmatrix}
+      v_1 \\ v_2 \\ v_3
+    \end{bmatrix} = \begin{bmatrix}
+      0 \\ 0 \\ 0
+    \end{bmatrix} \Rightarrow
+    \begin{cases}
+      (-1 - \lambda) v_1 + 3 v_2 + 11 v_3 = 0 \\
+      2 v_1 + (-6 - \lambda) v_2 + 16 v_3 = 0 \\
+      v_1 - 3 v_2 + (7 - \lambda) v_3 = 0
+    \end{cases}.
+  $$
+  Assim, os autovetores associados são:
+  \[
+    v_1 = \begin{bmatrix}3\\ 1\\ 0\end{bmatrix},\:
+    v_2 =\begin{bmatrix}-3-9\sqrt{3}\\ 6-\sqrt{3}\\ 3\end{bmatrix},\:
+    v_3 =\begin{bmatrix}-3+9\sqrt{3}\\ 6+\sqrt{3}\\ 3\end{bmatrix}.
+  \]
+
+  {\bf (h)} \;
+  Resolve-se a equação característica \( \det(A - \lambda I) = 0 \), que resulta em:
+  \[
+    -\lambda^3+4\lambda^2-4\lambda=0
+  \]
+  Logo, os autovalores são:
+  \[
+    \lambda_1=0,\:\lambda_{2, 3}=2.
+  \]
+  Para cada \(\lambda\), resolve-se o sistema \((A - \lambda I)v = 0\). Os autovetores associados são:
+  \[
+    v_1 = \begin{bmatrix}-1\\ -3\\ 1\end{bmatrix},\:
+    v_2 = \begin{bmatrix}1\\ -1\\ 1\end{bmatrix}.
+  \]
+
+  {\bf (i)} \;
+  Resolve-se a equação característica \( \det(A - \lambda I) = 0 \), que resulta em:
+  \[
+    -\lambda^3+3\lambda^2+24\lambda-52=0
+  \]
+  Logo, os autovalores são:
+  \[
+    \lambda_1=2,\:\lambda_2=\frac{1+\sqrt{105}}{2},\:\lambda_3=\frac{1-\sqrt{105}}{2}
+  \]
+  Para cada \(\lambda\), resolve-se o sistema \((A - \lambda I)v = 0\). Os autovetores associados são:
+  \[
+    v_1 = \begin{bmatrix}1\\ 0\\ 3\end{bmatrix},\:
+    v_2 = \begin{bmatrix}9-\sqrt{105}\\ -6\\ 6\end{bmatrix},\:
+    v_3 = \begin{bmatrix}9+\sqrt{105}\\ -6\\ 6\end{bmatrix}.
+  \]
+
+  {\bf (j)} \;
+  Resolve-se a equação característica \( \det(A - \lambda I) = 0 \), que resulta em:
+  \[
+    \lambda^4-12\lambda^3+22\lambda^2+84\lambda+49=0
+  \]
+  Logo, os autovalores são:
+  \[
+    \lambda_{1, 2}=-1,\:\lambda_{3, 4}=7.
+  \]
+  Para cada \(\lambda\), resolve-se o sistema \((A - \lambda I)v = 0\). Os autovetores associados são:
+  \[
+    v_1 = \begin{pmatrix}-1\\ 1\\ 0\\ 0\end{pmatrix},\:
+    v_2 = \begin{pmatrix}0\\ 0\\ -\frac{3}{2}\\ 1\end{pmatrix},\:
+    v_3 = \begin{pmatrix}1\\ 1\\ 0\\ 0\end{pmatrix},\:
+    v_4 = \begin{pmatrix}0\\ 0\\ \frac{1}{2}\\ 1\end{pmatrix}.
+  \]
+
+  {\bf (k)} \;
+  Resolve-se a equação característica \( \det(A - \lambda I) = 0 \), que resulta em:
+  \[
+    \left(-\lambda+4\right)\left(-\lambda+3\right)\left(-\lambda+2\right)\left(-\lambda+1\right)=0
+  \]
+  Logo, os autovalores são:
+  \[
+    \lambda_1=4,\:\lambda_2=3,\:\lambda_3=2,\:\lambda_4=1.
+  \]
+  Para cada \(\lambda\), resolve-se o sistema \((A - \lambda I)v = 0\). Os autovetores associados são:
+  \[
+    v_1 = \begin{pmatrix}1\\ 1\\ 0\\ 0\end{pmatrix},\:
+    v_2 = \begin{pmatrix}0\\ 1\\ 1\\ 0\end{pmatrix},\:
+    v_3 = \begin{pmatrix}0\\ 0\\ 1\\ 1\end{pmatrix},\:
+    v_4 = \begin{pmatrix}0\\ 0\\ 0\\ 1\end{pmatrix}.
+  \]
 \end{resolution}
 
 % =========================== Questão 02 ===========================
@@ -63,7 +411,52 @@
 
 % ========================= Resolução 02 =========================
 \begin{resolution}
+  Primeiramente, inicia-se pelo cálculo dos autovalores e autovetores da matriz \( A = \begin{bmatrix} 1 & 4 & 4 \\ 3 & -1 & 0 \\ 0 & 2 & 3 \end{bmatrix} \). Os autovalores são encontrados resolvendo o determinante da matriz característica \( A - \lambda I \), ou seja, \(\det(A - \lambda I) = 0\). A matriz característica é dada por
+  \[
+    A - \lambda I = \begin{bmatrix}
+      1 - \lambda & 4            & 4           \\
+      3           & -1 - \lambda & 0           \\
+      0           & 2            & 3 - \lambda
+    \end{bmatrix}.
+  \]
+  O determinante dessa matriz é
+  \[
+    \det(A - \lambda I) = \begin{vmatrix}
+      1 - \lambda & 4            & 4           \\
+      3           & -1 - \lambda & 0           \\
+      0           & 2            & 3 - \lambda
+    \end{vmatrix}
+    = -\lambda^3+3\lambda^2+13\lambda-15.
+  \]
+  Os autovalores de \( A \) são as raízes da equação cúbica \(-\lambda^3+3\lambda^2+13\lambda-15=0\). Aplicando métodos de fatoração, obtém-se que os autovalores são \( \lambda_1 = 1 \), \( \lambda_2 = -3 \), \( \lambda_3 = 5 \).
 
+  Para os autovetores, resolve-se \( (A - \lambda I)v = 0 \) para cada autovalor. Para \( \lambda_1 = 1 \), tem-se a matriz
+  \[
+    A - I = \begin{bmatrix}
+      0 & 4  & 4 \\
+      3 & -2 & 0 \\
+      0 & 2  & 2
+    \end{bmatrix},
+  \]
+  e a solução do sistema linear correspondente fornece o autovetor \( v_1 = \begin{bmatrix} -2 \\ -3 \\ 3 \end{bmatrix} \). Analogamente, para \( \lambda_2 = -3 \), a matriz
+  \[
+    A + 3I = \begin{bmatrix}
+      4 & 4 & 4 \\
+      3 & 2 & 0 \\
+      0 & 2 & 6
+    \end{bmatrix}
+  \]
+  leva ao autovetor \( v_2 = \begin{bmatrix} 2 \\ -3 \\ 1 \end{bmatrix} \). Por fim, para \( \lambda_3 = 5 \), resolve-se
+  \[
+    A - 5I = \begin{bmatrix}
+      -4 & 4  & 4  \\
+      3  & -6 & 0  \\
+      0  & 2  & -2
+    \end{bmatrix},
+  \]
+  resultando no autovetor \( v_3 = \begin{bmatrix} 2 \\ 1 \\ 1 \end{bmatrix} \).
+
+  O traço de \( A \) é a soma dos elementos da diagonal principal, ou seja, \( 1 + (-1) + 3 = 3 \). Nota-se que isso é igual à soma dos autovalores \( 1 + (-3) + 5 = 3 \), confirmando a relação. O determinante de \( A \), calculado diretamente, é \( -15 \), o que corresponde ao produto dos autovalores \( 1 \cdot (-3) \cdot (5) = -15 \), confirmando a propriedade.
 \end{resolution}
 
 % =========================== Questão 03 ===========================
@@ -104,6 +497,84 @@
 
 % ========================= Resolução 03 =========================
 \begin{resolution}
+  {\bf (a)} Para a matriz \( A = \begin{bmatrix} 4 & -4 \\ 1 & 0 \end{bmatrix} \), inicia-se determinando os autovalores resolvendo o determinante da matriz característica \( A - \lambda I \). Tem-se:
+  \[
+    A - \lambda I = \begin{bmatrix} 4 - \lambda & -4 \\ 1 & -\lambda \end{bmatrix}.
+  \]
+  O determinante dessa matriz é dado por:
+  \[
+    \det(A - \lambda I) = (4 - \lambda)(-\lambda) - (-4)(1).
+  \]
+  Expandindo os termos:
+  \[
+    \det(A - \lambda I) = -4\lambda + \lambda^2 + 4.
+  \]
+  Fatorando a equação quadrática:
+  \[
+    \lambda^2 - 4\lambda + 4 = (\lambda - 2)^2.
+  \]
+  Logo, o autovalor de \( A \) é \(\lambda = 2\), com multiplicidade algébrica 2. Para determinar a base do autoespaço associado, resolve-se o sistema \( (A - \lambda I)v = 0 \). Substituindo \(\lambda = 2\), obtém-se:
+  \[
+    A - 2I = \begin{bmatrix} 2 & -4 \\ 1 & -2 \end{bmatrix}.
+  \]
+  A forma escalonada da matriz é:
+  \[
+    \begin{bmatrix} 1 & -2 \\ 0 & 0 \end{bmatrix}.
+  \]
+  O sistema correspondente é:
+  \[
+    x_1 - 2x_2 = 0.
+  \]
+  Logo, \( x_1 = 2x_2 \), e a solução geral é:
+  \[
+    v = x_2 \begin{bmatrix} 2 \\ 1 \end{bmatrix}, \quad x_2 \in \mathbb{R}.
+  \]
+  Portanto, a base do autoespaço associado a \(\lambda = 2\) é:
+  \[
+    \mathcal{B} = \left\{ \begin{bmatrix} 2 \\ 1 \end{bmatrix} \right\}.
+  \]
+
+  Segue a solução resumida para as matrizes fornecidas, com cálculo dos autovalores e as bases dos autoespaços associados:
+
+  {\bf (b)} Para a matriz \( A = \begin{bmatrix} 6 & -8 \\ 4 & -6 \end{bmatrix} \), temos que o determinante de \( A - \lambda I \):
+  \[
+    \det(A - \lambda I) = \begin{vmatrix} 6 - \lambda & -8 \\ 4 & -6 - \lambda \end{vmatrix} = \lambda^2 - 0\lambda - 4 = (\lambda - 2)(\lambda + 2).
+  \]
+  Logo, os autovalores são \( \lambda_1 = 2, \lambda_2 = -2 \), os autoespaços:
+  Para \( \lambda_1 = 2 \):
+  $$ A - 2I = \begin{bmatrix} 4 & -8 \\ 4 & -8 \end{bmatrix},$$ base \( \mathcal{B}_1 = \left\{ \begin{bmatrix} 2 \\ 1 \end{bmatrix} \right\} \).
+  Para \( \lambda_2 = -2 \):
+  $$ A + 2I = \begin{bmatrix} 8 & -8 \\ 4 & -4 \end{bmatrix},$$ base \( \mathcal{B}_2 = \left\{ \begin{bmatrix} 1 \\ 1 \end{bmatrix} \right\} \).
+
+  \vspace{12pt}
+  {\bf (c)} Para a matriz \( A = \begin{bmatrix} 3 & -2 \\ 4 & -1 \end{bmatrix} \), temos:
+  $$ \det(A - \lambda I) = (3 - \lambda)(-1  - \lambda) + 8 = 0 .$$
+  Logo, os autovalores são \( \lambda_1 = 1 + 2i, \lambda_2 = 1 - 2i \). Assim,
+  para \( \lambda_1 = 1 + 2i\), a base é \( \mathcal{B}_1 = \left\{ \begin{bmatrix} 1 + i \\ 2 \end{bmatrix} \right\} \); e
+  para \( \lambda_2 = 1 - 2i \), a base \( \mathcal{B}_2 = \left\{ \begin{bmatrix} 1 - i\\ 2 \end{bmatrix} \right\} \).
+
+  \vspace{12pt}
+  {\bf (d)} Para a matriz \( A = \begin{bmatrix} i & -1 \\ 1 & i \end{bmatrix} \), temos:
+  $$\det(A - \lambda I) = (\lambda - i)^2 + 1 = 0.$$
+  Os autovalores são \( \lambda_1 = 0, \lambda_2 = 2i \). Logo, para \( \lambda_1 = 0\), a base é \( \mathcal{B}_1 = \left\{ \begin{bmatrix} 1 \\ i \end{bmatrix} \right\} \); e para \( \lambda_2 = i - 1 \), a base é \( \mathcal{B}_2 = \left\{ \begin{bmatrix} 1 \\ -i \end{bmatrix} \right\} \).
+
+  \vspace{12pt}
+  {\bf (e)} Para a matriz \( A = \begin{bmatrix} 4 & -1 & -1 \\ 0 & 3 & 0 \\ 1 & -1 & 2 \end{bmatrix} \), os autovalores são \( \lambda_{1, 2, 3} = 3 \) (multiplicidade algébrica 3). Dessa forma, os autovetores, para \( \lambda_{1, 2, 3} = 3 \). são obtidos pela base \( \mathcal{B} = \left\{ \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}, \begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix} \right\} \).
+
+
+  \vspace{12pt}
+  {\bf (f)} Para a matriz \( A = \begin{bmatrix} -6 & 0 & -8 \\ -4 & 2 & -4 \\ 4 & 0 & 6 \end{bmatrix} \), os autovalores são \( \lambda_{1,2} = 2, \lambda_3 = -2 \). Logo,
+  para \( \lambda_{1,2} = 2 \), a base é \( \mathcal{B}_1 = \left\{ \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}, \begin{bmatrix} -1 \\ 0 \\ 1 \end{bmatrix} \right\} \).
+  Para \( \lambda_3 = -2 \), a base é \( \mathcal{B}_2 = \left\{ \begin{bmatrix} -2 \\ -1 \\ 1 \end{bmatrix} \right\} \).
+
+  \vspace{12pt}
+  {\bf (g)} Para a matriz \( A = \begin{bmatrix} -2 & 1 & -1 \\ 5 & -3 & 6 \\ 5 & -1 & 4 \end{bmatrix} \), os autovalores são \( \lambda_{1,2} = -2, \lambda_3 = 3\).  Para cada autovalor, as bases são \( \mathcal{B}_1 = \left\{ \begin{bmatrix} -1 \\ 1 \\ 1 \end{bmatrix} \right\} \) e \( \mathcal{B}_2 = \left\{ \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix} \right\} \).
+
+  \vspace{12pt}
+  {\bf (h)} Para a matriz \( A = \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ -1 & 1 & -1 & 0 \\ 1 & 0 & -1 & 0 \end{bmatrix} \), os autovalores são \( \lambda_{1} = 0, \lambda_{2, 3} = 1, \lambda_4 = -1\).  Para cada autovalor, as bases são \( \mathcal{B}_1 = \left\{ \begin{bmatrix} 0 \\ 0 \\ 0 \\ 1 \end{bmatrix} \right\} \), \( \mathcal{B}_2 = \left\{ \begin{bmatrix} 1 \\ 3 \\ 1 \\ 0 \end{bmatrix}, \begin{bmatrix} 1 \\ 1 \\ 0 \\ 1 \end{bmatrix} \right\} \) e \( \mathcal{B}_3 = \left\{ \begin{bmatrix} 0 \\ 0 \\ 1 \\ 1 \end{bmatrix} \right\} \).
+
+  \vspace{12pt}
+  {\bf (i)} Para a matriz \( A = \begin{bmatrix} -1 & 0 & 1 & 2 \\ 0 & 1 & 0 & 1 \\ -1 & -4 & 1 & -2 \\ 0 & 1 & 0 & 1 \end{bmatrix} \), os autovalores são \( \lambda_{1, 2, 3} = 0, \lambda_4 = 2\).  Para cada autovalor, as bases são \( \mathcal{B}_1 = \left\{ \begin{bmatrix} 1 \\ 0 \\ 1 \\ 0 \end{bmatrix} \right\} \) e \( \mathcal{B}_2 = \left\{ \begin{bmatrix} 0 \\ 1 \\ -2 \\ 1 \end{bmatrix}\right\} \).
 
 \end{resolution}
 
